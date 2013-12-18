@@ -7,3 +7,15 @@ p {
     margin-right: 40px;
     margin-top: 30px;
 }
+
+#header {
+    margin: 0px;
+    height: 35px;
+    border-bottom: 1px #555555 solid;
+}
+
+#user_info {
+    text-align: right;
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 14px;
+}

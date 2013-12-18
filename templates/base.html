@@ -7,10 +7,15 @@
     {% block styles %}{% endblock %}
 </head>
 <body>
-{% block body %}
+    <div id="header">
+        {% if user.is_active %}
+        <div id="user_info">Welcome {{ user.first_name }} {{ user.last_name }}!  <a href="/accounts/logout/">Log Out</a> </div>
+        {% else %}
+        <div id="user_info">{{ user.first_name }}<a href="/accounts/login/?next=/welcome/">Log In</a></div>
+        {% endif %}
+    </div>
     <div id="content">
     {% block content %}{% endblock %}
     </div>
-{% endblock %}
 </body>
 </html>
