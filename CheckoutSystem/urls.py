@@ -7,6 +7,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
                        url(r'^$', views.index, name='index'),
-                       url(r'^checkout/', include('checkout.urls', namespace="checkout")),
+                       url(r'^checkout/', include('checkout.urls')),
                        url(r'^admin/', include(admin.site.urls)),
 )

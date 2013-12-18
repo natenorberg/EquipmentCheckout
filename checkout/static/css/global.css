@@ -1,0 +1,9 @@
+p {
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+}
+
+#content {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+}

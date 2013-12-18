@@ -13,6 +13,11 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="349b5947-8edb-4d0d-8a98-e90bb106bd05">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/checkout_dev</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 
