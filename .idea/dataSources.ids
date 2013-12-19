@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Django default" product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="25bbff08-0dff-4273-bcaa-f8564a415874">
-    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+  <data-source source="LOCAL" name="Django default" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="349b5947-8edb-4d0d-8a98-e90bb106bd05">
     <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
     <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/checkout_dev</jdbc-url>
-    <libraries>
-      <library>
-        <url>file://$USER_HOME$/Library/Preferences/PyCharm30/jdbc-drivers/xerial-sqlite-license.txt</url>
-      </library>
-      <library>
-        <url>jar://$USER_HOME$/Library/Preferences/PyCharm30/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar!/</url>
-      </library>
-    </libraries>
-    <schema name="" catalog=""/>
+    <libraries/>
   </data-source>
 </component>

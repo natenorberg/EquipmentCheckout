@@ -14,6 +14,10 @@ def progress(request):
     return render_to_response("progress.html", context_instance=RequestContext(request))
 
 
+def password_reset_placeholder(request):
+    return render_to_response("reset_placeholder.html", context_instance=RequestContext(request))
+
+
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect("/welcome/")
