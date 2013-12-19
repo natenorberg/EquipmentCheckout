@@ -6,28 +6,31 @@
 
 {% block content %}
 
+<h1>Welcome to MONSTER Checkout</h1>
+
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
 <div id="login">
-    <p class="login_header">Please Log In</p>
-    <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
-        {% csrf_token %}
-        <table>
-        <tr>
-            <td class="label">{{ form.username.label_tag }}</td>
-            <td>{{ form.username }}</td>
-        </tr>
-        <tr>
-            <td class="label">{{ form.password.label_tag }}</td>
-            <td>{{ form.password }}</td>
-        </tr>
-        </table>
+    <div class="login_header">
+        <p class="login_header_message">Please log in</p>
+    </div>
+    <div id="login_body">
+        <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+            {% csrf_token %}
+            <ul>
+            <li class="label">Username</li>
+            <li>{{ form.username }}</li>
+            <li class="label">Password</li>
+            <li>{{ form.password }}</li>
+            </li>
+            </ul>
 
-        <input class="submit_button" type="submit" value="Login" />
-        <input type="hidden" name="next" value="{{ next }}" />
-    </form>
+            <input class="submit_button" type="submit" value="Login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+    </div>
 </div>
 
 {% endblock %}
