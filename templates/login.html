@@ -9,7 +9,9 @@
 <h1>Welcome to MONSTER Checkout</h1>
 
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<div class="errors"><p>Your username and password didn't match. Please try again.</p></div>
+{% else %}
+<div class="errors_placeholder"></div>
 {% endif %}
 
 <div id="login">
