@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}MONSTER Equipment{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/equipment_list.css"/>
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Condition</th>
+        <th>Description</th>
+    </tr>
+    {% for object in object_list %}
+    <tr>
+        <td class="name">{{ object.name }}</td>
+        <td class="quantity">{{ object.quantity }}</td>
+        <td>{{ object.condition }}</td>
+        <td>{{ object.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
