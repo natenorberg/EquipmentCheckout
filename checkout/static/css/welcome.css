@@ -1,3 +1,17 @@
 p {
-    font-weight: 200;
+    font-weight: 500;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+#content {
+    margin-left: 70px;
+    margin-right: 70px;
+    background: #ffffff;
+    border: 1px #888888 solid;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px #aaaaaa;
+    padding: 3px 27px 10px 27px;
 }

@@ -1,5 +1,9 @@
 p {
-    font-family: helvetica, "Open sans", "Lucida Grande", Arial, sans-serif;
+    font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+}
+
+body {
+    margin: 0px;
 }
 
 #content {
@@ -10,12 +14,39 @@ p {
 
 #header {
     margin: 0px;
-    height: 35px;
+    padding-right: 5px;
+    height: 30px;
+    line-height: 30px;
     border-bottom: 1px #555555 solid;
+    background: -webkit-linear-gradient(top,  #2a7fc4 1%,#336093 100%); /* Chrome10+,Safari5.1+ */
+    /* TODO: add other background stuff */
+    box-shadow: 0px 0px 3px #888888;
+
+    /* Text */
+    color: #ffffff;
+}
+
+#monster_header {
+    width: 300px;
+    float: left;
+    padding-left: 10px;
+
+    font-family: "open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 30px;
+}
+
+a.login_logout {
+    margin-left: 5px;
+    color: #f0f0f0;
+    text-decoration: none;
 }
 
 #user_info {
+    width: 500px;
+    float: right;
     text-align: right;
-    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
-    font-size: 14px;
+    font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 13px;
 }
