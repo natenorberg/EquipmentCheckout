@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="header">
-        <div id="monster_header">MONSTER Checkout</div>
+        <a href="/"><div id="monster_header">MONSTER Checkout</div></a>
         {% if user.is_active %}
         <div id="user_info">Welcome, {{ user.first_name }} {{ user.last_name }}!  <a class="login_logout" href="/accounts/logout/">Log Out</a> </div>
         {% else %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ equipment.name }} Info{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/equipment_detail.css">
+{% endblock %}
+
+{% block content %}
+    <h1>{{ equipment.name }}</h1>
+
+    <h3>Condition</h3>
+    <p>{{ equipment.condition }}</p>
+
+    <h3>Description</h3>
+    <p>{{ equipment.description }}</p>
+
+    <a class="back" href="/checkout/equipment/">Back to list</a>
+{% endblock %}

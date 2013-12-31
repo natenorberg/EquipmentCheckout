@@ -1,5 +1,9 @@
-p {
+p, a {
     font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -35,6 +39,7 @@ body {
     font-weight: 300;
     font-size: 23px;
     line-height: 30px;
+    color: #ffffff;
 }
 
 a.login_logout {

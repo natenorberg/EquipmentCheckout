@@ -16,7 +16,7 @@
     </tr>
     {% for object in object_list %}
     <tr>
-        <td class="name">{{ object.name }}</td>
+        <td><a class="name" href="/checkout/equipment/{{ object.id }}/">{{ object.name }}</a></td>
         <td class="quantity">{{ object.quantity }}</td>
         <td>{{ object.condition }}</td>
         <td>{{ object.description }}</td>

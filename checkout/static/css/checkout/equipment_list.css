@@ -42,6 +42,7 @@ td {
 .name {
     color: #666682;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .quantity {
