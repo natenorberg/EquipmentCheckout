@@ -15,5 +15,11 @@
     <h3>Description</h3>
     <p>{{ equipment.description }}</p>
 
+    <h3>Permissions</h3>
+    <p>{% if equipment.music_ed %}Music Education students<br/>{% endif %}
+    {% if equipment.pre_gate %}Pre-Music Tech students<br/>{% endif %}
+    {% if equipment.post_gate %}Music Tech students<br/>{% endif %}
+    {% if equipment.staff %}Staff<br/>{% endif %}</p>
+
     <a class="back" href="/checkout/equipment/">Back to list</a>
 {% endblock %}
