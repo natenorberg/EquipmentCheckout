@@ -8,6 +8,7 @@ class EquipmentAdmin(admin.ModelAdmin):
         (None, {'fields': ['quantity']}),
         (None, {'fields': ['condition']}),
         (None, {'fields': ['description']}),
+        ('Permissions', {'fields': ['music_ed', 'pre_gate', 'post_gate', 'staff']}),
         ('Date Information', {'fields': ['date_added'], 'classes': ['collapse']})
     ]
     list_display = ('name', 'date_added', 'quantity', 'condition')
