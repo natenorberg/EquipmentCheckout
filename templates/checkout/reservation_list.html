@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Your reservations{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/list_view.css"/>
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Project</th>
+        <th>Out Time</th>
+        <th>In Time</th>
+        <th>Details</th>
+    </tr>
+    {% for object in object_list %}
+    <tr>
+        <td>{{ object.project }}</td>
+        <td>{{ object.out_time }}</td>
+        <td>{{ object.in_time }}</td>
+        <td><a href="/checkout/reservations/{{ object.id }}/">Details</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

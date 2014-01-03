@@ -4,7 +4,7 @@ from django.db import models
 
 class Equipment(models.Model):
     name = models.CharField(max_length=200)
-    date_added = models.DateTimeField('date published')
+    date_added = models.DateTimeField('date published', auto_now_add=True)
     quantity = models.IntegerField(max_length=200)
     condition = models.CharField(max_length=200)
     description = models.TextField()
@@ -20,9 +20,10 @@ class Equipment(models.Model):
 
 class Reservation(models.Model):
     user = models.ForeignKey(User)
+    project = models.CharField(max_length=50)
     equipment = models.ManyToManyField('Equipment')
-    reserved_time = models.DateTimeField()  # Time reservation was placed by the student
+    reserved_time = models.DateTimeField(auto_now_add=True)  # Time reservation was placed by the student
     out_time = models.DateTimeField()  # Time reservation officially starts
     in_time = models.DateTimeField()  # Time equipment is due
-    checked_out_time = models.DateTimeField()  # Time equipment is actually checked out
-    checked_in_time = models.DateTimeField()  # Time equipment is actually returned
+    checked_out_time = models.DateTimeField(null=True, blank=True)  # Time equipment is actually checked out
+    checked_in_time = models.DateTimeField(null=True, blank=True)  # Time equipment is actually returned
