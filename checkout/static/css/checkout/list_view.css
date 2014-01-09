@@ -48,3 +48,11 @@ td {
 .quantity {
     text-align: center;
 }
+
+.footer {
+    background: #f8f8f8;
+}
+
+.submit_button {
+    float: left;
+}

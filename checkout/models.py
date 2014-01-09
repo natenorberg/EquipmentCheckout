@@ -27,3 +27,7 @@ class Reservation(models.Model):
     in_time = models.DateTimeField()  # Time equipment is due
     checked_out_time = models.DateTimeField(null=True, blank=True)  # Time equipment is actually checked out
     checked_in_time = models.DateTimeField(null=True, blank=True)  # Time equipment is actually returned
+    is_approved = models.BooleanField()
+
+    class Meta:
+        ordering = ["out_time"]

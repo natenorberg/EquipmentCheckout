@@ -22,5 +22,14 @@
         <td><a href="/checkout/reservations/{{ object.id }}/">Details</a></td>
     </tr>
     {% endfor %}
+    <tr>
+        <td colspan="4" class="footer">
+            <form action="/checkout/reservations/add">
+                <input class="submit_button" type="submit" value="Add a Reservation">
+            </form>
+        </td>
+    </tr>
 </table>
+
+
 {% endblock %}

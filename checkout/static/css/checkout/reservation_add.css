@@ -1,0 +1,75 @@
+body {
+    background: #f0f0f0;
+}
+
+#content {
+    margin-left: 70px;
+    margin-right: 70px;
+    background: #ffffff;
+    border: 1px #888888 solid;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px #aaaaaa;
+    padding: 3px 27px 10px 27px;
+}
+
+h1, label {
+    font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+    color: #666682;
+    margin-bottom: 0px;
+}
+
+label {
+    font-weight: 700;
+}
+
+input[type=text] {
+    height: 20px;
+    width: 275px;
+    margin-top: 3px;
+    border: 1px #c5c5c5 solid;
+    box-shadow: 0px 0px 3px #cccccc inset;
+    border-radius: 2px;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #555555;
+}
+
+
+#id_out_time_0, #id_in_time_0, #id_out_time_1, #id_in_time_1 {
+    width: 80px;
+    margin-right: 5px;
+}
+
+.submit_button {
+    float: left;
+}
+
+.field_wrapper {
+    margin-top: 20px;
+}
+
+#datetime_container {
+    font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+}
+
+#id_equipment {
+    margin-top: 7px;
+    width: 415px;
+    border: 1px #c5c5c5 solid;
+    border-bottom: 0px;
+    border-radius: 2px;
+    border-collapse: collapse;
+    font-weight: 500;
+}
+
+li {
+    padding: 3px;
+    border-bottom: 1px #c5c5c5 solid;;
+}
+
+li:nth-child(odd)		{ background-color:#f1f4f7; }
+li:nth-child(even)		{ background-color:#fafafa; }
+
+.submit_button_wrapper {
+    height: 40px;
+}

@@ -94,45 +94,6 @@ input[type=text], input[type=password] {
     color: #555555;
 }
 
-.submit_button {
-    float: right;
-    margin-top: 5px;
-    margin-right: 35px;
-    border: 1px solid #122282;
-    padding: 7px 15px;
-    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
-    font-weight: 600;
-	font-size: 14px;
-    border-radius: 2px;
-    color: #ffffff;
-    background: #2a7fc4; /* Old browsers */
-    background: -moz-linear-gradient(top,  #2a7fc4 1%, #336093 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#2a7fc4), color-stop(100%,#336093)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #2a7fc4 1%,#336093 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #2a7fc4 1%,#336093 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #2a7fc4 1%,#336093 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #2a7fc4 1%,#336093 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a7fc4', endColorstr='#336093',GradientType=0 ); /* IE6-9 */
-}
-
-.submit_button:hover {
-    border: 1px solid #223282;
-
-    background: #2989d8; /* Old browsers */
-    background: -moz-linear-gradient(top,  #2989d8 0%, #1e5799 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2989d8), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #2989d8 0%,#1e5799 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #2989d8 0%,#1e5799 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #2989d8 0%,#1e5799 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #2989d8 0%,#1e5799 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
-}
-
-.submit_button:active {
-    background: #1e5799;
-    box-shadow: 0px 0px 2px #222222 inset;
-}
-
 a.forgot_password {
     font-family: helvetica, "Lucida Grande", Arial, sans-serif;
     font-size: 13px;

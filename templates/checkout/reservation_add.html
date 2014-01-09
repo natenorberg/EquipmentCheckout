@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}New Reservation{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/checkout/reservation_add.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/static/css/jquery/jquery.timepicker.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="/static/js/jquery.timepicker.js"></script>
+<script>
+$(function() {
+    $("#id_out_time_0").datepicker();
+    $("#id_in_time_0").datepicker();
+    $("#id_out_time_1").timepicker({ 'timeFormat': 'H:i'});
+    $("#id_in_time_1").timepicker({ 'timeFormat': 'H:i'});
+});
+</script>
+{% endblock %}
+
+{% block content %}
+    <h1>New Reservation</h1>
+    <form action="." method="post">{% csrf_token %}
+    {{ form.non_field_errors }}
+        <div class="field_wrapper">
+            {{ form.project.errors }}
+            <label for="id_project">Project<br/></label>
+            {{ form.project }}
+        </div>
+        <div class="field_wrapper" id="datetime_container">
+            {{ form.out_time.errors }}
+            {{ form.in_time.errors}}
+            <label for="id_reservation_time">Reservation Time<br/></label>
+            {{ form.out_time }} to
+            {{ form.in_time }}
+        </div>
+        <div class="field_wrapper">
+            {{ form.equipment.errors }}
+            <label for="id_equipment">Equipment</label>
+            {{ form.equipment }}
+        </div>
+        <div class="submit_button_wrapper">
+            <input class="submit_button" type="submit" value="Submit"/>
+        </div>
+    </form>
+
+{% endblock %}
