@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render_to_response, get_object_or_404
 from django.views.generic import ListView
 from checkout.models import Equipment, Reservation
@@ -18,9 +19,18 @@ def equipment_detail(request, equipment_id=None):
 
 class ReservationListView(ListView):
     model = Reservation
+    shows_all = True
 
     def get_queryset(self):
         return Reservation.objects.filter(user=self.request.user)
+
+
+class FutureReservationListView(ListView):
+    model = Reservation
+    shows_all = False
+
+    def get_queryset(self):
+        return Reservation.objects.filter(user=self.request.user, in_time__gte=datetime.now())
 
 
 def reservation_detail(request, reservation_id=None):

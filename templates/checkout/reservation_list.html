@@ -26,6 +26,11 @@
         <td colspan="4" class="footer">
             <form action="/checkout/reservations/add">
                 <input class="submit_button" type="submit" value="Add a Reservation">
+                {% if view.shows_all %}
+                    <a href="/checkout/reservations/">Hide past reservations.</a>
+                {% else %}
+                    <a href="/checkout/reservations/all/">View past reservations.</a>
+                {% endif %}
             </form>
         </td>
     </tr>

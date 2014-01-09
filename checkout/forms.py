@@ -26,7 +26,6 @@ class ReservationForm(forms.ModelForm):
         if check_out_time and check_in_time:
             if check_out_time > check_in_time:
                 message = "Check in time must be later than check out time."
-                #raise forms.ValidationError("Check in time must be later than check out time.")
                 if not 'in_time' in self._errors:
                     from django.forms.util import ErrorList
                     self._errors['in_time'] = ErrorList()
