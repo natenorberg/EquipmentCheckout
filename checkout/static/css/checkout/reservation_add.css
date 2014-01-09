@@ -73,3 +73,10 @@ li:nth-child(even)		{ background-color:#fafafa; }
 .submit_button_wrapper {
     height: 40px;
 }
+
+.errors {
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    color: #dd0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
