@@ -1,0 +1,419 @@
+- model: checkout.equipment
+  pk: 1
+  fields:
+    name: SM57
+    brand: Shure
+    date_added: 2009-07-24 21:45:0
+    quantity: 4
+    condition: Good
+    description: A good, inexpensive mic that can be used for many different things.
+    music_ed: False
+    pre_gate: True
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 2
+  fields:
+    name: SM58
+    brand: Shure
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: A basic vocal mic.  Identical to SM57, but with wind screen.
+    music_ed: False
+    pre_gate: True
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 3
+  fields:
+    name: C414 Stereo Pair
+    brand: AKG
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Mic clip is broken
+    description: Large diaphram condensor mic pair
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 4
+  fields:
+    name: CR-5
+    brand: T.H.E.
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 5
+  fields:
+    name: D112
+    brand: AKG
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Good for kick drum or bass amps, but not much else
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 6
+  fields:
+    name: e609 Silver
+    brand: Sennheiser
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: True
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 7
+  fields:
+    name: e912
+    brand: Sennheiser
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 8
+  fields:
+    name: Fat Head II Stereo Pair
+    brand: Cascade
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Pair of ribbon mics.
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 9
+  fields:
+    name: K2
+    brand: Rode
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 10
+  fields:
+    name: M23
+    brand: Earthworks
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: A very accurate mic used for measurements.
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 11
+  fields:
+    name: M88 TG
+    brand: Beyerdynamic
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 12
+  fields:
+    name: MD 421 II
+    brand: Sennheiser
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: True
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 13
+  fields:
+    name: MK-012 Stereo Pair
+    brand: Oktava
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: A pair of small diaphram condensers that can be assembled with different polar patterns.
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 14
+  fields:
+    name: NT4
+    brand: Rode
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Stereo mic
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 15
+  fields:
+    name: RE20
+    brand: Electro-Voice
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 16
+  fields:
+    name: SM7B
+    brand: Shure
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 17
+  fields:
+    name: SM81-LC
+    brand: Shure
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 18
+  fields:
+    name: TLM 127
+    brand: Neumann
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: Very high-end vintage condenser mic
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 19
+  fields:
+    name: DP5a Drum Kit Set
+    brand: Audix
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: 5 mics, 4 Goodeneck clips, 2 mic clips
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 20
+  fields:
+    name: CloudLifter CL-2 Mic Activator
+    brand: Cloud Microphones
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: No description yet
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 21
+  fields:
+    name: DI400P Passive DI Box
+    brand: Ultra-DI
+    date_added: 2009-07-24 21:45:0
+    quantity: 3
+    condition: Good
+    description: A basic DI box
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 22
+  fields:
+    name: J48 Active DI Box
+    brand: Radial
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: A high-end DI box
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 23
+  fields:
+    name: Headphone Remote Mixing Station
+    brand: Furman
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: A headphone mixing station that handles 4 separate mixes
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 24
+  fields:
+    name: 4-Channel Headphone Amp
+    brand: Presonus
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: No description
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 25
+  fields:
+    name: Pop filter
+    brand:
+    date_added: 2009-07-24 21:45:0
+    quantity: 2
+    condition: Good
+    description: Filters pops out of vocal recordings
+    music_ed: False
+    pre_gate: True
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 26
+  fields:
+    name: APC40
+    brand: Akai
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Control surface for Ableton Live
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 27
+  fields:
+    name: SPL Meter
+    brand: Radioshack
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Measures volume
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 28
+  fields:
+    name: Mic stand
+    brand:
+    date_added: 2009-07-24 21:45:0
+    quantity: 10
+    condition: Mostly good
+    description: No description
+    music_ed: True
+    pre_gate: True
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 29
+  fields:
+    name: Stereo Bar
+    brand:
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Lets you put two mics on one mic stand
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 30
+  fields:
+    name: Stereo Bar (A27M)
+    brand: Shure
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: A high-end stereo bar
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True

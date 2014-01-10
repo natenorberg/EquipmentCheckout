@@ -3,7 +3,8 @@ from django.db import models
 
 
 class Equipment(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=500)
+    brand = models.CharField(max_length=50, null=True, blank=True)
     date_added = models.DateTimeField('date published', auto_now_add=True)
     quantity = models.IntegerField(max_length=200)
     condition = models.CharField(max_length=200)
