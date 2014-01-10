@@ -417,3 +417,45 @@
     pre_gate: False
     post_gate: True
     staff: True
+
+- model: checkout.equipment
+  pk: 31
+  fields:
+    name: R26 Portable Recorder Kit
+    brand: Roland
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Need to have more code to deal with this
+    music_ed: True
+    pre_gate: True
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 32
+  fields:
+    name: EMW Omnidirectional Lavalier
+    brand: Countryman
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Lav kit
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
+
+- model: checkout.equipment
+  pk: 33
+  fields:
+    name: AT897 Shotgun
+    brand: Audio-Technica
+    date_added: 2009-07-24 21:45:0
+    quantity: 1
+    condition: Good
+    description: Used for film sound.  Needs kit options
+    music_ed: False
+    pre_gate: False
+    post_gate: True
+    staff: True
