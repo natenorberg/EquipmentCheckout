@@ -2,6 +2,7 @@ from datetime import datetime
 from django.shortcuts import render_to_response, get_object_or_404
 from django.views.generic import ListView
 from checkout.models import Equipment, Reservation
+from checkout.forms import SearchForm
 
 
 def index(request):
@@ -10,6 +11,18 @@ def index(request):
 
 class EquipmentListView(ListView):
     model = Equipment
+    form_class = SearchForm
+
+    def get_queryset(self):
+        try:
+            name = self.kwargs['name']
+        except:
+            name = ''
+        if name != '':
+            equipment_list = self.model.objects.filter(name__icontains=name)
+        else:
+            equipment_list = self.model.objects.all()
+        return equipment_list
 
 
 def equipment_detail(request, equipment_id=None):
@@ -36,3 +49,4 @@ class FutureReservationListView(ListView):
 def reservation_detail(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     return render_to_response("checkout/reservation_detail.html", {"reservation": reservation})
+

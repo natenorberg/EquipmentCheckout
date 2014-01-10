@@ -34,6 +34,10 @@ class ReservationForm(forms.ModelForm):
         return cleaned_data
 
 
+class SearchForm(forms.Form):
+    keyword = forms.CharField(max_length=200)
+
+
 @login_required
 def new_reservation(request):
     if request.POST:
@@ -46,3 +50,4 @@ def new_reservation(request):
     else:
         form = ReservationForm()
     return render_to_response("checkout/reservation_add.html", {'form': form}, context_instance=RequestContext(request))
+
