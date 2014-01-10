@@ -59,3 +59,12 @@ td {
 .submit_button {
     float: left;
 }
+
+/* Reservation Statuses */
+.not_approved {
+    color: #aa0000;
+}
+
+.approved {
+    color: #008800;
+}
