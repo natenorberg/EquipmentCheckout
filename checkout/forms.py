@@ -34,10 +34,6 @@ class ReservationForm(forms.ModelForm):
         return cleaned_data
 
 
-class SearchForm(forms.Form):
-    keyword = forms.CharField(max_length=200)
-
-
 @login_required
 def new_reservation(request):
     if request.POST:
