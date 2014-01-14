@@ -24,6 +24,12 @@ class ReservationListView(ListView):
     def get_queryset(self):
         return Reservation.objects.filter(user=self.request.user)
 
+    def approve_reservation(self):
+        self.model.is_approved = True
+
+    def deny_reservation(self):
+        self.model.is_approved = False
+
 
 class FutureReservationListView(ListView):
     model = Reservation

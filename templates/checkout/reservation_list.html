@@ -3,59 +3,72 @@
 {% block title %}Your reservations{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" type="text/css" href="/static/css/checkout/list_view.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/checkout/list_view.css"
+          xmlns="http://www.w3.org/1999/html"/>
 {% endblock %}
 
 {% block content %}
-<table>
-    <tr>
-        <th>Project</th>
-        <th>Out Time</th>
-        <th>In Time</th>
-        <th>Status</th>
-        <th>Details</th>
-    </tr>
-    {% for object in object_list %}
-    <tr>
-        <td>{{ object.project }}</td>
-        <td>{{ object.out_time }}</td>
-        <td>{{ object.in_time }}</td>
-        <td>
-            {% if object.is_approved %}
-                {% if object.checked_in_time %}
-                    {% if object.checked_in_time > object.in_time %}
-                        <span class="checked_in_late">Returned Late</span>
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Out Time</th>
+            <th>In Time</th>
+            <th>Status</th>
+            <th>Details</th>
+        </tr>
+        {% for object in object_list %}
+            <tr>
+                <td>{{ object.project }}</td>
+                <td>{{ object.out_time }}</td>
+                <td>{{ object.in_time }}</td>
+                <td>
+                    {% if object.is_approved %}
+                        {% if object.checked_in_time %}
+                            {% if object.checked_in_time > object.in_time %}
+                                <span class="checked_in_late">Returned Late</span>
+                            {% else %}
+                                <span class="checked_in">Returned</span>
+                            {% endif %}
+                        {% elif object.checked_out_time %}
+                            {% if datetime.now > object.in_time %}
+                                <span class="overdue">Overdue</span>
+                            {% else %}
+                                <span class="checked_out">Checked Out</span>
+                            {% endif %}
+                        {% endif %}
+                        <span class="approved">Approved
+                            {% if user.is_superuser %}
+                                <button>
+                                    <img src="/static/images/icons/delete.ico">
+                                </button>
+                            {% endif %}
+                        </span>
                     {% else %}
-                        <span class="checked_in">Returned</span>
+                        <span class="not_approved">Not approved
+                            {% if user.is_superuser %}
+                                <button>
+                                    <img src="/static/images/icons/check.ico">
+                                </button>
+                            {% endif %}
+                        </span>
                     {% endif %}
-                {% elif object.checked_out_time %}
-                    {% if datetime.now > object.in_time %}
-                        <span class="overdue">Overdue</span>
+                </td>
+                <td><a href="/checkout/reservations/{{ object.id }}/">Details</a></td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="5" class="footer">
+                <form action="/checkout/reservations/add">
+                    <input class="submit_button" type="submit" value="Add a Reservation">
+                    {% if view.shows_all %}
+                        <a href="/checkout/reservations/">Hide past reservations.</a>
                     {% else %}
-                        <span class="checked_out">Checked Out</span>
+                        <a href="/checkout/reservations/all/">View past reservations.</a>
                     {% endif %}
-                {% endif %}
-                <span class="approved">Approved</span>
-            {% else %}
-            <span class="not_approved">Not approved</span>
-            {% endif %}
-        </td>
-        <td><a href="/checkout/reservations/{{ object.id }}/">Details</a></td>
-    </tr>
-    {% endfor %}
-    <tr>
-        <td colspan="5" class="footer">
-            <form action="/checkout/reservations/add">
-                <input class="submit_button" type="submit" value="Add a Reservation">
-                {% if view.shows_all %}
-                    <a href="/checkout/reservations/">Hide past reservations.</a>
-                {% else %}
-                    <a href="/checkout/reservations/all/">View past reservations.</a>
-                {% endif %}
-            </form>
-        </td>
-    </tr>
-</table>
+                </form>
+            </td>
+        </tr>
+    </table>
 
 
 {% endblock %}
