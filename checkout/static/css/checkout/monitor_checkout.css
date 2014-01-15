@@ -1,0 +1,38 @@
+#left, #right {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%;
+}
+
+#right {
+    width: 30%;
+}
+
+#id_equipment {
+    margin-top: 7px;
+    width: 415px;
+    border: 1px #c5c5c5 solid;
+    border-bottom: 0px;
+    border-radius: 2px;
+    border-collapse: collapse;
+    font-weight: 500;
+}
+
+li {
+    padding: 3px;
+    border-bottom: 1px #c5c5c5 solid;
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.note {
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+}
+
+li:nth-child(odd)		{ background-color:#f1f4f7; }
+li:nth-child(even)		{ background-color:#fafafa; }
+
+input[type=checkbox] {
+    padding-right: 3px;
+}

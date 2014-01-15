@@ -41,5 +41,14 @@ class FutureReservationListView(ListView):
 
 def reservation_detail(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    return render_to_response("checkout/reservation_detail.html", {"reservation": reservation})
+    return render_to_response("checkout/reservation_detail.html",
+                              {"reservation": reservation, "is_monitor": is_lab_monitor(request.user)})
 
+
+def is_lab_monitor(user):
+    return user.groups.filter(name='monitor')
+
+
+def monitor_checkout(request, reservation_id=None):
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    return render_to_response("checkout/monitor_checkout.html", {"reservation": reservation})

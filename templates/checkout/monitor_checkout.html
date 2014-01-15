@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Check out{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/monitor_checkout.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script>
+$(".check").click(function() {
+    if (!$('input.check[type=checkbox]:not(:checked)').length)
+        document.getElementById("checkout_button").disabled=false;
+    else
+        document.getElementById("checkout_button").disabled=true;
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>Reservation Checkout</h1>
+
+<div id="left">
+    <h3>Equipment</h3>
+    <p class="note">Please check that all the equipment is here to continue.</p>
+        <ul id="id_equipment">
+            {% for equipment in reservation.equipment.all %}
+            <li>
+                <div class="equipment_checkbox">
+                    <input type="checkbox" class="check">{{ equipment.name }}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+    <div class="submit_button_wrapper">
+        <form action="/checkout/monitor/checkout/{{ reservation.id }}/confirm/">
+            <input type="submit" id="checkout_button" class="submit_button" value="Checkout" disabled>
+        </form>
+    </div>
+</div>
+
+<div id="right">
+    <h3>Name</h3>
+    <p class="name">{{ reservation.user.first_name }} {{ reservation.user.last_name }}</p>
+
+    <h3>Project</h3>
+    <p>{{ reservation.project }}</p>
+
+    <h3>Check out time</h3>
+    <p>{{ reservation.out_time }}</p>
+
+    <h3>Due at</h3>
+    <p>{{ reservation.in_time }}</p>
+</div>
+{% endblock %}

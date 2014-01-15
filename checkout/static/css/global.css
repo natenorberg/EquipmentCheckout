@@ -15,7 +15,6 @@ body {
     margin-right: 40px;
     margin-top: 30px;
 }
-
 #header {
     margin: 0px;
     padding-right: 5px;
@@ -98,5 +97,12 @@ a.login_logout {
 
 .submit_button:active {
     background: #1e5799;
+    box-shadow: 0px 0px 2px #222222 inset;
+}
+
+.submit_button:disabled {
+    opacity: .5;
+    border: 1px solid #223242;
+    background: #2e5789;
     box-shadow: 0px 0px 2px #222222 inset;
 }
