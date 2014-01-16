@@ -459,3 +459,11 @@
     pre_gate: False
     post_gate: True
     staff: True
+
+- model: auth.user
+  pk: 100
+  fields:
+    first_name: Nate
+    last_name: Norberg
+    username: nate
+    password: "pbkdf2_sha256$12000$RS3TePR9WJPG$xEdZ4PIxFoM9psX3uuugWQgahhW+Obcmx1l8yY4IEeE="

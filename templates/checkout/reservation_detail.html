@@ -25,4 +25,10 @@
     <p>{% for equipment in reservation.equipment.all %}
         {{ equipment.name }}<br/>
     {% endfor %}</p>
+
+    {% if is_monitor %}
+    <form action="/checkout/monitor/checkout/{{ reservation.id }}/">
+        <input class="submit_button" type="submit" value="Checkout">
+    </form>
+    {% endif %}
 {% endblock %}

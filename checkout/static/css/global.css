@@ -10,12 +10,16 @@ body {
     margin: 0px;
 }
 
+h1, h2, h3 {
+    font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+    color: #666682;
+    margin-bottom: 0px;
+}
 #content {
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 30px;
 }
-
 #header {
     margin: 0px;
     padding-right: 5px;
@@ -98,5 +102,12 @@ a.login_logout {
 
 .submit_button:active {
     background: #1e5799;
+    box-shadow: 0px 0px 2px #222222 inset;
+}
+
+.submit_button:disabled {
+    opacity: .5;
+    border: 1px solid #223242;
+    background: #2e5789;
     box-shadow: 0px 0px 2px #222222 inset;
 }

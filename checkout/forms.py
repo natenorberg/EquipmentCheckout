@@ -46,4 +46,3 @@ def new_reservation(request):
     else:
         form = ReservationForm()
     return render_to_response("checkout/reservation_add.html", {'form': form}, context_instance=RequestContext(request))
-
