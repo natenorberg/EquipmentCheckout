@@ -10,6 +10,11 @@ body {
     margin: 0px;
 }
 
+h1, h2, h3 {
+    font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+    color: #666682;
+    margin-bottom: 0px;
+}
 #content {
     margin-left: 40px;
     margin-right: 40px;

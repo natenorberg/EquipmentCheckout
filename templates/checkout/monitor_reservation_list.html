@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Upcoming Checkouts{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/list_view.css">
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/monitor_reservation_list.css">
+{% endblock %}
+
+{% block content %}
+<h1>Upcoming Checkouts</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Project</th>
+        <th>Out Time</th>
+        <th>In Time</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    {% for object in reservations %}
+        <tr>
+            <td><a href="/checkout/reservations/{{ object.id }}/">{{ object.user.first_name }} {{ object.user.last_name }}</a></td>
+            <td><a href="/checkout/reservations/{{ object.id }}/">{{ object.project }}</a></td>
+            <td>{{ object.out_time }}</td>
+            <td>{{ object.in_time }}</td>
+            <td>
+                {% if object.is_ready %}
+                    <span class="ready">Ready</span>
+                {% elif object.is_checked_out %}
+                    <span class="checked_out">Checked Out</span>
+                {% elif object.is_overdue %}
+                    <span class="overdue">Past Due</span>
+                {% elif object.is_returned_late %}
+                    <span class="late">Returned Late</span>
+                {% else %}
+                    <span class="waiting">Waiting</span>
+                {% endif %}
+            </td>
+            <td>
+                {% if object.checked_out_time %}
+                <a href="/checkout/monitor/checkin/{{ object.id }}/">Check In</a>
+                {% else %}
+                <a href="/checkout/monitor/checkout/{{ object.id }}/">Check Out</a>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

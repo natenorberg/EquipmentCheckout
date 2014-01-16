@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -32,3 +33,32 @@ class Reservation(models.Model):
 
     class Meta:
         ordering = ["out_time"]
+
+    @property
+    def is_ready(self):
+        now = datetime.now()
+        if self.checked_out_time is None and self.out_time >= now:
+            return True
+        else:
+            return False
+
+    @property
+    def is_checked_out(self):
+        if self.checked_out_time is not None and self.checked_in_time is None:
+            return True
+        else:
+            return False
+
+    @property
+    def is_overdue(self):
+        if self.checked_out_time is not None and self.checked_in_time is None and self.in_time < datetime.now():
+            return True
+        else:
+            return False
+
+    @property
+    def is_returned_late(self):
+        if self.checked_in_time is not None and self.checked_in_time > self.in_time:
+            return True
+        else:
+            return False
