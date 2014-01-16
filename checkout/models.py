@@ -21,7 +21,7 @@ class Equipment(models.Model):
 
 
 class Reservation(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, related_name='reserved_by')
     project = models.CharField(max_length=50)
     equipment = models.ManyToManyField('Equipment')
     reserved_time = models.DateTimeField(auto_now_add=True)  # Time reservation was placed by the student
@@ -30,6 +30,10 @@ class Reservation(models.Model):
     checked_out_time = models.DateTimeField(null=True, blank=True)  # Time equipment is actually checked out
     checked_in_time = models.DateTimeField(null=True, blank=True)  # Time equipment is actually returned
     is_approved = models.BooleanField()
+    check_out_comments = models.TextField(null=True, blank=True)
+    check_in_comments = models.TextField(null=True, blank=True)
+    checked_out_by = models.ForeignKey(User, related_name='checked_out_by', null=True, blank=True)
+    checked_in_by = models.ForeignKey(User, related_name='checked_in_by', null=True, blank=True)
 
     class Meta:
         ordering = ["out_time"]
