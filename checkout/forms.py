@@ -56,6 +56,12 @@ class CheckoutForm(forms.ModelForm):
         fields = ['check_out_comments']
 
 
+class CheckInForm(forms.ModelForm):
+    class Meta:
+        model = Reservation
+        fields = ['check_in_comments']
+
+
 @login_required
 def check_out_comments(request):
     if not request.POST:
@@ -63,10 +69,30 @@ def check_out_comments(request):
     pk = request.POST['id']
     instance = get_object_or_404(Reservation, id=pk)
     form = CheckoutForm(request.POST or None, instance=instance)
+    page_title = "Equipment Check Out"
     if request.POST.get('edited') and form.is_valid():
         form.instance.checked_out_by = request.user
         form.instance.checked_out_time = datetime.now()
         form.save()
         return HttpResponseRedirect('/checkout/monitor')
-    return render_to_response("checkout/checkout_comments.html", {'form': form, 'reservation': instance},
-                              context_instance=RequestContext(request),)
+    return render_to_response("checkout/checkout_comments.html",
+                              {'form': form, 'reservation': instance, 'page_title': page_title},
+                              context_instance=RequestContext(request), )
+
+
+@login_required
+def check_in_comments(request):
+    if not request.POST:
+        raise Http404
+    pk = request.POST['id']
+    instance = get_object_or_404(Reservation, id=pk)
+    form = CheckInForm(request.POST or None, instance=instance)
+    page_title = "Equipment Check In"
+    if request.POST.get('edited') and form.is_valid():
+        form.instance.checked_in_by = request.user
+        form.instance.checked_in_time = datetime.now()
+        form.save()
+        return HttpResponseRedirect('/checkout/monitor')
+    return render_to_response("checkout/checkout_comments.html",
+                              {'form': form, 'reservation': instance, 'page_title': page_title},
+                              context_instance=RequestContext(request), )

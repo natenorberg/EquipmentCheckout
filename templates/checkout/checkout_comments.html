@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Checkout Comments{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block content %}
-<h1>Reservation Checkout</h1>
+<h1>{{ page_title }}</h1>
 
 
 <div id="left">
@@ -22,7 +22,11 @@
         <input type="hidden" value="True" name="edited">
         <input type="hidden" value="{{ reservation.id }}" name="id">
         {{ form.as_p|cut:":" }}
-        <input class="submit_button" type="submit" value="Checkout">
+        {% if not reservation.is_checked_out %}
+        <input class="submit_button" type="submit" value="Check Out">
+        {% else %}
+        <input class="submit_button" type="submit" value="Check In">
+        {% endif %}
     </form>
 </div>
 
@@ -38,6 +42,12 @@
 
     <h3>Due at</h3>
     <p>{{ reservation.in_time }}</p>
+
+    {% if reservation.is_checked_out  %}
+    <h3>Checked out</h3>
+        <p>By {{ reservation.checked_out_by.first_name }} {{ reservation.checked_out_by.last_name }}<br/>on {{ reservation.checked_out_time }}</p>
+        <p>{{ reservation.check_out_comments }}</p>
+    {% endif %}
 </div>
 
 {% endblock %}
