@@ -1,11 +1,12 @@
 from datetime import datetime
 from django import forms
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.forms import SplitDateTimeWidget
 from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from checkout.models import Reservation, Equipment
+from checkout.views import is_monitor
 
 
 class ReservationForm(forms.ModelForm):
@@ -63,6 +64,7 @@ class CheckInForm(forms.ModelForm):
 
 
 @login_required
+@user_passes_test(is_monitor)
 def check_out_comments(request):
     if not request.POST:
         raise Http404
@@ -81,6 +83,7 @@ def check_out_comments(request):
 
 
 @login_required
+@user_passes_test(is_monitor)
 def check_in_comments(request):
     if not request.POST:
         raise Http404
