@@ -36,7 +36,9 @@ $(".check").click(function() {
         </ul>
 
     <div class="submit_button_wrapper">
-        <form action="/checkout/monitor/checkout/{{ reservation.id }}/confirm/">
+        <form action="/checkout/monitor/checkout/confirm/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{ reservation.id }}">
             <input type="submit" id="checkout_button" class="submit_button" value="Checkout" disabled>
         </form>
     </div>

@@ -1,6 +1,7 @@
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response, get_object_or_404
+from django.template import RequestContext
 from django.views.generic import ListView
 from checkout.models import Equipment, Reservation
 
@@ -60,4 +61,5 @@ def is_lab_monitor(user):
 @login_required
 def monitor_checkout(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    return render_to_response("checkout/monitor_checkout.html", {"reservation": reservation})
+    return render_to_response("checkout/monitor_checkout.html", {"reservation": reservation},
+                              context_instance=RequestContext(request))

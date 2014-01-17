@@ -26,9 +26,21 @@
         {{ equipment.name }}<br/>
     {% endfor %}</p>
 
+    {% if reservation.is_checked_out or reservation.is_returned %}
+    <h3>Checked out</h3>
+        <p>By {{ reservation.checked_out_by.first_name }} {{ reservation.checked_out_by.last_name }}<br/>on {{ reservation.checked_out_time }}</p>
+        <p>{{ reservation.check_out_comments }}</p>
+    {% endif %}
+
     {% if is_monitor %}
-    <form action="/checkout/monitor/checkout/{{ reservation.id }}/">
-        <input class="submit_button" type="submit" value="Checkout">
-    </form>
+        {% if reservation.is_approved and not reservation.is_checked_out %}
+        <form action="/checkout/monitor/checkout/{{ reservation.id }}/">
+            <input class="submit_button" type="submit" value="Check Out">
+        </form>
+        {% elif reservation.is_checked_out %}
+        <form action="/checkout/monitor/checkin/{{ reservation.id }}/">
+            <input class="submit_button" type="submit" value="Check In">
+        </form>
+        {% endif %}
     {% endif %}
 {% endblock %}

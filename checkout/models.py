@@ -54,6 +54,13 @@ class Reservation(models.Model):
             return False
 
     @property
+    def is_returned(self):
+        if self.checked_out_time is not None and self.checked_in_time is not None:
+            return True
+        else:
+            return False
+
+    @property
     def is_overdue(self):
         if self.checked_out_time is not None and self.checked_in_time is None and self.in_time < datetime.now():
             return True

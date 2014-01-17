@@ -1,8 +1,9 @@
+from datetime import datetime
 from django import forms
 from django.contrib.auth.decorators import login_required
 from django.forms import SplitDateTimeWidget
-from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect, Http404
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from checkout.models import Reservation, Equipment
 
@@ -28,6 +29,7 @@ class ReservationForm(forms.ModelForm):
                 message = "Check in time must be later than check out time."
                 if not 'in_time' in self._errors:
                     from django.forms.util import ErrorList
+
                     self._errors['in_time'] = ErrorList()
                 self._errors['in_time'].append(message)
 
@@ -41,8 +43,30 @@ def new_reservation(request):
         if form.is_valid():
             form.instance.user = request.user
             form.instance.is_approved = False
-            new_reservation = form.save()
+            form.save()
             return HttpResponseRedirect('/checkout/reservations')
     else:
         form = ReservationForm()
     return render_to_response("checkout/reservation_add.html", {'form': form}, context_instance=RequestContext(request))
+
+
+class CheckoutForm(forms.ModelForm):
+    class Meta:
+        model = Reservation
+        fields = ['check_out_comments']
+
+
+@login_required
+def check_out_comments(request):
+    if not request.POST:
+        raise Http404
+    pk = request.POST['id']
+    instance = get_object_or_404(Reservation, id=pk)
+    form = CheckoutForm(request.POST or None, instance=instance)
+    if request.POST.get('edited') and form.is_valid():
+        form.instance.checked_out_by = request.user
+        form.instance.checked_out_time = datetime.now()
+        form.save()
+        return HttpResponseRedirect('/checkout/monitor')
+    return render_to_response("checkout/checkout_comments.html", {'form': form, 'reservation': instance},
+                              context_instance=RequestContext(request),)
