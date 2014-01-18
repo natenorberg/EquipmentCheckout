@@ -28,7 +28,6 @@ class EquipmentForm(forms.ModelForm):
         return cleaned_data
 
 
-@login_required
 @user_passes_test(is_admin)
 def new_equipment(request):
     title = "New Equipment"
@@ -43,7 +42,6 @@ def new_equipment(request):
                               context_instance=RequestContext(request))
 
 
-@login_required
 @user_passes_test(is_admin)
 def edit_equipment(request, equipment_id):
     instance = get_object_or_404(Equipment, id=equipment_id)
@@ -111,7 +109,6 @@ class CheckInForm(forms.ModelForm):
         fields = ['check_in_comments']
 
 
-@login_required
 @user_passes_test(is_monitor)
 def check_out_comments(request):
     if not request.POST:
@@ -130,7 +127,6 @@ def check_out_comments(request):
                               context_instance=RequestContext(request), )
 
 
-@login_required
 @user_passes_test(is_monitor)
 def check_in_comments(request):
     if not request.POST:

@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.models import User
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
@@ -26,7 +27,6 @@ def equipment_detail(request, equipment_id=None):
                               context_instance=RequestContext(request))
 
 
-@login_required
 @user_passes_test(is_admin)
 def delete_equipment(request):
     if not request.POST:
@@ -63,7 +63,6 @@ def is_monitor(user):
     return user.groups.filter(name='monitor')
 
 
-@login_required
 @user_passes_test(is_monitor)
 def monitor_reservation_list(request):
     # TODO: We might want to have reservations stay on the list if they were that day
@@ -77,9 +76,12 @@ def reservation_detail(request, reservation_id=None):
                               {"reservation": reservation, "is_monitor": is_lab_monitor(request.user)})
 
 
-@login_required
 @user_passes_test(is_monitor)
 def monitor_checkout(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     return render_to_response("checkout/monitor_checkout.html", {"reservation": reservation},
                               context_instance=RequestContext(request))
+
+
+class UserListView(ListView):
+    model = User
