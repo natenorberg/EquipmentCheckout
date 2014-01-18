@@ -1,6 +1,9 @@
 #left, #right {
     display: inline-block;
     vertical-align: top;
+}
+
+#left {
     width: 65%;
 }
 

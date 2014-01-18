@@ -13,26 +13,37 @@ body {
     padding: 3px 27px 10px 27px;
 }
 
+#left, #right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left {
+    width: 50%;
+}
+
+#right {
+    width: 49%;
+}
+
 h1, label {
     font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
     color: #666682;
     margin-bottom: 0px;
 }
 
+h3 {
+    font-size: 16px;
+}
+
 label {
     font-weight: 700;
+    display: block;
 }
 
 input[type=text] {
     height: 20px;
     width: 275px;
-    margin-top: 3px;
-    border: 1px #c5c5c5 solid;
-    box-shadow: 0px 0px 3px #cccccc inset;
-    border-radius: 2px;
-    font-size: 12px;
-    padding-left: 5px;
-    color: #555555;
 }
 
 
@@ -56,6 +67,16 @@ input[type=text] {
 #id_equipment {
     margin-top: 7px;
     width: 415px;
+    border: 1px #c5c5c5 solid;
+    border-bottom: 0px;
+    border-radius: 2px;
+    border-collapse: collapse;
+    font-weight: 500;
+}
+
+#id_permissions {
+    margin-top: 3px;
+    width: 400px;
     border: 1px #c5c5c5 solid;
     border-bottom: 0px;
     border-radius: 2px;

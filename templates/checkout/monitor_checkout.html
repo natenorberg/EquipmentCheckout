@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Check out{% endblock %}
+{% block title %}
+    {% if reservation.is_checked_out %}
+    Check In
+    {% else %}
+    Check Out
+    {% endif %}
+{% endblock %}
 
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">

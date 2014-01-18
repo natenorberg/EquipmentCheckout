@@ -9,6 +9,41 @@ from checkout.models import Reservation, Equipment
 from checkout.views import is_monitor
 
 
+class EquipmentForm(forms.ModelForm):
+    class Meta:
+        model = Equipment
+
+    def clean(self):
+        cleaned_data = super(EquipmentForm, self).clean()
+        quantity = cleaned_data.get('quantity')
+
+        if not quantity > 0:
+            message = "Quantity must be greater than zero"
+            if not 'quantity' in self._errors:
+                from django.forms.util import ErrorList
+                self._errors['quantity'] = ErrorList()
+            self._errors['quantity'].append(message)
+
+        return cleaned_data
+
+
+def is_admin(user):
+    return user.is_superuser
+
+
+@login_required
+@user_passes_test(is_admin)
+def new_equipment(request):
+    if request.POST:
+        form = EquipmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/checkout/equipment/')
+    else:
+        form = EquipmentForm()
+    return render_to_response("checkout/equipment_add.html", {'form': form}, context_instance=RequestContext(request))
+
+
 class ReservationForm(forms.ModelForm):
     equipment = forms.ModelMultipleChoiceField(widget=forms.CheckboxSelectMultiple(attrs={'class': 'equipment_list'}),
                                                queryset=Equipment.objects.all())

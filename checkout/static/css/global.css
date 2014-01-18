@@ -65,6 +65,16 @@ a.login_logout {
     font-size: 13px;
 }
 
+input[type=text], textarea {
+    margin-top: 3px;
+    border: 1px #c5c5c5 solid;
+    box-shadow: 0px 0px 3px #cccccc inset;
+    border-radius: 2px;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #555555;
+}
+
 /* Button styling */
 .submit_button {
     float: right;
