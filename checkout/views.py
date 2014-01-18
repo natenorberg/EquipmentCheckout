@@ -16,7 +16,8 @@ class EquipmentListView(ListView):
 
 def equipment_detail(request, equipment_id=None):
     equipment = get_object_or_404(Equipment, pk=equipment_id)
-    return render_to_response("checkout/equipment_detail.html", {"equipment": equipment})
+    can_edit = is_admin(request.user)
+    return render_to_response("checkout/equipment_detail.html", {"equipment": equipment, 'can_edit': can_edit})
 
 
 class ReservationListView(ListView):
@@ -41,8 +42,13 @@ class FutureReservationListView(ListView):
         return Reservation.objects.filter(user=self.request.user, in_time__gte=datetime.now())
 
 
+def is_admin(user):
+    return user.is_superuser
+
+
 def is_monitor(user):
     return user.groups.filter(name='monitor')
+
 
 @login_required
 @user_passes_test(is_monitor)

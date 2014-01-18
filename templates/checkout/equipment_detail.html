@@ -22,4 +22,13 @@
     {% if equipment.staff %}Staff<br/>{% endif %}</p>
 
     <a class="back" href="/checkout/equipment/">Back to list</a>
+
+    {% if can_edit %}
+    <form action="/checkout/equipment/edit/{{ equipment.id }}/">
+        <input type="submit" class="submit_button" value="Edit">
+    </form>
+    <form action="/checkout/equipment/edit/{{ equipment.id }}/">
+        <input type="submit" class="red_button" value="Delete">
+    </form>
+    {% endif %}
 {% endblock %}

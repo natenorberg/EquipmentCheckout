@@ -121,3 +121,42 @@ input[type=text], textarea {
     background: #2e5789;
     box-shadow: 0px 0px 2px #222222 inset;
 }
+
+.red_button {
+    margin-top: 5px;
+    margin-right: 35px;
+    border: 1px solid #822212;
+    padding: 7px 15px;
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-weight: 600;
+	font-size: 14px;
+    border-radius: 2px;
+    color: #ffffff;
+    background: #cd412a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cd412a 0%, #933233 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd412a), color-stop(100%,#933233)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #cd412a 0%,#933233 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #cd412a 0%,#933233 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #cd412a 0%,#933233 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #cd412a 0%,#933233 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd412a', endColorstr='#933233',GradientType=0 ); /* IE6-9 */
+}
+
+.red_button:hover {
+    border: 1px solid #823222;
+    background: #fb412a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fb412a 0%, #9d3233 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb412a), color-stop(100%,#9d3233)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fb412a 0%,#9d3233 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fb412a 0%,#9d3233 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fb412a 0%,#9d3233 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fb412a 0%,#9d3233 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb412a', endColorstr='#9d3233',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+.red_button:active {
+    background: #a9372e;
+    box-shadow: 0px 0px 2px #222222 inset;
+}
