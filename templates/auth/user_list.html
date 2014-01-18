@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/list_view.css"/>
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+    {% for user in user_list %}
+    <tr>
+        <td><a class="name" href="/checkout/users/{{ user.id }}/">{{ user.first_name }} {{ user.last_name }}</a></td>
+        <td>{{ user.username }}</td>
+        <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td colspan="3" class="footer">
+            <form action="/checkout/users/add">
+                <input class="submit_button" type="submit" value="Add New User">
+            </form>
+        </td>
+    </tr>
+</table>
+{% endblock %}

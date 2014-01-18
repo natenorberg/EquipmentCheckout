@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.models import User
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
@@ -60,7 +60,7 @@ class FutureReservationListView(ListView):
 
 
 def is_monitor(user):
-    return user.groups.filter(name='monitor')
+    return user.groups.filter(name='Monitor') or user.is_superuser
 
 
 @user_passes_test(is_monitor)
@@ -73,7 +73,7 @@ def monitor_reservation_list(request):
 def reservation_detail(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     return render_to_response("checkout/reservation_detail.html",
-                              {"reservation": reservation, "is_monitor": is_lab_monitor(request.user)})
+                              {"reservation": reservation, "is_monitor": is_monitor(request.user)})
 
 
 @user_passes_test(is_monitor)
@@ -83,5 +83,24 @@ def monitor_checkout(request, reservation_id=None):
                               context_instance=RequestContext(request))
 
 
-class UserListView(ListView):
-    model = User
+@user_passes_test(is_admin)
+def user_list(request):
+    users = User.objects.all()
+    return render_to_response("auth/user_list.html", {'user_list': users}, context_instance=RequestContext(request))
+
+
+@user_passes_test(is_admin)
+def user_detail(request, user_id=None):
+    # We can't pass in an object called 'user' or it will mess up the logout bar at the top
+    user_object = get_object_or_404(User, pk=user_id)
+    return render_to_response("auth/user_detail.html", {'user_object': user_object},
+                              context_instance=RequestContext(request))
+
+@user_passes_test(is_admin)
+def delete_user(request):
+    if not request.POST:
+        raise Http404
+    user_id = request.POST['id']
+    user = get_object_or_404(User, id=user_id)
+    user.delete()
+    return HttpResponseRedirect("/checkout/users/")

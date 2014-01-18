@@ -1,6 +1,7 @@
 from datetime import datetime
 from django import forms
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.models import User, Group
 from django.forms import SplitDateTimeWidget
 from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
@@ -143,3 +144,90 @@ def check_in_comments(request):
     return render_to_response("checkout/checkout_comments.html",
                               {'form': form, 'reservation': instance, 'page_title': page_title},
                               context_instance=RequestContext(request), )
+
+
+GROUP_CHOICES = (
+    ('1', "Music Education"),
+    ('2', "Pre-Music Tech"),
+    ('3', "Music Tech"),
+    ('4', "Staff"),
+)
+
+
+class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+    permission_group = forms.ChoiceField(choices=GROUP_CHOICES)
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'username', 'password', 'email', 'permission_group', 'is_superuser']
+
+    def clean(self):
+        cleaned_data = super(UserForm, self).clean()
+        first_name = cleaned_data.get('first_name')
+        last_name = cleaned_data.get('last_name')
+        email = cleaned_data.get('email')
+
+        if first_name is u'':
+            message = "First name is required"
+            if not 'first_name' in self._errors:
+                from django.forms.util import ErrorList
+
+                self._errors['first_name'] = ErrorList()
+            self._errors['first_name'].append(message)
+
+        if last_name is u'':
+            message = "Last name is required"
+            if not 'last_name' in self._errors:
+                from django.forms.util import ErrorList
+
+                self._errors['last_name'] = ErrorList()
+            self._errors['last_name'].append(message)
+
+        if email is u'':
+            message = "Email is required"
+            if not 'email' in self._errors:
+                from django.forms.util import ErrorList
+
+                self._errors['email'] = ErrorList()
+            self._errors['email'].append(message)
+
+        return cleaned_data
+
+
+@user_passes_test(is_admin)
+def new_user(request):
+    page_title = "New User"
+    if request.POST:
+        form = UserForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.set_password(request.POST['password'])
+            user.groups.clear()
+            user.groups.add(request.POST['permission_group'])
+            if 'is_monitor' in request.POST:
+                user.groups.add(u'5')
+            user.save()
+            return HttpResponseRedirect("/checkout/users")
+    else:
+        form = UserForm()
+    return render_to_response("auth/user_edit.html", {'page_title': page_title, 'form': form},
+                              context_instance=RequestContext(request))
+
+
+@user_passes_test(is_admin)
+def edit_user(request, user_id):
+    instance = get_object_or_404(User, id=user_id)
+    page_title = "Edit User"
+    form = UserForm(request.POST or None, instance=instance)
+    if request.POST and form.is_valid():
+        user = form.save()
+        user.set_password(request.POST['password'])
+        user.groups.clear()
+        user.groups.add(request.POST['permission_group'])
+        if 'is_monitor' in request.POST:
+            user.groups.add(u'5')
+        user.save()
+        return HttpResponseRedirect("/checkout/users")
+    return render_to_response("auth/user_edit.html", {'page_title': page_title, 'form': form},
+                              context_instance=RequestContext(request))

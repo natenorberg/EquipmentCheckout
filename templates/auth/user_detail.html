@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user_object.first_name }} {{ user_object.last_name }}{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
+{% endblock %}
+
+{% block content %}
+<h1>{{ user_object.first_name }} {{ user_object.last_name }}</h1>
+
+<h3>Username</h3>
+<p>{{ user_object.username }}</p>
+
+<h3>Email</h3>
+<p><a href="mailto:{{ user_object.email }}">{{ user_object.email }}</a></p>
+
+<h3>Permissions</h3>
+<p>{% for group in user_object.groups.all %}
+    {{ group.name }}<br/>
+    {% endfor %}
+    {% if user_object.is_superuser %}
+    Admin
+    {% endif %}
+</p>
+
+<form action="/checkout/users/edit/{{ user_object.id }}/">
+    <input type="submit" class="submit_button" value="Edit">
+</form>
+<form action="/checkout/users/delete/" method="post">
+{% csrf_token %}
+    <input type="hidden" name="id" value="{{ user_object.id }}">
+    <input type="submit" class="red_button" value="Delete">
+</form>
+
+<p><a href="/checkout/users/">Back to list</a></p>
+{% endblock %}

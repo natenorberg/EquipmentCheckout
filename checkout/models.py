@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
+@property
+def is_monitor(user):
+    return user.groups.filter(name="monitor")
+
+
 class Equipment(models.Model):
     name = models.CharField(max_length=500)
     brand = models.CharField(max_length=50, null=True, blank=True)

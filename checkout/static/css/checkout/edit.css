@@ -41,7 +41,7 @@ label {
     display: block;
 }
 
-input[type=text] {
+input[type=text], input[type=password], input[type=email] {
     height: 20px;
     width: 275px;
 }
@@ -104,4 +104,23 @@ li:nth-child(even)		{ background-color:#fafafa; }
     color: #dd0000;
     font-size: 14px;
     margin-top: 5px;
+}
+
+#first_name_field, #last_name_field {
+    width: 43%;
+    display: inline-block;
+}
+
+#id_first_name, #id_last_name {
+    width: 90%;
+}
+
+.checkbox_label {
+    display: inline;
+    padding-left: 5px;
+
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555555;
 }
