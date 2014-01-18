@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}New Equipment{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" href="/static/css/checkout/add.css"/>
+<link rel="stylesheet" href="/static/css/checkout/edit.css"/>
 {% endblock %}
 
 {% block content %}
-<h1>New Equipment</h1>
+<h1>{{ title }}</h1>
 <form action="." method="post">{% csrf_token %}
     <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
         <div id="left">

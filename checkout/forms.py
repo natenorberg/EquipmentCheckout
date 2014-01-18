@@ -31,6 +31,7 @@ class EquipmentForm(forms.ModelForm):
 @login_required
 @user_passes_test(is_admin)
 def new_equipment(request):
+    title = "New Equipment"
     if request.POST:
         form = EquipmentForm(request.POST)
         if form.is_valid():
@@ -38,18 +39,21 @@ def new_equipment(request):
             return HttpResponseRedirect('/checkout/equipment/')
     else:
         form = EquipmentForm()
-    return render_to_response("checkout/equipment_add.html", {'form': form}, context_instance=RequestContext(request))
+    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title},
+                              context_instance=RequestContext(request))
 
 
 @login_required
 @user_passes_test(is_admin)
 def edit_equipment(request, equipment_id):
     instance = get_object_or_404(Equipment, id=equipment_id)
+    title = "Edit Equipment"
     form = EquipmentForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
         form.save()
         return HttpResponseRedirect('/checkout/equipment/')
-    return render_to_response("checkout/equipment_add.html", {'form': form}, context_instance=RequestContext(request))
+    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title},
+                              context_instance=RequestContext(request))
 
 
 class ReservationForm(forms.ModelForm):
@@ -91,7 +95,8 @@ def new_reservation(request):
             return HttpResponseRedirect('/checkout/reservations')
     else:
         form = ReservationForm()
-    return render_to_response("checkout/reservation_add.html", {'form': form}, context_instance=RequestContext(request))
+    return render_to_response("checkout/reservation_edit.html", {'form': form},
+                              context_instance=RequestContext(request))
 
 
 class CheckoutForm(forms.ModelForm):

@@ -86,7 +86,10 @@ input[type=text] {
 
 li {
     padding: 3px;
-    border-bottom: 1px #c5c5c5 solid;;
+    border-bottom: 1px #c5c5c5 solid;
+
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 13px;
 }
 
 li:nth-child(odd)		{ background-color:#f1f4f7; }
