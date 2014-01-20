@@ -24,5 +24,15 @@
         <td>{{ object.description }}</td>
     </tr>
     {% endfor %}
+
+    {% if user.is_superuser %}
+    <tr>
+        <td colspan="5" class="footer">
+            <form action="/checkout/equipment/add">
+                <input class="submit_button" type="submit" value="Add New Equipment">
+            </form>
+        </td>
+    </tr>
+    {% endif %}
 </table>
 {% endblock %}

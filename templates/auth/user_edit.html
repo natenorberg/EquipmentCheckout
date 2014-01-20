@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/edit.css">
+{% endblock %}
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+
+<form action="." method="post">
+    {% csrf_token %}
+    <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
+    <div id="left">
+            <div>
+                <div class="field_wrapper" id="first_name_field">
+                    <label for="id_first_name">First Name</label>
+                    <div class="errors">{{ form.first_name.errors.as_text|cut:"* " }}</div>
+                    {{ form.first_name }}
+                </div>
+                <div class="field_wrapper" id="last_name_field">
+                    <label for="id_last_name">Last Name</label>
+                    <div class="errors">{{ form.last_name.errors.as_text|cut:"* " }}</div>
+                    {{ form.last_name }}
+                </div>
+            </div>
+            <div class="field_wrapper">
+                <label for="id_username">Username</label>
+                <div class="errors">{{ form.username.errors.as_text|cut:"* " }}</div>
+                {{ form.username }}
+            </div>
+            <div class="field_wrapper">
+                <label for="id_password">Password</label>
+                <div class="errors">{{ form.password.errors.as_text|cut:"* " }}</div>
+                {{ form.password }}
+            </div>
+            <div class="field_wrapper">
+                <label for="id_email">Email</label>
+                <div class="errors">{{ form.email.errors.as_text|cut:"* " }}</div>
+                {{ form.email }}
+            </div>
+            <div class="submit_button_wrapper">
+                <input class="submit_button" type="submit" value="Submit"/>
+            </div>
+        </div>
+        <div id="right">
+            <div class="field_wrapper">
+                <label for="id_permission_group">Permissions</label>
+                <div class="errors">{{ form.permission_group.errors.as_text|cut:"* " }}</div>
+                {{ form.permission_group }}
+            </div>
+            <div class="field_wrapper">
+                <div class="errors">{{ form.is_superuser.errors.as_text|cut:"* " }}</div>
+                {{ form.is_superuser }}<label class="checkbox_label" for="id_is_superuser">Administrator Access</label>
+            </div>
+            <div class="field_wrapper">
+                <input type="checkbox" name="is_monitor"><label class="checkbox_label" for="id_is_monitor">Lab Monitor Access</label>
+            </div>
+        </div>
+
+
+</form>
+{% endblock %}

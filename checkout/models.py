@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
+@property
+def is_monitor(user):
+    return user.groups.filter(name="monitor")
+
+
 class Equipment(models.Model):
     name = models.CharField(max_length=500)
     brand = models.CharField(max_length=50, null=True, blank=True)
@@ -49,6 +54,13 @@ class Reservation(models.Model):
     @property
     def is_checked_out(self):
         if self.checked_out_time is not None and self.checked_in_time is None:
+            return True
+        else:
+            return False
+
+    @property
+    def is_returned(self):
+        if self.checked_out_time is not None and self.checked_in_time is not None:
             return True
         else:
             return False

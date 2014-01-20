@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/monitor_checkout.css">
+{% endblock %}
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+
+
+<div id="left">
+    <h3>Equipment</h3>
+    <p class="equipment_list">{% for equipment in reservation.equipment.all %}
+        {{ equipment.name }}<br/>
+    {% endfor %}</p>
+
+    <form action="." method="post">
+        {% csrf_token %}
+        <input type="hidden" value="True" name="edited">
+        <input type="hidden" value="{{ reservation.id }}" name="id">
+        {{ form.as_p|cut:":" }}
+        {% if not reservation.is_checked_out %}
+        <input class="submit_button" type="submit" value="Check Out">
+        {% else %}
+        <input class="submit_button" type="submit" value="Check In">
+        {% endif %}
+    </form>
+</div>
+
+<div id="right">
+    <h3>Name</h3>
+    <p class="name">{{ reservation.user.first_name }} {{ reservation.user.last_name }}</p>
+
+    <h3>Project</h3>
+    <p>{{ reservation.project }}</p>
+
+    <h3>Check out time</h3>
+    <p>{{ reservation.out_time }}</p>
+
+    <h3>Due at</h3>
+    <p>{{ reservation.in_time }}</p>
+
+    {% if reservation.is_checked_out  %}
+    <h3>Checked out</h3>
+        <p>By {{ reservation.checked_out_by.first_name }} {{ reservation.checked_out_by.last_name }}<br/>on {{ reservation.checked_out_time }}</p>
+        <p>{{ reservation.check_out_comments }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

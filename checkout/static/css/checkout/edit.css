@@ -13,26 +13,37 @@ body {
     padding: 3px 27px 10px 27px;
 }
 
+#left, #right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left {
+    width: 50%;
+}
+
+#right {
+    width: 49%;
+}
+
 h1, label {
     font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
     color: #666682;
     margin-bottom: 0px;
 }
 
-label {
-    font-weight: 700;
+h3 {
+    font-size: 16px;
 }
 
-input[type=text] {
+label {
+    font-weight: 700;
+    display: block;
+}
+
+input[type=text], input[type=password], input[type=email] {
     height: 20px;
     width: 275px;
-    margin-top: 3px;
-    border: 1px #c5c5c5 solid;
-    box-shadow: 0px 0px 3px #cccccc inset;
-    border-radius: 2px;
-    font-size: 12px;
-    padding-left: 5px;
-    color: #555555;
 }
 
 
@@ -63,9 +74,22 @@ input[type=text] {
     font-weight: 500;
 }
 
+#id_permissions {
+    margin-top: 3px;
+    width: 400px;
+    border: 1px #c5c5c5 solid;
+    border-bottom: 0px;
+    border-radius: 2px;
+    border-collapse: collapse;
+    font-weight: 500;
+}
+
 li {
     padding: 3px;
-    border-bottom: 1px #c5c5c5 solid;;
+    border-bottom: 1px #c5c5c5 solid;
+
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 13px;
 }
 
 li:nth-child(odd)		{ background-color:#f1f4f7; }
@@ -80,4 +104,23 @@ li:nth-child(even)		{ background-color:#fafafa; }
     color: #dd0000;
     font-size: 14px;
     margin-top: 5px;
+}
+
+#first_name_field, #last_name_field {
+    width: 43%;
+    display: inline-block;
+}
+
+#id_first_name, #id_last_name {
+    width: 90%;
+}
+
+.checkbox_label {
+    display: inline;
+    padding-left: 5px;
+
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555555;
 }

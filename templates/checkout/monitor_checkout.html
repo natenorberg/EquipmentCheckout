@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Check out{% endblock %}
+{% block title %}
+    {% if reservation.is_checked_out %}
+    Check In
+    {% else %}
+    Check Out
+    {% endif %}
+{% endblock %}
 
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
@@ -20,7 +26,11 @@ $(".check").click(function() {
 {% endblock %}
 
 {% block content %}
-<h1>Reservation Checkout</h1>
+{% if not reservation.is_checked_out %}
+<h1>Equipment Check Out</h1>
+{% else %}
+<h1>Equipment Check In</h1>
+{% endif %}
 
 <div id="left">
     <h3>Equipment</h3>
@@ -36,8 +46,18 @@ $(".check").click(function() {
         </ul>
 
     <div class="submit_button_wrapper">
-        <form action="/checkout/monitor/checkout/{{ reservation.id }}/confirm/">
-            <input type="submit" id="checkout_button" class="submit_button" value="Checkout" disabled>
+        {% if not reservation.is_checked_out %}
+        <form action="/checkout/monitor/checkout/confirm/" method="post">
+        {% else %}
+        <form action="/checkout/monitor/checkin/confirm/" method="post">
+        {% endif %}
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{ reservation.id }}">
+            {% if not reservation.is_checked_out %}
+            <input type="submit" id="checkout_button" class="submit_button" value="Check Out" disabled>
+            {% else %}
+            <input type="submit" id="checkout_button" class="submit_button" value="Check In" disabled>
+            {% endif %}
         </form>
     </div>
 </div>
@@ -54,5 +74,11 @@ $(".check").click(function() {
 
     <h3>Due at</h3>
     <p>{{ reservation.in_time }}</p>
+
+    {% if reservation.is_checked_out  %}
+    <h3>Checked out</h3>
+        <p>By {{ reservation.checked_out_by.first_name }} {{ reservation.checked_out_by.last_name }}<br/>on {{ reservation.checked_out_time }}</p>
+        <p>{{ reservation.check_out_comments }}</p>
+    {% endif %}
 </div>
 {% endblock %}

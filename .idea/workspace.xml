@@ -1,7 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
+    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="27: Finished custom 404 page and fixed CSS bug">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/IRC-connect 48x48.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/agents.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/aim-away.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/aim-chat.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/aim.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/arrow-down.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/block.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/buddy-signon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-bold.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-emoticons.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-event.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-home.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-italic.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-list.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-txtbg.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/chat-underline.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/check.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/checkbox-checked.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/checkbox-unchecked.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/contract.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/dbtool-green.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/dbtool-orange.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/dbtool-red.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/dbtool.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/delete.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/email.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/expand.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/file.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/find-new-users.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/folder.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/font.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/help.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/history.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/icq-away.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/icq-dnd.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/icq-freeforchat.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/icq-invisible.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/icq-na.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/icq-occupied.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/icq.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/import.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/info.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc-arrow.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc-away.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc-join.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc-list.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc-quick.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc-rename.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc-server.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/irc.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/jabber-away.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/jabber-control.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/jabber-dnd.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/jabber-freeforchat.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/jabber-invisible.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/jabber-na.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/jabber.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/lock.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/message.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/miranda-im.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn-avatar.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn-away.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn-invisible.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn-na.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn-occupied.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn-profile.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn-service.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/msn.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/multi-user.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/multisend.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/netmeeting.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/options.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/phone.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/plus.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/rename-old.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/search-networks.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-away.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-dnd.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-freeforchat.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-invisible.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-lunch.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-na.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-occupied.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-offline.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-online.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-phone.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/status-universal-offline.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/submit-bug.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/time.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/url.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/vcard.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/warn-user.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/warning.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/yahoo-away.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/yahoo-dnd.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/yahoo-invisible.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/yahoo-na.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/yahoo-occupied.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/images/icons/yahoo.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/custom_404.html" afterPath="$PROJECT_DIR$/templates/custom_404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/reservation_list.html" afterPath="$PROJECT_DIR$/templates/checkout/reservation_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/settings.py" afterPath="$PROJECT_DIR$/CheckoutSystem/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/views.py" afterPath="$PROJECT_DIR$/CheckoutSystem/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/views.py" afterPath="$PROJECT_DIR$/checkout/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -28,7 +132,7 @@
       <file leaf-file-name="reservation_list.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="43" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.3985849" vertical-offset="761" max-vertical-offset="1185">
+            <state line="49" column="78" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.21226415" vertical-offset="645" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -562,11 +666,7 @@
       <created>1389652107138</created>
       <updated>1389652107138</updated>
     </task>
-    <task id="LOCAL-00007" summary="11: Admin approval, created buttons for approve and deny reservation. Still need to add button actions">
-      <created>1389729102915</created>
-      <updated>1389729102915</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -625,8 +725,7 @@
     <MESSAGE value="#15 (Doing) Added some basic equipment CRUD functionality" />
     <MESSAGE value="Search is unfinished. Added the get_queryset operation to EquipmentListView but having trouble displaying the SearchForm" />
     <MESSAGE value="27: Finished custom 404 page and fixed CSS bug" />
-    <MESSAGE value="11: Admin approval, created buttons for approve and deny reservation. Still need to add button actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="11: Admin approval, created buttons for approve and deny reservation. Still need to add button actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="27: Finished custom 404 page and fixed CSS bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -747,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="43" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.3985849" vertical-offset="761" max-vertical-offset="1185">
+        <state line="49" column="78" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.21226415" vertical-offset="645" max-vertical-offset="1185">
           <folding />
         </state>
       </provider>

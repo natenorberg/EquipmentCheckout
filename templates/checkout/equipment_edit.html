@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/checkout/edit.css"/>
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<form action="." method="post">{% csrf_token %}
+    <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
+        <div id="left">
+            <div class="field_wrapper">
+                <label for="id_name">Name<br/></label>
+                <div class="errors">{{ form.name.errors.as_text|cut:"* " }}</div>
+                {{ form.name }}
+            </div>
+            <div class="field_wrapper">
+                <label for="id_brand">Brand<br/></label>
+                <div class="errors">{{ form.brand.errors.as_text|cut:"* " }}</div>
+                {{ form.brand }}
+            </div>
+            <div class="field_wrapper">
+                <label for="id_quantity">Quantity</label>
+                <div class="errors">{{ form.quantity.errors.as_text|cut:"* " }}</div>
+                {{ form.quantity }}
+            </div>
+            <div class="field_wrapper">
+                <label for="id_condition">Condition</label>
+                <div class="errors">{{ form.condition.errors.as_text|cut:"* " }}</div>
+                {{ form.condition }}
+            </div>
+            <div class="field_wrapper">
+                <label for="id_description">Description</label>
+                <div class="errors">{{ form.description.errors.as_text|cut:"* " }}</div>
+                {{ form.description }}
+            </div>
+            <div class="submit_button_wrapper">
+                <input class="submit_button" type="submit" value="Submit"/>
+            </div>
+        </div>
+        <div id="right">
+            <h3>Permissions</h3>
+            <ul id="id_permissions">
+                <li>{{ form.music_ed }} Music Education</li>
+                <li>{{ form.pre_gate }} Pre-Music Tech</li>
+                <li>{{ form.post_gate }} Music Tech</li>
+                <li>{{ form.staff }} Staff</li>
+            </ul>
+        </div>
+    </form>
+{% endblock %}
