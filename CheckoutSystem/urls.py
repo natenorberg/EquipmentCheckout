@@ -5,6 +5,8 @@ from CheckoutSystem import views
 from django.contrib import admin
 from CheckoutSystem.views import password_reset_placeholder
 
+handler400 = views.custom_400_view
+handler403 = views.custom_403_view
 handler404 = views.custom_404_view
 handler500 = views.custom_500_view
 

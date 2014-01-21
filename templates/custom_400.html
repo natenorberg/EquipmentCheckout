@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Error 400! (Bad request){% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="/static/css/welcome.css"/>
+{% endblock %}
+
+{% block content %}
+    <h2>Bad request!</h2>
+    <p>It appears that the requested URL was not formed properly. Make sure you have spelled everything correctly and try again.</p>
+    <p>We can help you find your way back <a href="/">HOME</a> though.</p>
+{% endblock %}
