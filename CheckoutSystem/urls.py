@@ -6,6 +6,7 @@ from django.contrib import admin
 from CheckoutSystem.views import password_reset_placeholder
 
 handler404 = views.custom_404_view
+handler500 = views.custom_500_view
 
 admin.autodiscover()
 
