@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/custom_400.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/custom_403.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/urls.py" afterPath="$PROJECT_DIR$/CheckoutSystem/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/views.py" afterPath="$PROJECT_DIR$/CheckoutSystem/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -614,7 +610,11 @@
       <created>1390328206333</created>
       <updated>1390328206333</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="31: custom 500 page">
+      <created>1390328589186</created>
+      <updated>1390328589186</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
