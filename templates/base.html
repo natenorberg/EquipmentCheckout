@@ -33,7 +33,11 @@
             {% endif %}
         </div>
         {% if user.is_active %}
-        <div id="user_info">Welcome, <strong>{{ user.first_name }} {{ user.last_name }}</strong>!  <a class="login_logout" href="/accounts/logout/">Log Out</a> </div>
+        <div id="user_info">
+            Welcome, <strong>{{ user.first_name }} {{ user.last_name }}</strong>!
+            <a class="login_logout" href="/checkout/settings/account/{{ user.id }}/">My Account</a>
+            <a class="login_logout" href="/accounts/logout/">Log Out</a>
+        </div>
         {% else %}
         <div id="user_info">{{ user.first_name }}<a class="login_logout" href="/accounts/login/?next=/welcome/">Log In</a></div>
         {% endif %}
