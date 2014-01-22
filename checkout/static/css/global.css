@@ -1,5 +1,23 @@
+/* Reset style */
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+h3 { font-size: 19px; }
+
 p, a {
     font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+}
+
+p {
+    margin: 16px;
 }
 
 a {
@@ -16,6 +34,7 @@ h1, h2, h3 {
     color: #666682;
     margin-bottom: 0px;
 }
+
 #content {
     margin-left: 40px;
     margin-right: 40px;
@@ -24,8 +43,8 @@ h1, h2, h3 {
 #header {
     margin: 0px;
     padding-right: 5px;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     border-bottom: 1px #555555 solid;
     background: -webkit-linear-gradient(top,  #2a7fc4 1%,#336093 100%); /* Chrome10+,Safari5.1+ */
     /* TODO: add other background stuff */
@@ -36,15 +55,50 @@ h1, h2, h3 {
 }
 
 #monster_header {
-    width: 300px;
-    float: left;
+    width: 230px;
     padding-left: 10px;
+    display: inline;
+    float: left;
 
     font-family: "open sans", helvetica, "Lucida Grande", Arial, sans-serif;
     font-weight: 300;
     font-size: 23px;
-    line-height: 30px;
+    line-height: 35px;
     color: #ffffff;
+}
+
+#nav {
+    display: inline-block;
+    height: 35px;
+    float: left;
+    margin-left: 20px;
+
+    /*border-right: 1px solid #c5c5c5;*/
+}
+
+.tab {
+    display: inline-block;
+    margin: 0px;
+    /*width: 90px;*/
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    list-style-type: none;
+
+    /*border-left: 1px solid #c5c5c5;*/
+}
+
+.tab.active {
+    background: #336093;
+}
+
+.tab_text {
+    color: #f0f0f0;
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
 }
 
 ul {
@@ -56,10 +110,12 @@ a.login_logout {
     margin-left: 5px;
     color: #f0f0f0;
     text-decoration: none;
+    font-weight: 300;
 }
 
 #user_info {
-    width: 500px;
+    display: inline;
+    width: 300px;
     float: right;
     text-align: right;
     font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;

@@ -1,7 +1,7 @@
 from datetime import datetime
 from django import forms
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.forms import SplitDateTimeWidget
 from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
@@ -230,18 +230,4 @@ def edit_user(request, user_id):
         user.save()
         return HttpResponseRedirect("/checkout/users")
     return render_to_response("auth/user_edit.html", {'page_title': page_title, 'form': form},
-                              context_instance=RequestContext(request))
-
-
-@login_required
-def edit_account(request, user_id):
-    instance = get_object_or_404(User, id=user_id)
-    page_title = "Account Settings"
-    form = UserForm(request.POST or None, instance=instance)
-    if request.POST and form.is_valid():
-        user = form.save()
-        user.set_password(request.POST['password'])
-        user.save()
-        return HttpResponseRedirect("welcome/")
-    return render_to_response("settings/account_settings.html", {'page_title': page_title, 'form': form},
                               context_instance=RequestContext(request))
