@@ -12,8 +12,28 @@
 <body>
     <div id="header">
         <a href="/"><div id="monster_header">MONSTER Checkout</div></a>
+        <div id="nav">
+            {% if user.is_active %}
+            <div id="reservation_tab" class="tab {% if reservation_tab %}active{% endif %}">
+                <a href="/checkout/reservations/"><span class="tab_text">Reservations</span></a>
+            </div>
+            {% endif %}
+            <div id="equipment_tab" class="tab {% if equipment_tab %}active{% endif %}">
+                <a href="/checkout/equipment/"><span class="tab_text">Equipment</span></a>
+            </div>
+            {% if user.is_superuser %}
+            <div id="users_tab" class="tab {% if users_tab %}active{% endif %}">
+                <a href="/checkout/users/"><span class="tab_text">Users</span></a>
+            </div>
+            {% endif %}
+            {% if True %}
+            <div id="monitor_tab" class="tab {% if monitor_tab %}active{% endif %}">
+                <a href="/checkout/monitor/"><span class="tab_text">Monitor</span></a>
+            </div>
+            {% endif %}
+        </div>
         {% if user.is_active %}
-        <div id="user_info">Welcome, {{ user.first_name }} {{ user.last_name }}!  <a class="login_logout" href="/accounts/logout/">Log Out</a> </div>
+        <div id="user_info">Welcome, <strong>{{ user.first_name }} {{ user.last_name }}</strong>!  <a class="login_logout" href="/accounts/logout/">Log Out</a> </div>
         {% else %}
         <div id="user_info">{{ user.first_name }}<a class="login_logout" href="/accounts/login/?next=/welcome/">Log In</a></div>
         {% endif %}
@@ -21,6 +41,10 @@
     <div id="content">
     {% block content %}{% endblock %}
     </div>
-    {% block scripts %}{% endblock %}
+    {% block scripts %}
+        <script>
+        $("#").find("{{ active_tab }}").addClass("active");
+        </script>
+    {% endblock %}
 </body>
 </html>
