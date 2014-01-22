@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="33: Added CRUD functionality for users">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="33: Added CRUD functionality for users" />
+    <list id="e74b6a60-d55c-4da7-8887-b100da21674a" name="New changelist" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/forms.py" afterPath="$PROJECT_DIR$/checkout/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/css/global.css" afterPath="$PROJECT_DIR$/checkout/static/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css" afterPath="$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/urls.py" afterPath="$PROJECT_DIR$/checkout/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/views.py" afterPath="$PROJECT_DIR$/checkout/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="e74b6a60-d55c-4da7-8887-b100da21674a" name="New changelist" comment="" />
     <ignored path="CheckoutSystem.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -791,7 +788,11 @@
       <created>1390087946523</created>
       <updated>1390087946523</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="12: Added nav tabs at the top">
+      <created>1390426238329</created>
+      <updated>1390426238329</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -846,7 +847,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="15: Added fields for equipment admin CRUD" />
     <MESSAGE value="16: Created view for list of all equipment" />
     <MESSAGE value="16: Created view for equipment details" />
     <MESSAGE value="15: Added permissions for equipment" />
@@ -871,7 +871,8 @@
     <MESSAGE value="33: Pulled login_required decorator off view that require additional authentication" />
     <MESSAGE value="5: Hard coded groups" />
     <MESSAGE value="33: Added CRUD functionality for users" />
-    <option name="LAST_COMMIT_MESSAGE" value="33: Added CRUD functionality for users" />
+    <MESSAGE value="12: Added nav tabs at the top" />
+    <option name="LAST_COMMIT_MESSAGE" value="12: Added nav tabs at the top" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
