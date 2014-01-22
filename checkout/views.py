@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.decorators import user_passes_test, login_required
 from django.contrib.auth.models import User
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
@@ -23,7 +23,8 @@ class EquipmentListView(ListView):
 def equipment_detail(request, equipment_id=None):
     equipment = get_object_or_404(Equipment, pk=equipment_id)
     can_edit = is_admin(request.user)
-    return render_to_response("checkout/equipment_detail.html", {"equipment": equipment, 'can_edit': can_edit},
+    return render_to_response("checkout/equipment_detail.html",
+                              {"equipment": equipment, 'can_edit': can_edit},
                               context_instance=RequestContext(request))
 
 
@@ -86,7 +87,8 @@ def monitor_checkout(request, reservation_id=None):
 @user_passes_test(is_admin)
 def user_list(request):
     users = User.objects.all()
-    return render_to_response("auth/user_list.html", {'user_list': users}, context_instance=RequestContext(request))
+    return render_to_response("auth/user_list.html", {'user_list': users},
+                              context_instance=RequestContext(request))
 
 
 @user_passes_test(is_admin)
@@ -104,3 +106,10 @@ def delete_user(request):
     user = get_object_or_404(User, id=user_id)
     user.delete()
     return HttpResponseRedirect("/checkout/users/")
+
+
+@login_required
+def account_detail(request, user_id=None):
+    user_object = get_object_or_404(User, pk=user_id)
+    return render_to_response("settings/account_settings.html", {'user_object': user_object},
+                              context_instance=RequestContext(request))

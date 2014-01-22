@@ -5,7 +5,7 @@ from checkout import views
 from checkout.forms import new_reservation, check_out_comments, check_in_comments, new_equipment, edit_equipment, new_user, edit_user
 from checkout.views import EquipmentListView, equipment_detail, ReservationListView, reservation_detail, \
     FutureReservationListView, monitor_checkout, monitor_reservation_list, delete_equipment, is_admin, user_detail,\
-    user_list, delete_user
+    user_list, delete_user, account_detail
 
 admin_required = user_passes_test(lambda u: is_admin(u))
 
@@ -29,5 +29,6 @@ urlpatterns = patterns('',
                        url(r'users/(?P<user_id>\d+)/$', user_detail),
                        url(r'users/add/$', new_user),
                        url(r'users/edit/(?P<user_id>\d+)/$', edit_user),
-                       url(r'users/delete/$', delete_user)
+                       url(r'users/delete/$', delete_user),
+                       url(r'settings/account/(?P<user_id>\d+)/$', login_required(account_detail))
 )
