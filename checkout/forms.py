@@ -39,7 +39,7 @@ def new_equipment(request):
             return HttpResponseRedirect('/checkout/equipment/')
     else:
         form = EquipmentForm()
-    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title, 'equipment_tab': True},
+    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title},
                               context_instance=RequestContext(request))
 
 
@@ -51,7 +51,7 @@ def edit_equipment(request, equipment_id):
     if request.POST and form.is_valid():
         form.save()
         return HttpResponseRedirect('/checkout/equipment/')
-    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title, 'equipment_tab': True},
+    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title},
                               context_instance=RequestContext(request))
 
 
@@ -94,7 +94,7 @@ def new_reservation(request):
             return HttpResponseRedirect('/checkout/reservations')
     else:
         form = ReservationForm()
-    return render_to_response("checkout/reservation_edit.html", {'form': form, 'reservation_tab': True},
+    return render_to_response("checkout/reservation_edit.html", {'form': form},
                               context_instance=RequestContext(request))
 
 
@@ -124,7 +124,7 @@ def check_out_comments(request):
         form.save()
         return HttpResponseRedirect('/checkout/monitor')
     return render_to_response("checkout/checkout_comments.html",
-                              {'form': form, 'reservation': instance, 'page_title': page_title, 'monitor_tab': True},
+                              {'form': form, 'reservation': instance, 'page_title': page_title},
                               context_instance=RequestContext(request), )
 
 
@@ -142,7 +142,7 @@ def check_in_comments(request):
         form.save()
         return HttpResponseRedirect('/checkout/monitor')
     return render_to_response("checkout/checkout_comments.html",
-                              {'form': form, 'reservation': instance, 'page_title': page_title, 'monitor_tab': True},
+                              {'form': form, 'reservation': instance, 'page_title': page_title},
                               context_instance=RequestContext(request), )
 
 
@@ -211,7 +211,7 @@ def new_user(request):
             return HttpResponseRedirect("/checkout/users")
     else:
         form = UserForm()
-    return render_to_response("auth/user_edit.html", {'page_title': page_title, 'form': form, 'users_tab': True},
+    return render_to_response("auth/user_edit.html", {'page_title': page_title, 'form': form},
                               context_instance=RequestContext(request))
 
 
@@ -229,5 +229,19 @@ def edit_user(request, user_id):
             user.groups.add(u'5')
         user.save()
         return HttpResponseRedirect("/checkout/users")
-    return render_to_response("auth/user_edit.html", {'page_title': page_title, 'form': form, 'users_tab': True},
+    return render_to_response("auth/user_edit.html", {'page_title': page_title, 'form': form},
+                              context_instance=RequestContext(request))
+
+
+@login_required
+def edit_account(request, user_id):
+    instance = get_object_or_404(User, id=user_id)
+    page_title = "Account Settings"
+    form = UserForm(request.POST or None, instance=instance)
+    if request.POST and form.is_valid():
+        user = form.save()
+        user.set_password(request.POST['password'])
+        user.save()
+        return HttpResponseRedirect("/welcome")
+    return render_to_response("settings/account_settings.html", {'page_title': page_title, 'form': form},
                               context_instance=RequestContext(request))

@@ -3,6 +3,7 @@ from django.conf.urls import patterns, include, url
 from CheckoutSystem import views
 
 from django.contrib import admin
+from django.contrib.auth.decorators import login_required
 from CheckoutSystem.views import password_reset_placeholder
 
 handler400 = views.custom_400_view
