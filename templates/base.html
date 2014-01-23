@@ -14,11 +14,11 @@
         <a href="/"><div id="monster_header">MONSTER Checkout</div></a>
         <div id="nav">
             {% if user.is_active %}
-            <div id="reservation_tab" class="tab {% if reservation_tab %}active{% endif %}">
+            <div id="reservation_tab" class="tab {% if reservation_tab or view.reservation_tab %}active{% endif %}">
                 <a href="/checkout/reservations/"><span class="tab_text">Reservations</span></a>
             </div>
             {% endif %}
-            <div id="equipment_tab" class="tab {% if equipment_tab %}active{% endif %}">
+            <div id="equipment_tab" class="tab {% if equipment_tab or view.equipment_tab %}active{% endif %}">
                 <a href="/checkout/equipment/"><span class="tab_text">Equipment</span></a>
             </div>
             {% if user.is_superuser %}

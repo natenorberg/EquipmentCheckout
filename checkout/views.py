@@ -18,12 +18,14 @@ def index(request):
 
 class EquipmentListView(ListView):
     model = Equipment
+    equipment_tab = True
 
 
 def equipment_detail(request, equipment_id=None):
     equipment = get_object_or_404(Equipment, pk=equipment_id)
     can_edit = is_admin(request.user)
-    return render_to_response("checkout/equipment_detail.html", {"equipment": equipment, 'can_edit': can_edit},
+    return render_to_response("checkout/equipment_detail.html",
+                              {"equipment": equipment, 'can_edit': can_edit, 'equipment_tab': True},
                               context_instance=RequestContext(request))
 
 
@@ -40,6 +42,7 @@ def delete_equipment(request):
 class ReservationListView(ListView):
     model = Reservation
     shows_all = True
+    reservation_tab = True
 
     def get_queryset(self):
         return Reservation.objects.filter(user=self.request.user)
@@ -54,6 +57,7 @@ class ReservationListView(ListView):
 class FutureReservationListView(ListView):
     model = Reservation
     shows_all = False
+    reservation_tab = True
 
     def get_queryset(self):
         return Reservation.objects.filter(user=self.request.user, in_time__gte=datetime.now())
@@ -67,26 +71,29 @@ def is_monitor(user):
 def monitor_reservation_list(request):
     # TODO: We might want to have reservations stay on the list if they were that day
     reservations = Reservation.objects.filter(checked_in_time=None, is_approved=True)
-    return render_to_response("checkout/monitor_reservation_list.html", {"reservations": reservations})
+    return render_to_response("checkout/monitor_reservation_list.html",
+                              dict(reservations=reservations, monitor_tab=True),
+                              context_instance=RequestContext(request))
 
 
 def reservation_detail(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     return render_to_response("checkout/reservation_detail.html",
-                              {"reservation": reservation, "is_monitor": is_monitor(request.user)})
+                              dict(reservation=reservation, is_monitor=is_monitor(request.user), reservation_tab=True),
+                              context_instance=RequestContext(request))
 
 
 @user_passes_test(is_monitor)
 def monitor_checkout(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    return render_to_response("checkout/monitor_checkout.html", {"reservation": reservation},
+    return render_to_response("checkout/monitor_checkout.html", {"reservation": reservation, 'monitor_tab': True},
                               context_instance=RequestContext(request))
 
 
 @user_passes_test(is_admin)
 def user_list(request):
     users = User.objects.all()
-    return render_to_response("auth/user_list.html", {'user_list': users},
+    return render_to_response("auth/user_list.html", {'user_list': users, 'users_tab': True},
                               context_instance=RequestContext(request))
 
 
@@ -94,8 +101,9 @@ def user_list(request):
 def user_detail(request, user_id=None):
     # We can't pass in an object called 'user' or it will mess up the logout bar at the top
     user_object = get_object_or_404(User, pk=user_id)
-    return render_to_response("auth/user_detail.html", {'user_object': user_object},
+    return render_to_response("auth/user_detail.html", {'user_object': user_object, 'users_tab': True},
                               context_instance=RequestContext(request))
+
 
 @user_passes_test(is_admin)
 def delete_user(request):

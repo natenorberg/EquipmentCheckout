@@ -3,9 +3,9 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 
 from checkout import views
 from checkout.forms import new_reservation, check_out_comments, check_in_comments, new_equipment, edit_equipment, new_user, edit_user, edit_account
-from checkout.views import EquipmentListView, equipment_detail, ReservationListView, reservation_detail, \
+from checkout.views import equipment_detail, ReservationListView, reservation_detail, \
     FutureReservationListView, monitor_checkout, monitor_reservation_list, delete_equipment, is_admin, user_detail,\
-    user_list, delete_user
+    user_list, delete_user, EquipmentListView
 
 admin_required = user_passes_test(lambda u: is_admin(u))
 
