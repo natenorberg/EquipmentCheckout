@@ -82,7 +82,9 @@ h1, h2, h3 {
 }
 
 .tab.active {
-    background: #336093;
+    background: -webkit-linear-gradient(top, #2a7fc4 -40%, #235083 100%); /* Chrome10+,Safari5.1+ */
+    border-left: 1px solid #7799bb;
+    border-right: 1px solid #7799bb;
 }
 
 .tab_text {

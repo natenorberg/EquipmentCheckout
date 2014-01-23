@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/css/global.css" afterPath="$PROJECT_DIR$/checkout/static/css/global.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -45,19 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="global.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="24" selection-start="2366" selection-end="2366" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="3750">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="43" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.6723869" vertical-offset="139" max-vertical-offset="795">
+            <state line="82" column="0" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.53745925" vertical-offset="900" max-vertical-offset="3780">
               <folding />
             </state>
           </provider>
@@ -120,10 +111,10 @@
         <option value="$PROJECT_DIR$/checkout/forms.py" />
         <option value="$PROJECT_DIR$/CheckoutSystem/settings.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css" />
-        <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
         <option value="$PROJECT_DIR$/checkout/urls.py" />
         <option value="$PROJECT_DIR$/checkout/views.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
       </list>
     </option>
   </component>
@@ -804,7 +795,11 @@
       <created>1390455512142</created>
       <updated>1390455512142</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="12: Fixed Log In link that broke during merge">
+      <created>1390455587792</created>
+      <updated>1390455587792</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -859,7 +854,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="16: Added permissions for equipment to detail view" />
     <MESSAGE value="8: Added a model for reservations" />
     <MESSAGE value="8: Added a view for reservations" />
     <MESSAGE value="8: Created form for new reservation" />
@@ -884,7 +878,8 @@
     <MESSAGE value="12: Trying to push" />
     <MESSAGE value="33: Added CRUD functionality for users" />
     <MESSAGE value="12: Got tab selection logic in place" />
-    <option name="LAST_COMMIT_MESSAGE" value="12: Got tab selection logic in place" />
+    <MESSAGE value="12: Fixed Log In link that broke during merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="12: Fixed Log In link that broke during merge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -988,16 +983,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="24" selection-start="2366" selection-end="2366" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="3750">
+        <state line="38" column="43" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.6723869" vertical-offset="139" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="43" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.6723869" vertical-offset="139" max-vertical-offset="795">
+        <state line="82" column="0" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.53745925" vertical-offset="900" max-vertical-offset="3780">
           <folding />
         </state>
       </provider>
