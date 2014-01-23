@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" afterPath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/urls.py" afterPath="$PROJECT_DIR$/checkout/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/views.py" afterPath="$PROJECT_DIR$/checkout/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -49,19 +45,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="24" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-0.067669176" vertical-offset="2070" max-vertical-offset="3750">
+            <state line="135" column="24" selection-start="2366" selection-end="2366" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="3750">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="58" selection-start="1185" selection-end="1185" vertical-scroll-proportion="-9.208333" vertical-offset="139" max-vertical-offset="795">
+            <state line="38" column="43" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.6723869" vertical-offset="139" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
@@ -126,8 +122,8 @@
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css" />
         <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
         <option value="$PROJECT_DIR$/checkout/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/checkout/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -804,7 +800,11 @@
       <created>1390449510527</created>
       <updated>1390449510527</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="12: Got tab selection logic in place">
+      <created>1390455512142</created>
+      <updated>1390455512142</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -859,7 +859,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="15: Added permissions for equipment" />
     <MESSAGE value="16: Added permissions for equipment to detail view" />
     <MESSAGE value="8: Added a model for reservations" />
     <MESSAGE value="8: Added a view for reservations" />
@@ -884,7 +883,8 @@
     <MESSAGE value="32: Fixed defect where sometime the user didn't appear to be logged in" />
     <MESSAGE value="12: Trying to push" />
     <MESSAGE value="33: Added CRUD functionality for users" />
-    <option name="LAST_COMMIT_MESSAGE" value="33: Added CRUD functionality for users" />
+    <MESSAGE value="12: Got tab selection logic in place" />
+    <option name="LAST_COMMIT_MESSAGE" value="12: Got tab selection logic in place" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -981,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="58" selection-start="1185" selection-end="1185" vertical-scroll-proportion="-9.208333" vertical-offset="139" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkout/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="103" column="101" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.0" vertical-offset="1017" max-vertical-offset="1695">
@@ -997,7 +990,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="24" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-0.067669176" vertical-offset="2070" max-vertical-offset="3750">
+        <state line="135" column="24" selection-start="2366" selection-end="2366" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="3750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="43" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.6723869" vertical-offset="139" max-vertical-offset="795">
           <folding />
         </state>
       </provider>

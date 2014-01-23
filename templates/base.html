@@ -36,7 +36,7 @@
         <div id="user_info"><div class="top">Welcome, <strong>{{ user.first_name }} {{ user.last_name }}</strong></div>
             <div class="bottom"><a class="logout" href="/checkout/settings/account/{{ user.id }}/">My Account</a> | <a class="logout" href="/accounts/logout/">Log Out</a></div> </div>
         {% else %}
-        <div id="user_info">{{ user.first_name }}<a class="login_logout" href="/accounts/login/?next=/welcome/">Log In</a></div>
+        <div id="user_info"><a class="login" href="/accounts/login/?next=/welcome/">Log In</a></div>
         {% endif %}
     </div>
     <div id="content">
