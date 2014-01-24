@@ -21,7 +21,7 @@ urlpatterns = patterns('',
                        url(r'^accounts/logout/$', views.logout_view),
                        url(r'^accounts/password/reset/$', password_reset_placeholder),
                        url(r'^checkout/', include('checkout.urls')),
-                       url(r'^admin/', include(admin.site.urls)),
+                       url(r'^admin/', include(admin.site.urls))
                        )
 
 
