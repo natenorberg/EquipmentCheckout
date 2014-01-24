@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" afterPath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" />
+    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="12:  Nav tab styling tweaks and default element">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/settings/account_settings.html" afterPath="$PROJECT_DIR$/templates/settings/account_settings.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/forms.py" afterPath="$PROJECT_DIR$/checkout/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/css/global.css" afterPath="$PROJECT_DIR$/checkout/static/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/urls.py" afterPath="$PROJECT_DIR$/CheckoutSystem/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -51,7 +48,34 @@
         <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="4" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3780">
-              <folding />
+              <folding>
+                <marker date="1390584352000" expanded="true" signature="333:366" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="370:420" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="427:447" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="460:584" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="595:667" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="676:1014" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="1032:1256" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="1263:1351" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="1358:1478" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="1492:1669" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="1681:1815" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="1820:1873" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="1883:2023" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="2034:2174" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="2187:2409" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="2416:2529" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="2538:2672" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="2742:2928" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="2937:2956" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="2994:4004" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="4027:4804" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="4828:4899" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="4925:5044" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="5058:6050" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="6070:6848" placeholder="{...}" />
+                <marker date="1390584352000" expanded="true" signature="6869:6940" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,10 +89,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="114" selection-start="1451" selection-end="1451" vertical-scroll-proportion="1.0666667" vertical-offset="0" max-vertical-offset="3975">
+            <state line="261" column="0" selection-start="9378" selection-end="9378" vertical-scroll-proportion="0.0" vertical-offset="3593" max-vertical-offset="3990">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account_settings.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="0.5227882" vertical-offset="0" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
@@ -101,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/checkout/equipment_detail.html" />
         <option value="$PROJECT_DIR$/checkout/models.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/list_view.css" />
         <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
@@ -117,6 +149,7 @@
         <option value="$PROJECT_DIR$/CheckoutSystem/urls.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
         <option value="$PROJECT_DIR$/checkout/forms.py" />
+        <option value="$PROJECT_DIR$/templates/settings/account_settings.html" />
       </list>
     </option>
   </component>
@@ -180,6 +213,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MonsterCheckout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -805,7 +856,11 @@
       <created>1390456704499</created>
       <updated>1390456704499</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="12:  Nav tab styling tweaks and default element">
+      <created>1390585185557</created>
+      <updated>1390585185557</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -832,22 +887,22 @@
     <frame x="0" y="22" width="1440" height="826" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32719547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67280453" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.276901" sideWeight="0.6751412" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.276901" sideWeight="0.601983" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.398017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32485875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32577905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -860,7 +915,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="8: Added a view for reservations" />
     <MESSAGE value="8: Created form for new reservation" />
     <MESSAGE value="8: Added validation to checkout form so check in time is after check out time" />
     <MESSAGE value="8: Changed reservation list view to hide past reservations" />
@@ -885,24 +939,15 @@
     <MESSAGE value="12: Got tab selection logic in place" />
     <MESSAGE value="12: Fixed Log In link that broke during merge" />
     <MESSAGE value="12:  Nav tab styling tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="12:  Nav tab styling tweaks" />
+    <MESSAGE value="12:  Nav tab styling tweaks and default element" />
+    <option name="LAST_COMMIT_MESSAGE" value="12:  Nav tab styling tweaks and default element" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="44" />
+      <option name="time" value="48" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/auth/user_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="78" selection-start="771" selection-end="771" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="540" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/auth/user_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="105" selection-start="2560" selection-end="2560" vertical-scroll-proportion="-21.875" vertical-offset="330" max-vertical-offset="1035" />
@@ -956,7 +1001,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="64" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.76666665" vertical-offset="0" max-vertical-offset="495">
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,7 +1016,34 @@
     <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="4" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3780">
-          <folding />
+          <folding>
+            <marker date="1390584352000" expanded="true" signature="333:366" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="370:420" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="427:447" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="460:584" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="595:667" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="676:1014" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="1032:1256" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="1263:1351" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="1358:1478" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="1492:1669" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="1681:1815" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="1820:1873" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="1883:2023" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="2034:2174" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="2187:2409" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="2416:2529" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="2538:2672" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="2742:2928" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="2937:2956" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="2994:4004" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="4027:4804" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="4828:4899" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="4925:5044" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="5058:6050" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="6070:6848" placeholder="{...}" />
+            <marker date="1390584352000" expanded="true" signature="6869:6940" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -982,9 +1054,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/forms/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="8" selection-start="4815" selection-end="4815" vertical-scroll-proportion="0.3324937" vertical-offset="1503" max-vertical-offset="8640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/checkout/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="114" selection-start="1451" selection-end="1451" vertical-scroll-proportion="1.0666667" vertical-offset="0" max-vertical-offset="3975">
+        <state line="261" column="0" selection-start="9378" selection-end="9378" vertical-scroll-proportion="0.0" vertical-offset="3593" max-vertical-offset="3990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="0.5227882" vertical-offset="0" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>

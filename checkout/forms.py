@@ -200,7 +200,7 @@ class AccountForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'password', 'email', 'date_joined', 'is_superuser']
+        fields = ['first_name', 'last_name', 'username', 'password', 'email', 'is_superuser']
 
     def clean(self):
         cleaned_data = super(AccountForm, self).clean()
@@ -265,5 +265,6 @@ def edit_account(request, user_id):
         user.set_password(request.POST['password'])
         user.save()
         return HttpResponseRedirect("/welcome")
-    return render_to_response("settings/account_settings.html", {'page_title': page_title, 'form': form},
+    return render_to_response("settings/account_settings.html",
+                              dict(page_title=page_title, form=form, instance=instance),
                               context_instance=RequestContext(request))
