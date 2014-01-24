@@ -14,11 +14,11 @@
         <a href="/"><div id="monster_header">MONSTER Checkout</div></a>
         <div id="nav">
             {% if user.is_active %}
-            <div id="reservation_tab" class="tab {% if reservation_tab %}active{% endif %}">
+            <div id="reservation_tab" class="tab {% if reservation_tab or view.reservation_tab %}active{% endif %}">
                 <a href="/checkout/reservations/"><span class="tab_text">Reservations</span></a>
             </div>
             {% endif %}
-            <div id="equipment_tab" class="tab {% if equipment_tab %}active{% endif %}">
+            <div id="equipment_tab" class="tab {% if equipment_tab or view.equipment_tab %}active{% endif %}">
                 <a href="/checkout/equipment/"><span class="tab_text">Equipment</span></a>
             </div>
             {% if user.is_superuser %}
@@ -33,22 +33,16 @@
             {% endif %}
         </div>
         {% if user.is_active %}
-        <div id="user_info">
-            Welcome, <strong>{{ user.first_name }} {{ user.last_name }}</strong>!
-            <a class="login_logout" href="/checkout/settings/account/{{ user.id }}/">My Account</a>
-            <a class="login_logout" href="/accounts/logout/">Log Out</a>
-        </div>
+        <div id="user_info"><div class="top">Welcome, <strong>{{ user.first_name }} {{ user.last_name }}</strong></div>
+            <div class="bottom"><a class="logout" href="/checkout/settings/account/{{ user.id }}/">My Account</a> | <a class="logout" href="/accounts/logout/">Log Out</a></div> </div>
         {% else %}
-        <div id="user_info">{{ user.first_name }}<a class="login_logout" href="/accounts/login/?next=/welcome/">Log In</a></div>
+        <div id="user_info"><a class="login" href="/accounts/login/?next=/welcome/">Log In</a></div>
         {% endif %}
     </div>
     <div id="content">
     {% block content %}{% endblock %}
     </div>
     {% block scripts %}
-        <script>
-        $("#").find("{{ active_tab }}").addClass("active");
-        </script>
     {% endblock %}
 </body>
 </html>

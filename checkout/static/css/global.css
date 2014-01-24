@@ -43,8 +43,8 @@ h1, h2, h3 {
 #header {
     margin: 0px;
     padding-right: 5px;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     border-bottom: 1px #555555 solid;
     background: -webkit-linear-gradient(top,  #2a7fc4 1%,#336093 100%); /* Chrome10+,Safari5.1+ */
     /* TODO: add other background stuff */
@@ -63,33 +63,28 @@ h1, h2, h3 {
     font-family: "open sans", helvetica, "Lucida Grande", Arial, sans-serif;
     font-weight: 300;
     font-size: 23px;
-    line-height: 35px;
     color: #ffffff;
 }
 
 #nav {
     display: inline-block;
-    height: 35px;
+    height: 100%;
     float: left;
     margin-left: 20px;
-
-    /*border-right: 1px solid #c5c5c5;*/
 }
 
 .tab {
     display: inline-block;
     margin: 0px;
-    /*width: 90px;*/
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-    list-style-type: none;
-
-    /*border-left: 1px solid #c5c5c5;*/
 }
 
 .tab.active {
-    background: #336093;
+    background: -webkit-linear-gradient(top, #2a7fc4 -40%, #235083 100%); /* Chrome10+,Safari5.1+ */
+    border-left: 1px solid #7799bb;
+    border-right: 1px solid #7799bb;
 }
 
 .tab_text {
@@ -106,20 +101,49 @@ ul {
     padding-left: 0px;
 }
 
-a.login_logout {
+a.login {
     margin-left: 5px;
+    margin-right: 3px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+a.logout {
+    margin-left: 5px;
+    margin-right: 3px;
     color: #f0f0f0;
     text-decoration: none;
     font-weight: 300;
+    line-height: 20px;
 }
 
 #user_info {
     display: inline;
     width: 300px;
+    height: 40px;
+    line-height: 20px;
     float: right;
     text-align: right;
     font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
     font-size: 13px;
+}
+
+.top {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: top;
+}
+.bottom {
+    display: inline-block;
+    width: 100%;
+    height: 19px;
+    line-height: 19px;
+    vertical-align: top;
+    font-size: 12px;
 }
 
 input[type=text], input[type=password], input[type=email], textarea {
