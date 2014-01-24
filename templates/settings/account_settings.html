@@ -30,7 +30,8 @@
                     {{ form.email }}
                 </div>
                 <div class="field_wrapper">
-                    <label>Date Joined: {{ form.date_joined.value }}</label>
+                    <label>Date Joined</label>
+                    {{ form.date_joined.value }}
                 </div>
             </div>
             <div class="submit_button_wrapper">
@@ -39,6 +40,10 @@
         </div>
         <div id="right">
             <div>
+                <div class="field_wrapper">
+                    <label>Permission Level</label>
+                    {{ user.groups.all.0 }}
+                </div>
                 <div class="field_wrapper">
                     <label>Username</label>
                     {{ form.username.value }}

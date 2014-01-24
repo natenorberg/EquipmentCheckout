@@ -204,25 +204,7 @@ class AccountForm(forms.ModelForm):
 
     def clean(self):
         cleaned_data = super(AccountForm, self).clean()
-        first_name = cleaned_data.get('first_name')
-        last_name = cleaned_data.get('last_name')
         email = cleaned_data.get('email')
-
-        if first_name is u'':
-            message = "First name is required"
-            if not 'first_name' in self._errors:
-                from django.forms.util import ErrorList
-
-                self._errors['first_name'] = ErrorList()
-            self._errors['first_name'].append(message)
-
-        if last_name is u'':
-            message = "Last name is required"
-            if not 'last_name' in self._errors:
-                from django.forms.util import ErrorList
-
-                self._errors['last_name'] = ErrorList()
-            self._errors['last_name'].append(message)
 
         if email is u'':
             message = "Email is required"

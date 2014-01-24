@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="31: custom 500 page">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" afterPath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/settings/account_settings.html" afterPath="$PROJECT_DIR$/templates/settings/account_settings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/forms.py" afterPath="$PROJECT_DIR$/checkout/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -27,46 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="account_settings.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="account_settings.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="885">
+            <state line="44" column="40" selection-start="1607" selection-end="1607" vertical-scroll-proportion="-14.041667" vertical-offset="323" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="0" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="1800">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="94" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="18" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="795">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkout/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="61" selection-start="8693" selection-end="8693" vertical-scroll-proportion="0.0" vertical-offset="3690" max-vertical-offset="4380">
+            <state line="202" column="92" selection-start="7219" selection-end="7219" vertical-scroll-proportion="0.41095892" vertical-offset="2715" max-vertical-offset="3975">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/django/contrib/auth/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="360" column="6" selection-start="12682" selection-end="12682" vertical-scroll-proportion="0.0" vertical-offset="5299" max-vertical-offset="7695">
               <folding />
             </state>
           </provider>
@@ -91,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/checkout/admin.py" />
         <option value="$PROJECT_DIR$/checkout/models.py" />
         <option value="$PROJECT_DIR$/templates/checkout/equipment_search.html" />
         <option value="$PROJECT_DIR$/templates/checkout/equipment_list.html" />
@@ -104,9 +85,10 @@
         <option value="$PROJECT_DIR$/CheckoutSystem/urls.py" />
         <option value="$PROJECT_DIR$/CheckoutSystem/views.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/checkout/forms.py" />
         <option value="$PROJECT_DIR$/checkout/urls.py" />
         <option value="$PROJECT_DIR$/checkout/views.py" />
+        <option value="$PROJECT_DIR$/templates/settings/account_settings.html" />
+        <option value="$PROJECT_DIR$/checkout/forms.py" />
       </list>
     </option>
   </component>
@@ -512,7 +494,11 @@
       <created>1390328589186</created>
       <updated>1390328589186</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="31: custom 500 page">
+      <created>1390536327862</created>
+      <updated>1390536327862</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -537,14 +523,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33144248" sideWeight="0.6823362" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33144248" sideWeight="0.6823362" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28444085" sideWeight="0.42592594" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -554,7 +541,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -581,18 +567,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="666" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/detail_view.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="448" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CheckoutSystem/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="12" selection-start="794" selection-end="794" vertical-scroll-proportion="0.011764706" vertical-offset="355" max-vertical-offset="1380">
@@ -659,30 +633,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+    <entry file="file://$PROJECT_DIR$/checkout/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="61" selection-start="8693" selection-end="8693" vertical-scroll-proportion="0.0" vertical-offset="3690" max-vertical-offset="4380">
+        <state line="106" column="0" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.5205479" vertical-offset="1257" max-vertical-offset="1695">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="94" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+        <state line="32" column="94" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.767184" vertical-offset="29" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/views.py">
+    <entry file="file:///Library/Python/2.7/site-packages/django/forms/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="1800">
+        <state line="440" column="6" selection-start="18181" selection-end="18181" vertical-scroll-proportion="-0.55707765" vertical-offset="6619" max-vertical-offset="18105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="360" column="6" selection-start="12682" selection-end="12682" vertical-scroll-proportion="0.0" vertical-offset="5299" max-vertical-offset="7695">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="885">
+        <state line="44" column="40" selection-start="1607" selection-end="1607" vertical-scroll-proportion="-14.041667" vertical-offset="323" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="92" selection-start="7219" selection-end="7219" vertical-scroll-proportion="0.41095892" vertical-offset="2715" max-vertical-offset="3975">
           <folding />
         </state>
       </provider>
