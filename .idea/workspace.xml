@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="12:  Nav tab styling tweaks and default element">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/settings/account_settings.html" afterPath="$PROJECT_DIR$/templates/settings/account_settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/forms.py" afterPath="$PROJECT_DIR$/checkout/forms.py" />
+    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CheckoutSystem/user_info.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/settings.py" afterPath="$PROJECT_DIR$/CheckoutSystem/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -89,28 +90,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="261" column="0" selection-start="9378" selection-end="9378" vertical-scroll-proportion="0.0" vertical-offset="3593" max-vertical-offset="3990">
+            <state line="23" column="26" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account_settings.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
+      <file leaf-file-name="user_info.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CheckoutSystem/user_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="0.5227882" vertical-offset="0" max-vertical-offset="1005">
+            <state line="6" column="28" selection-start="202" selection-end="202" vertical-scroll-proportion="0.14354067" vertical-offset="0" max-vertical-offset="627">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="equipment_edit.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_edit.html">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheckoutSystem/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="36" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="870">
+            <state line="62" column="39" selection-start="1897" selection-end="1897" vertical-scroll-proportion="-15.88" vertical-offset="533" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
@@ -134,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/checkout/models.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/list_view.css" />
         <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" />
         <option value="$PROJECT_DIR$/templates/auth/user_list.html" />
         <option value="$PROJECT_DIR$/templates/auth/user_detail.html" />
         <option value="$PROJECT_DIR$/templates/auth/user_edit.html" />
-        <option value="$PROJECT_DIR$/CheckoutSystem/settings.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css" />
         <option value="$PROJECT_DIR$/checkout/urls.py" />
         <option value="$PROJECT_DIR$/checkout/views.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/CheckoutSystem/urls.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
         <option value="$PROJECT_DIR$/checkout/forms.py" />
         <option value="$PROJECT_DIR$/templates/settings/account_settings.html" />
+        <option value="$PROJECT_DIR$/CheckoutSystem/settings.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/CheckoutSystem/user_info.py" />
       </list>
     </option>
   </component>
@@ -860,7 +861,11 @@
       <created>1390585185557</created>
       <updated>1390585185557</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="35: Got user accounts page to update correctly">
+      <created>1390587110940</created>
+      <updated>1390587110940</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -894,7 +899,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67280453" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.276901" sideWeight="0.601983" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.398017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32577905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -915,7 +920,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="8: Created form for new reservation" />
     <MESSAGE value="8: Added validation to checkout form so check in time is after check out time" />
     <MESSAGE value="8: Changed reservation list view to hide past reservations" />
     <MESSAGE value="8: Added status field to reservation list" />
@@ -940,7 +944,8 @@
     <MESSAGE value="12: Fixed Log In link that broke during merge" />
     <MESSAGE value="12:  Nav tab styling tweaks" />
     <MESSAGE value="12:  Nav tab styling tweaks and default element" />
-    <option name="LAST_COMMIT_MESSAGE" value="12:  Nav tab styling tweaks and default element" />
+    <MESSAGE value="35: Got user accounts page to update correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="35: Got user accounts page to update correctly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -948,11 +953,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/auth/user_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="105" selection-start="2560" selection-end="2560" vertical-scroll-proportion="-21.875" vertical-offset="330" max-vertical-offset="1035" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CheckoutSystem/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="678" />
@@ -961,13 +961,6 @@
     <entry file="file://$PROJECT_DIR$/templates/checkout/monitor_checkout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheckoutSystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="12" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_edit.html">
@@ -990,11 +983,6 @@
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="43" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.6723869" vertical-offset="139" max-vertical-offset="795" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CheckoutSystem/urls.py">
@@ -1047,13 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="101" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/forms/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="8" selection-start="4815" selection-end="4815" vertical-scroll-proportion="0.3324937" vertical-offset="1503" max-vertical-offset="8640">
@@ -1061,16 +1042,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+    <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="261" column="0" selection-start="9378" selection-end="9378" vertical-scroll-proportion="0.0" vertical-offset="3593" max-vertical-offset="3990">
+        <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="0.29816514" vertical-offset="0" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
+    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="0.5227882" vertical-offset="0" max-vertical-offset="1005">
+        <state line="261" column="0" selection-start="9378" selection-end="9378" vertical-scroll-proportion="0.6902655" vertical-offset="3312" max-vertical-offset="3990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="101" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="39" selection-start="1897" selection-end="1897" vertical-scroll-proportion="-15.88" vertical-offset="533" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="26" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/user_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="202" selection-end="202" vertical-scroll-proportion="0.14354067" vertical-offset="0" max-vertical-offset="627">
           <folding />
         </state>
       </provider>

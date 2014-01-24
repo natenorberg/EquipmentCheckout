@@ -21,12 +21,12 @@
             <div id="equipment_tab" class="tab {% if equipment_tab or view.equipment_tab %}active{% endif %}">
                 <a href="/checkout/equipment/"><span class="tab_text">Equipment</span></a>
             </div>
-            {% if user.is_superuser %}
+            {% if is_admin %}
             <div id="users_tab" class="tab {% if users_tab %}active{% endif %}">
                 <a href="/checkout/users/"><span class="tab_text">Users</span></a>
             </div>
             {% endif %}
-            {% if True %}
+            {% if is_monitor %}
             <div id="monitor_tab" class="tab {% if monitor_tab %}active{% endif %}">
                 <a href="/checkout/monitor/"><span class="tab_text">Monitor</span></a>
             </div>
