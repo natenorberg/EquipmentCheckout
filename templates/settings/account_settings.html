@@ -3,53 +3,52 @@
 {% block title %}{{ page_title }}{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" type="text/css" href="/static/css/checkout/edit.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/checkout/edit.css">
 {% endblock %}
 
 {% block content %}
-<h1>{{ page_title }}</h1>
+    <h1>{{ page_title }}</h1>
 
-<form action="../../../../" method="post">
-    {% csrf_token %}
-    <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
-    <div id="left">
+    <form action="../../../../" method="post">
+        {% csrf_token %}
+        <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
+        <div id="left">
             <div>
                 <div class="field_wrapper" id="first_name_field">
-                    <label for="id_first_name">First Name</label>
-                    <div class="errors">{{ form.first_name.errors.as_text|cut:"* " }}</div>
-                    {{ form.first_name }}
+                    <label>First Name</label>
+                    {{ form.first_name.value }}
                 </div>
                 <div class="field_wrapper" id="last_name_field">
-                    <label for="id_last_name">Last Name</label>
-                    <div class="errors">{{ form.last_name.errors.as_text|cut:"* " }}</div>
-                    {{ form.last_name }}
+                    <label>Last Name</label>
+                    {{ form.last_name.value }}
                 </div>
             </div>
-            <div class="field_wrapper">
-                <label for="id_username">Username</label>
-                <div class="errors">{{ form.username.errors.as_text|cut:"* " }}</div>
-                {{ form.username }}
-            </div>
-            <div class="field_wrapper">
-                <label for="id_password">Password</label>
-                <div class="errors">{{ form.password.errors.as_text|cut:"* " }}</div>
-                {{ form.password }}
-            </div>
-            <div class="field_wrapper">
-                <label for="id_email">Email</label>
-                <div class="errors">{{ form.email.errors.as_text|cut:"* " }}</div>
-                {{ form.email }}
+            <div>
+                <div class="field_wrapper">
+                    <label for="id_email">Email</label>
+                    <div class="errors">{{ form.email.errors.as_text|cut:"* " }}</div>
+                    {{ form.email }}
+                </div>
+                <div class="field_wrapper">
+                    <label>Date Joined: {{ form.date_joined.value }}</label>
+                </div>
             </div>
             <div class="submit_button_wrapper">
-                <input class="submit_button" type="submit" value="Submit"/>
+                <input class="submit_button" type="submit" value="Save Changes"/>
             </div>
         </div>
         <div id="right">
-            <div class="field_wrapper">
-                <label for="id_permission_group">Permissions</label>
-                <div class="errors">{{ form.permission_group.errors.as_text|cut:"* " }}</div>
-                {{ form.permission_group }}
+            <div>
+                <div class="field_wrapper">
+                    <label>Username</label>
+                    {{ form.username.value }}
+                </div>
+                <div class="field_wrapper">
+                    <label for="id_password">Password</label>
+                    <div class="errors">{{ form.password.errors.as_text|cut:"* " }}</div>
+                    {{ form.password }}
+                </div>
             </div>
         </div>
-</form>
+    </form>
 {% endblock %}

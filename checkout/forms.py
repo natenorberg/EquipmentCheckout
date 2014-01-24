@@ -195,6 +195,46 @@ class UserForm(forms.ModelForm):
         return cleaned_data
 
 
+class AccountForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'username', 'password', 'email', 'date_joined', 'is_superuser']
+
+    def clean(self):
+        cleaned_data = super(AccountForm, self).clean()
+        first_name = cleaned_data.get('first_name')
+        last_name = cleaned_data.get('last_name')
+        email = cleaned_data.get('email')
+
+        if first_name is u'':
+            message = "First name is required"
+            if not 'first_name' in self._errors:
+                from django.forms.util import ErrorList
+
+                self._errors['first_name'] = ErrorList()
+            self._errors['first_name'].append(message)
+
+        if last_name is u'':
+            message = "Last name is required"
+            if not 'last_name' in self._errors:
+                from django.forms.util import ErrorList
+
+                self._errors['last_name'] = ErrorList()
+            self._errors['last_name'].append(message)
+
+        if email is u'':
+            message = "Email is required"
+            if not 'email' in self._errors:
+                from django.forms.util import ErrorList
+
+                self._errors['email'] = ErrorList()
+            self._errors['email'].append(message)
+
+        return cleaned_data
+
+
 @user_passes_test(is_admin)
 def new_user(request):
     page_title = "New User"
@@ -237,7 +277,7 @@ def edit_user(request, user_id):
 def edit_account(request, user_id):
     instance = get_object_or_404(User, id=user_id)
     page_title = "Account Settings"
-    form = UserForm(request.POST or None, instance=instance)
+    form = AccountForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
         user = form.save()
         user.set_password(request.POST['password'])
