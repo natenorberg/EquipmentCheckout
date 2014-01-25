@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CheckoutSystem/user_info.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/settings.py" afterPath="$PROJECT_DIR$/CheckoutSystem/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/css/global.css" afterPath="$PROJECT_DIR$/checkout/static/css/global.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -45,38 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="global.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3780">
-              <folding>
-                <marker date="1390584352000" expanded="true" signature="333:366" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="370:420" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="427:447" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="460:584" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="595:667" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="676:1014" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="1032:1256" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="1263:1351" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="1358:1478" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="1492:1669" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="1681:1815" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="1820:1873" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="1883:2023" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="2034:2174" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="2187:2409" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="2416:2529" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="2538:2672" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="2742:2928" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="2937:2956" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="2994:4004" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="4027:4804" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="4828:4899" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="4925:5044" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="5058:6050" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="6070:6848" placeholder="{...}" />
-                <marker date="1390584352000" expanded="true" signature="6869:6940" placeholder="{...}" />
-              </folding>
+            <state line="87" column="16" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.39097744" vertical-offset="1045" max-vertical-offset="3990">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,16 +64,25 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="26" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="795">
+            <state line="13" column="44" selection-start="523" selection-end="523" vertical-scroll-proportion="-1.92" vertical-offset="51" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_info.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_info.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CheckoutSystem/user_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28" selection-start="202" selection-end="202" vertical-scroll-proportion="0.14354067" vertical-offset="0" max-vertical-offset="627">
+            <state line="6" column="28" selection-start="202" selection-end="202" vertical-scroll-proportion="-1.7647059" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account_settings.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="6.5" vertical-offset="351" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
@@ -145,12 +125,12 @@
         <option value="$PROJECT_DIR$/checkout/urls.py" />
         <option value="$PROJECT_DIR$/checkout/views.py" />
         <option value="$PROJECT_DIR$/CheckoutSystem/urls.py" />
-        <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
         <option value="$PROJECT_DIR$/checkout/forms.py" />
         <option value="$PROJECT_DIR$/templates/settings/account_settings.html" />
         <option value="$PROJECT_DIR$/CheckoutSystem/settings.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/CheckoutSystem/user_info.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
       </list>
     </option>
   </component>
@@ -865,7 +845,11 @@
       <created>1390587110940</created>
       <updated>1390587110940</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="12: Got monitor tab to only show up for monitors">
+      <created>1390589370617</created>
+      <updated>1390589370617</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -920,7 +904,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="8: Added validation to checkout form so check in time is after check out time" />
     <MESSAGE value="8: Changed reservation list view to hide past reservations" />
     <MESSAGE value="8: Added status field to reservation list" />
     <MESSAGE value="4: Created default data file and loaded first checkout form" />
@@ -945,7 +928,8 @@
     <MESSAGE value="12:  Nav tab styling tweaks" />
     <MESSAGE value="12:  Nav tab styling tweaks and default element" />
     <MESSAGE value="35: Got user accounts page to update correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="35: Got user accounts page to update correctly" />
+    <MESSAGE value="12: Got monitor tab to only show up for monitors" />
+    <option name="LAST_COMMIT_MESSAGE" value="12: Got monitor tab to only show up for monitors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1001,50 +985,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3780">
-          <folding>
-            <marker date="1390584352000" expanded="true" signature="333:366" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="370:420" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="427:447" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="460:584" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="595:667" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="676:1014" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="1032:1256" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="1263:1351" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="1358:1478" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="1492:1669" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="1681:1815" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="1820:1873" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="1883:2023" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="2034:2174" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="2187:2409" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="2416:2529" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="2538:2672" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="2742:2928" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="2937:2956" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="2994:4004" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="4027:4804" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="4828:4899" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="4925:5044" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="5058:6050" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="6070:6848" placeholder="{...}" />
-            <marker date="1390584352000" expanded="true" signature="6869:6940" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/forms/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="8" selection-start="4815" selection-end="4815" vertical-scroll-proportion="0.3324937" vertical-offset="1503" max-vertical-offset="8640">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="0.29816514" vertical-offset="0" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
@@ -1070,16 +1013,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/templates/settings/account_settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="26" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="795">
+        <state line="13" column="71" selection-start="375" selection-end="375" vertical-scroll-proportion="6.5" vertical-offset="351" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CheckoutSystem/user_info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="202" selection-end="202" vertical-scroll-proportion="0.14354067" vertical-offset="0" max-vertical-offset="627">
+        <state line="6" column="28" selection-start="202" selection-end="202" vertical-scroll-proportion="-1.7647059" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="44" selection-start="523" selection-end="523" vertical-scroll-proportion="-1.92" vertical-offset="51" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="16" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.39097744" vertical-offset="1045" max-vertical-offset="3990">
           <folding />
         </state>
       </provider>

@@ -46,8 +46,14 @@ h1, h2, h3 {
     height: 40px;
     line-height: 40px;
     border-bottom: 1px #555555 solid;
-    background: -webkit-linear-gradient(top,  #2a7fc4 1%,#336093 100%); /* Chrome10+,Safari5.1+ */
-    /* TODO: add other background stuff */
+    background: #2a7fc4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #2a7fc4 0%, #336093 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2a7fc4), color-stop(100%,#336093)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #2a7fc4 0%,#336093 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #2a7fc4 0%,#336093 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #2a7fc4 0%,#336093 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #2a7fc4 0%,#336093 100%); /* W3C */
+
     box-shadow: 0px 0px 3px #888888;
 
     /* Text */
@@ -79,10 +85,18 @@ h1, h2, h3 {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+    height: 40px;
 }
 
 .tab.active {
-    background: -webkit-linear-gradient(top, #2a7fc4 -40%, #235083 100%); /* Chrome10+,Safari5.1+ */
+    background: #2c73ae; /* Old browsers */
+    background: -moz-linear-gradient(top,  #2c73ae 0%, #235083 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c73ae), color-stop(100%,#235083)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #2c73ae 0%,#235083 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #2c73ae 0%,#235083 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #2c73ae 0%,#235083 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #2c73ae 0%,#235083 100%); /* W3C */
+
     border-left: 1px solid #7799bb;
     border-right: 1px solid #7799bb;
 }
