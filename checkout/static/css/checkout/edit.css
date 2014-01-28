@@ -65,6 +65,7 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 #id_equipment {
+    display: inline-block;
     margin-top: 7px;
     width: 415px;
     border: 1px #c5c5c5 solid;
@@ -123,4 +124,23 @@ li:nth-child(even)		{ background-color:#fafafa; }
     font-size: 15px;
     font-weight: 500;
     color: #555555;
+}
+
+.equipment_choices {
+    width: 420px;
+    display: inline-block;
+}
+
+.quantities {
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
+    margin-top: 7px;
+}
+
+input[type=number] {
+    height: 19px;
+    width: 40px;
+    margin-top: 2px;
+    margin-bottom: 1px;
 }

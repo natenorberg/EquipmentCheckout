@@ -39,9 +39,19 @@ $(function() {
             {{ form.in_time }}
         </div>
         <div class="field_wrapper">
-            <label for="id_equipment">Equipment</label>
+
+
             <div class="errors">{{ form.equipment.errors.as_text|cut:"* " }}</div>
-            {{ form.equipment }}
+            <div class="equipment_choices">
+                <label for="id_equipment">Equipment</label>
+                {{ form.equipment }}
+            </div>
+            <div class="quantities">
+                <label>Quantity</label>
+                {% for quantity in form.equipment %}
+                <input type="number" name="quantity_{{ quantity.choice_value }}"><br/>
+                {% endfor %}
+            </div>
         </div>
         <div class="submit_button_wrapper">
             <input class="submit_button" type="submit" value="Submit"/>
