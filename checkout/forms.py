@@ -82,11 +82,25 @@ class ReservationForm(forms.ModelForm):
 
         return cleaned_data
 
+        # TODO: Figure this out
+        # def get_allowed_equipment(self, user):
+        #     allowed_equipment = []
+        #     for equipment in Equipment.objects.all():
+        #         if equipment.post_gate and user.groups.filter(name="Music Tech") or \
+        #                 equipment.pre_gate and user.groups.filter(name="Pre-Music Tech") or \
+        #                 equipment.staff and user.groups.filter(name="Staff") or \
+        #                 equipment.music_ed and user.groups.filter(name="Music Education"):
+        #             allowed_equipment.append(equipment)
+
+        #     return allowed_equipment
+
 
 @login_required
 def new_reservation(request):
+    queryset = Equipment.objects.all()
     if request.POST:
         form = ReservationForm(request.POST)
+        queryset = Equipment.objects.all()
         if form.is_valid():
             form.instance.user = request.user
             form.instance.is_approved = False
@@ -94,7 +108,8 @@ def new_reservation(request):
             return HttpResponseRedirect('/checkout/reservations')
     else:
         form = ReservationForm()
-    return render_to_response("checkout/reservation_edit.html", {'form': form, 'reservation_tab': True},
+    return render_to_response("checkout/reservation_edit.html",
+                              {'form': form, 'reservation_tab': True, 'queryset': queryset},
                               context_instance=RequestContext(request))
 
 

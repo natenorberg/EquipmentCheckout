@@ -48,8 +48,10 @@ $(function() {
             </div>
             <div class="quantities">
                 <label>Quantity</label>
-                {% for quantity in form.equipment %}
-                <input type="number" name="quantity_{{ quantity.choice_value }}"><br/>
+                {% for equipment in queryset %}
+                <div {% if equipment.quantity == 1 %} class="hidden"{% endif %}>
+                    <input type="number" name="quantity_{{ equipment.id }}" {% if equipment.quantity > 1 %}value="1"{% endif %}><span class="sans"> / {{ equipment.quantity }}</span><br/>
+                </div>
                 {% endfor %}
             </div>
         </div>
