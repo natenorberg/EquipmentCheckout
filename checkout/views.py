@@ -5,7 +5,7 @@ from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.views.generic import ListView
-from checkout.models import Equipment, Reservation
+from checkout.models import Equipment, Reservation, EquipmentReservation
 
 
 def is_admin(user):
@@ -78,8 +78,10 @@ def monitor_reservation_list(request):
 
 def reservation_detail(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
+    equipment = EquipmentReservation.objects.filter(reservation=reservation)
     return render_to_response("checkout/reservation_detail.html",
-                              dict(reservation=reservation, is_monitor=is_monitor(request.user), reservation_tab=True),
+                              dict(reservation=reservation, equipment=equipment, is_monitor=is_monitor(request.user),
+                                   reservation_tab=True),
                               context_instance=RequestContext(request))
 
 

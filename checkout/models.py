@@ -28,7 +28,7 @@ class Equipment(models.Model):
 class Reservation(models.Model):
     user = models.ForeignKey(User, related_name='reserved_by')
     project = models.CharField(max_length=50)
-    equipment = models.ManyToManyField('Equipment')
+    equipment = models.ManyToManyField('Equipment', through='EquipmentReservation')
     reserved_time = models.DateTimeField(auto_now_add=True)  # Time reservation was placed by the student
     out_time = models.DateTimeField()  # Time reservation officially starts
     in_time = models.DateTimeField()  # Time equipment is due
@@ -78,3 +78,9 @@ class Reservation(models.Model):
             return True
         else:
             return False
+
+
+class EquipmentReservation(models.Model):
+    equipment = models.ForeignKey(Equipment)
+    reservation = models.ForeignKey(Reservation)
+    quantity = models.IntegerField()

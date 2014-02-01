@@ -22,8 +22,8 @@
     <p>{{ reservation.in_time }}</p>
 
     <h3>Equipment</h3>
-    <p>{% for equipment in reservation.equipment.all %}
-        {{ equipment.name }}<br/>
+    <p>{% for item in equipment %}
+        {{ item.equipment.name }} {% if item.quantity > 1 %}(x{{ item.quantity }}){% endif %}<br/>
     {% endfor %}</p>
 
     {% if reservation.is_checked_out or reservation.is_returned %}

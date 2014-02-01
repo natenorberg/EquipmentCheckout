@@ -50,7 +50,9 @@ $(function() {
                 <label>Quantity</label>
                 {% for equipment in queryset %}
                 <div {% if equipment.quantity == 1 %} class="hidden"{% endif %}>
-                    <input type="number" name="quantity_{{ equipment.id }}" {% if equipment.quantity > 1 %}value="1"{% endif %}><span class="sans"> / {{ equipment.quantity }}</span><br/>
+                    <input type="number" name="quantity_{{ equipment.id }}" value="1" 
+                        {% if equipment.quantity > 1 %}min="1" max="{{ equipment.quantity }}"><span class="sans"> / {{ equipment.quantity }}</span>
+                        {% endif %}<br/>
                 </div>
                 {% endfor %}
             </div>

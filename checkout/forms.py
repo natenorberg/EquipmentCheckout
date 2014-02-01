@@ -1,12 +1,12 @@
 from datetime import datetime
 from django import forms
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from django.forms import SplitDateTimeWidget
 from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
-from checkout.models import Reservation, Equipment
+from checkout.models import Reservation, Equipment, EquipmentReservation
 from checkout.views import is_monitor, is_admin
 
 
@@ -98,13 +98,22 @@ class ReservationForm(forms.ModelForm):
 @login_required
 def new_reservation(request):
     queryset = Equipment.objects.all()
+    # EquipmentFormset = inlineformset_factory(Reservation, Equipment)
+    # formset = EquipmentFormset()
     if request.POST:
         form = ReservationForm(request.POST)
         queryset = Equipment.objects.all()
         if form.is_valid():
             form.instance.user = request.user
             form.instance.is_approved = False
-            form.save()
+            reservation = form.save(commit=False)
+            reservation.save()
+            selected_equipment = form.cleaned_data.get('equipment')
+            for equipment in selected_equipment:
+                quantity = request.POST['quantity_' + str(equipment.id)]
+                equipment_reservation = EquipmentReservation(equipment=equipment, reservation=reservation,
+                                                             quantity=quantity)
+                equipment_reservation.save()
             return HttpResponseRedirect('/checkout/reservations')
     else:
         form = ReservationForm()
