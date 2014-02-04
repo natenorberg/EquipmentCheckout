@@ -140,6 +140,7 @@ def check_out_comments(request):
         raise Http404
     pk = request.POST['id']
     instance = get_object_or_404(Reservation, id=pk)
+    equipment = EquipmentReservation.objects.filter(reservation=instance)
     form = CheckoutForm(request.POST or None, instance=instance)
     page_title = "Equipment Check Out"
     if request.POST.get('edited') and form.is_valid():
@@ -148,7 +149,8 @@ def check_out_comments(request):
         form.save()
         return HttpResponseRedirect('/checkout/monitor')
     return render_to_response("checkout/checkout_comments.html",
-                              {'form': form, 'reservation': instance, 'page_title': page_title, 'monitor_tab': True},
+                              {'form': form, 'reservation': instance, 'equipment': equipment, 'page_title': page_title,
+                               'monitor_tab': True},
                               context_instance=RequestContext(request), )
 
 
@@ -158,6 +160,7 @@ def check_in_comments(request):
         raise Http404
     pk = request.POST['id']
     instance = get_object_or_404(Reservation, id=pk)
+    equipment = EquipmentReservation.objects.filter(reservation=instance)
     form = CheckInForm(request.POST or None, instance=instance)
     page_title = "Equipment Check In"
     if request.POST.get('edited') and form.is_valid():
@@ -166,7 +169,8 @@ def check_in_comments(request):
         form.save()
         return HttpResponseRedirect('/checkout/monitor')
     return render_to_response("checkout/checkout_comments.html",
-                              {'form': form, 'reservation': instance, 'page_title': page_title, 'monitor_tab': True},
+                              {'form': form, 'reservation': instance, 'equipment': equipment, 'page_title': page_title,
+                               'monitor_tab': True},
                               context_instance=RequestContext(request), )
 
 

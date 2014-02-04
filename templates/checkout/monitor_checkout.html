@@ -36,10 +36,11 @@ $(".check").click(function() {
     <h3>Equipment</h3>
     <p class="note">Please check that all the equipment is here to continue.</p>
         <ul id="id_equipment">
-            {% for equipment in reservation.equipment.all %}
+            {% for item in equipment %}
             <li>
                 <div class="equipment_checkbox">
-                    <input type="checkbox" class="check">{{ equipment.name }}
+                    <input type="checkbox" class="check">{{ item.equipment.name }}
+                    {% if item.quantity > 1 %} (x{{ item.quantity }}){% endif %}
                 </div>
             </li>
             {% endfor %}

@@ -13,8 +13,8 @@
 
 <div id="left">
     <h3>Equipment</h3>
-    <p class="equipment_list">{% for equipment in reservation.equipment.all %}
-        {{ equipment.name }}<br/>
+    <p class="equipment_list">{% for item in equipment %}
+        {{ item.equipment.name }} {% if item.quantity > 1 %} (x{{ item.quantity }}){% endif %}<br/>
     {% endfor %}</p>
 
     <form action="." method="post">
