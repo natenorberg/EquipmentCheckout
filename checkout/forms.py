@@ -6,6 +6,7 @@ from django.forms import SplitDateTimeWidget
 from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
+from checkout.mediator import detect_conflicts
 from checkout.models import Reservation, Equipment, EquipmentReservation
 from checkout.views import is_monitor, is_admin
 
@@ -97,15 +98,15 @@ class ReservationForm(forms.ModelForm):
 
 @login_required
 def new_reservation(request):
+    page_title = 'New Reservation'
     queryset = Equipment.objects.all()
-    # EquipmentFormset = inlineformset_factory(Reservation, Equipment)
-    # formset = EquipmentFormset()
     if request.POST:
         form = ReservationForm(request.POST)
         queryset = Equipment.objects.all()
         if form.is_valid():
             form.instance.user = request.user
             form.instance.is_approved = False
+            form.instance.is_conflicting = False
             reservation = form.save(commit=False)
             reservation.save()
             selected_equipment = form.cleaned_data.get('equipment')
@@ -114,11 +115,50 @@ def new_reservation(request):
                 equipment_reservation = EquipmentReservation(equipment=equipment, reservation=reservation,
                                                              quantity=quantity)
                 equipment_reservation.save()
+
+            conflicts = detect_conflicts(reservation)
+            if conflicts.__len__() > 0:
+                reservation.is_conflicting = True
+                reservation.save()
+                return HttpResponseRedirect("/checkout/reservations/add/" + str(reservation.id) + "/conflicts/")
             return HttpResponseRedirect('/checkout/reservations')
     else:
         form = ReservationForm()
     return render_to_response("checkout/reservation_edit.html",
-                              {'form': form, 'reservation_tab': True, 'queryset': queryset},
+                              {'form': form, 'reservation_tab': True, 'queryset': queryset, 'page_title': page_title},
+                              context_instance=RequestContext(request))
+
+@login_required
+def edit_reservation(request, reservation_id):
+    page_title = 'Edit Reservation'
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    form = ReservationForm(request.POST or None, instance=reservation)
+    queryset = Equipment.objects.all()
+    if request.POST and form.is_valid():
+        form.instance.user = request.user
+        form.instance.is_approved = False
+        form.instance.is_conflicting = False
+        reservation = form.save(commit=False)
+        reservation.save()
+
+        # Deletes the previous selections from the database
+        EquipmentReservation.objects.filter(reservation=reservation).delete()
+        # Add the new equipment to the database
+        selected_equipment = form.cleaned_data.get('equipment')
+        for equipment in selected_equipment:
+            quantity = request.POST['quantity_' + str(equipment.id)]
+            equipment_reservation = EquipmentReservation(equipment=equipment, reservation=reservation,
+                                                         quantity=quantity)
+            equipment_reservation.save()
+
+        conflicts = detect_conflicts(reservation)
+        if conflicts.__len__() > 0:
+            reservation.is_conflicting = True
+            reservation.save()
+            return HttpResponseRedirect("/checkout/reservations/add/" + str(reservation.id) + "/conflicts/")
+        return HttpResponseRedirect('/checkout/reservations')
+    return render_to_response("checkout/reservation_edit.html",
+                              {'form': form, 'reservation_tab': True, 'queryset': queryset, 'page_title': page_title},
                               context_instance=RequestContext(request))
 
 

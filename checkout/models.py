@@ -39,6 +39,7 @@ class Reservation(models.Model):
     check_in_comments = models.TextField(null=True, blank=True)
     checked_out_by = models.ForeignKey(User, related_name='checked_out_by', null=True, blank=True)
     checked_in_by = models.ForeignKey(User, related_name='checked_in_by', null=True, blank=True)
+    is_conflicting = models.BooleanField()
 
     class Meta:
         ordering = ["out_time"]

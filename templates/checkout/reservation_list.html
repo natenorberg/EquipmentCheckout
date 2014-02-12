@@ -22,36 +22,40 @@
                 <td>{{ object.out_time }}</td>
                 <td>{{ object.in_time }}</td>
                 <td>
-                    {% if object.is_approved %}
-                        {% if object.checked_in_time %}
-                            {% if object.checked_in_time > object.in_time %}
-                                <span class="checked_in_late">Returned Late</span>
+                    {% if object.is_conflicting %}
+                        <span class="not_approved">Conflicting!</span>
+                    {% else %}
+                        {% if object.is_approved %}
+                            {% if object.checked_in_time %}
+                                {% if object.checked_in_time > object.in_time %}
+                                    <span class="checked_in_late">Returned Late</span>
+                                {% else %}
+                                    <span class="checked_in">Returned</span>
+                                {% endif %}
+                            {% elif object.checked_out_time %}
+                                {% if datetime.now > object.in_time %}
+                                    <span class="overdue">Overdue</span>
+                                {% else %}
+                                    <span class="checked_out">Checked Out</span>
+                                {% endif %}
                             {% else %}
-                                <span class="checked_in">Returned</span>
-                            {% endif %}
-                        {% elif object.checked_out_time %}
-                            {% if datetime.now > object.in_time %}
-                                <span class="overdue">Overdue</span>
-                            {% else %}
-                                <span class="checked_out">Checked Out</span>
+                            <span class="approved">Approved
+                                {% if user.is_superuser %}
+                                    <button>
+                                        <img src="/static/images/icons/delete.ico">
+                                    </button>
+                                {% endif %}
+                            </span>
                             {% endif %}
                         {% else %}
-                        <span class="approved">Approved
-                            {% if user.is_superuser %}
-                                <button>
-                                    <img src="/static/images/icons/delete.ico">
-                                </button>
-                            {% endif %}
-                        </span>
+                            <span class="not_approved">Not approved
+                                {% if user.is_superuser %}
+                                    <button>
+                                        <img src="/static/images/icons/check.ico">
+                                    </button>
+                                {% endif %}
+                            </span>
                         {% endif %}
-                    {% else %}
-                        <span class="not_approved">Not approved
-                            {% if user.is_superuser %}
-                                <button>
-                                    <img src="/static/images/icons/check.ico">
-                                </button>
-                            {% endif %}
-                        </span>
                     {% endif %}
                 </td>
                 <td><a href="/checkout/reservations/{{ object.id }}/">Details</a></td>

@@ -1,6 +1,6 @@
 from django.contrib.auth.models import Group
 
-## Create default checkout permission groups
+# Create default checkout permission groups
 if not Group.objects.filter(name="Music Education"):
     Group.objects.create(name="Music Education")
 if not Group.objects.filter(name="Pre-Music Tech"):

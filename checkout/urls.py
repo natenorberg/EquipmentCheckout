@@ -2,10 +2,11 @@ from django.conf.urls import patterns, url
 from django.contrib.auth.decorators import login_required, user_passes_test
 
 from checkout import views
-from checkout.forms import new_reservation, check_out_comments, check_in_comments, new_equipment, edit_equipment, new_user, edit_user, edit_account
+from checkout.forms import new_reservation, check_out_comments, check_in_comments, new_equipment, edit_equipment, \
+    new_user, edit_user, edit_account, edit_reservation
 from checkout.views import equipment_detail, ReservationListView, reservation_detail, \
-    FutureReservationListView, monitor_checkout, monitor_reservation_list, delete_equipment, is_admin, user_detail,\
-    user_list, delete_user, EquipmentListView
+    FutureReservationListView, monitor_checkout, monitor_reservation_list, delete_equipment, is_admin, user_detail, \
+    user_list, delete_user, EquipmentListView, reservation_conflicts, delete_reservation
 
 admin_required = user_passes_test(lambda u: is_admin(u))
 
@@ -20,6 +21,9 @@ urlpatterns = patterns('',
                        url(r'reservations/all/$', login_required(ReservationListView.as_view())),
                        url(r'reservations/(?P<reservation_id>\d+)/$', reservation_detail),
                        url(r'reservations/add/$', new_reservation),
+                       url(r'reservations/add/(?P<reservation_id>\d+)/conflicts/$', reservation_conflicts),  # delete?
+                       url(r'reservations/edit/(?P<reservation_id>\d+)/$', edit_reservation),
+                       url(r'reservations/delete/$', delete_reservation),
                        url(r'monitor/$', monitor_reservation_list),
                        url(r'monitor/checkout/(?P<reservation_id>\d+)/$', monitor_checkout),
                        url(r'monitor/checkout/confirm/$', check_out_comments),

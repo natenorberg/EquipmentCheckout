@@ -5,3 +5,16 @@ p {
 .submit_button {
     float: left;
 }
+
+#left, #right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left {
+    width: 49%;
+}
+
+#right {
+    width: 50%;
+}

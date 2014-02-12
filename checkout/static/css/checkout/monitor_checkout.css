@@ -28,11 +28,6 @@ li {
     font-size: 14px;
 }
 
-.note {
-    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
-    font-size: 15px;
-}
-
 li:nth-child(odd)		{ background: #f1f4f7; }
 li:nth-child(even)		{ background: #fafafa; }
 

@@ -12,19 +12,12 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="/static/js/jquery.timepicker.js"></script>
-<script>
-$(function() {
-    $("#id_out_time_0").datepicker();
-    $("#id_in_time_0").datepicker();
-    $("#id_out_time_1").timepicker({ 'timeFormat': 'H:i'});
-    $("#id_in_time_1").timepicker({ 'timeFormat': 'H:i'});
-});
-</script>
+<script src="/static/js/new_reservation.js"></script>
 {% endblock %}
 
 {% block content %}
-    <h1>New Reservation</h1>
-    <form action="." method="post">{% csrf_token %}
+    <h1>{{ page_title }}</h1>
+    <form id="reservation_form" action="." method="post">{% csrf_token %}
     <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
         <div class="field_wrapper">
             <label for="id_project">Project<br/></label>
@@ -62,4 +55,7 @@ $(function() {
         </div>
     </form>
 
+    <div id="dialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
 {% endblock %}

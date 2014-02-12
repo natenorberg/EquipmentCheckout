@@ -9,28 +9,40 @@
 {% block content %}
 <h1>Reservation</h1>
 
-    <h3>Name</h3>
-    <p>{{ reservation.user.first_name }} {{ reservation.user.last_name }}</p>
+    <div id="left">
+        <h3>Name</h3>
+        <p>{{ reservation.user.first_name }} {{ reservation.user.last_name }}</p>
 
-    <h3>Project</h3>
-    <p>{{ reservation.project }}</p>
+        <h3>Project</h3>
+        <p>{{ reservation.project }}</p>
 
-    <h3>Check out time</h3>
-    <p>{{ reservation.out_time }}</p>
+        <h3>Check out time</h3>
+        <p>{{ reservation.out_time }}</p>
 
-    <h3>Due at</h3>
-    <p>{{ reservation.in_time }}</p>
+        <h3>Due at</h3>
+        <p>{{ reservation.in_time }}</p>
 
-    <h3>Equipment</h3>
-    <p>{% for item in equipment %}
-        {{ item.equipment.name }} {% if item.quantity > 1 %}(x{{ item.quantity }}){% endif %}<br/>
-    {% endfor %}</p>
+        <h3>Equipment</h3>
+        <p>{% for item in equipment %}
+            {{ item.equipment.name }} {% if item.quantity > 1 %}(x{{ item.quantity }}){% endif %}<br/>
+        {% endfor %}</p>
+    </div>
 
-    {% if reservation.is_checked_out or reservation.is_returned %}
-    <h3>Checked out</h3>
-        <p>By {{ reservation.checked_out_by.first_name }} {{ reservation.checked_out_by.last_name }}<br/>on {{ reservation.checked_out_time }}</p>
-        <p>{{ reservation.check_out_comments }}</p>
-    {% endif %}
+    <div id="right">
+        {% if reservation.is_checked_out or reservation.is_returned %}
+        <h3>Checked out</h3>
+            <p>By {{ reservation.checked_out_by.first_name }} {{ reservation.checked_out_by.last_name }}<br/>
+                on {{ reservation.checked_out_time }}</p>
+            <p><strong>Comments:</strong><br/>{{ reservation.check_out_comments }}</p>
+        {% endif %}
+
+        {% if reservation.is_returned %}
+        <h3>Checked In</h3>
+            <p>By {{ reservation.checked_in_by.first_name }} {{ reservation.checked_in_by.last_name }}<br/>
+                on {{ reservation.checked_in_time }}</p>
+            <p><strong>Comments:</strong><br/>{{ reservation.check_in_comments }}</p>
+        {% endif %}
+    </div>
 
     {% if is_monitor %}
         {% if reservation.is_approved and not reservation.is_checked_out %}

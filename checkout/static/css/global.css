@@ -35,6 +35,15 @@ h1, h2, h3 {
     margin-bottom: 0px;
 }
 
+.red_header {
+    color: #b25555;
+}
+
+.note {
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+}
+
 #content {
     margin-left: 40px;
     margin-right: 40px;

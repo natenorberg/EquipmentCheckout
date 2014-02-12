@@ -5,6 +5,7 @@ from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.views.generic import ListView
+from checkout.mediator import detect_conflicts
 from checkout.models import Equipment, Reservation, EquipmentReservation
 
 
@@ -76,6 +77,7 @@ def monitor_reservation_list(request):
                               context_instance=RequestContext(request))
 
 
+@login_required
 def reservation_detail(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     equipment = EquipmentReservation.objects.filter(reservation=reservation)
@@ -83,6 +85,27 @@ def reservation_detail(request, reservation_id=None):
                               dict(reservation=reservation, equipment=equipment, is_monitor=is_monitor(request.user),
                                    reservation_tab=True),
                               context_instance=RequestContext(request))
+
+
+@login_required
+def reservation_conflicts(request, reservation_id=None):
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    conflicts = detect_conflicts(reservation)
+    return render_to_response("checkout/reservation_conflicts.html",
+                              {'reservation': reservation, 'conflicts': conflicts, 'reservation_tab': True},
+                              context_instance=RequestContext(request))
+
+
+@login_required
+def delete_reservation(request):
+    if not request.POST:
+        raise Http404
+    reservation_id = request.POST['id']
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    if request.user != reservation.user and not request.user.is_superuser:
+        raise Http404  # TODO: Create permission denied page
+    reservation.delete()
+    return HttpResponseRedirect("/checkout/reservations")
 
 
 @user_passes_test(is_monitor)

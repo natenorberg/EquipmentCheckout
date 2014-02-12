@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/checkout/edit.css"/>
+{% endblock %}
+
+{% block content%}
+    <h1 class="red_header">Conflicts</h1>
+    <p class="note">Some of the equipment you requested for this time has already been requested.</p>
+
+    {% for conflict in conflicts %}
+    <p>{{ conflict }}</p>
+    {% endfor %}
+
+    <div class="submit_button_wrapper">
+        <form action="/checkout/reservations/edit/{{ reservation.id }}/">
+            <input type="submit" class="submit_button" value="Edit">
+        </form>
+
+        <form action="/checkout/reservations/delete/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{ reservation.id }}">
+            <input type="submit" class="red_button" value="Cancel">
+        </form>
+    </div>
+{% endblock %}
