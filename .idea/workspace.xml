@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/equipment_detail.html" afterPath="$PROJECT_DIR$/templates/checkout/equipment_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/auth/user_detail.html" afterPath="$PROJECT_DIR$/templates/auth/user_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/mediator.py" afterPath="$PROJECT_DIR$/checkout/mediator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -54,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_detail.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="16" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.6260997" vertical-offset="128" max-vertical-offset="810">
+            <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="-9.666667" vertical-offset="128" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -67,6 +65,15 @@
         <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="234" column="12" selection-start="6246" selection-end="6246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4155">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mediator.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/checkout/mediator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="29" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.7223796" vertical-offset="0" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
@@ -119,7 +126,6 @@
         <option value="$PROJECT_DIR$/checkout/models.py" />
         <option value="$PROJECT_DIR$/checkout/static/js/new_reservation.js" />
         <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
-        <option value="$PROJECT_DIR$/checkout/mediator.py" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_list.html" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_edit.html" />
         <option value="$PROJECT_DIR$/checkout/forms.py" />
@@ -132,6 +138,7 @@
         <option value="$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js" />
         <option value="$PROJECT_DIR$/templates/checkout/equipment_detail.html" />
         <option value="$PROJECT_DIR$/templates/auth/user_detail.html" />
+        <option value="$PROJECT_DIR$/checkout/mediator.py" />
       </list>
     </option>
   </component>
@@ -912,7 +919,11 @@
       <created>1392187096686</created>
       <updated>1392187096686</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="38: Dialog for deleting users">
+      <created>1392225756453</created>
+      <updated>1392225756453</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -993,7 +1004,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="13: Created check out comments view and populated checkout info to the database" />
     <MESSAGE value="13: Created check in view" />
     <MESSAGE value="13: Made monitor status required to view monitor related views" />
     <MESSAGE value="33: Allowed admins to create new equipment" />
@@ -1018,7 +1028,8 @@
     <MESSAGE value="36: Handled conflicts in reservations" />
     <MESSAGE value="38: Added confirmation dialog for deleting equipment" />
     <MESSAGE value="38: Quick styling tweak to confirmation dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="38: Quick styling tweak to confirmation dialog" />
+    <MESSAGE value="38: Dialog for deleting users" />
+    <option name="LAST_COMMIT_MESSAGE" value="38: Dialog for deleting users" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1218,13 +1229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/mediator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.6798867" vertical-offset="0" max-vertical-offset="990">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/monitor_checkout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="69" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-26.25" vertical-offset="0" max-vertical-offset="1350">
@@ -1320,7 +1324,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="16" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.6260997" vertical-offset="128" max-vertical-offset="810">
+        <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="-9.666667" vertical-offset="128" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/mediator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="29" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.7223796" vertical-offset="0" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>

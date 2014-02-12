@@ -19,18 +19,21 @@ def overlap(reservation1, reservation2):
 
 
 # Finds conflicts between equipment from a reservation and list of equipment (assuming they overlap)
-def conflicting_equipment(reservation1, reservation2):
+def conflicting_equipment(reservation1, reservation2, quantities):
     reservation1_equipment = EquipmentReservation.objects.filter(reservation=reservation1)
     reservation2_equipment = EquipmentReservation.objects.filter(reservation=reservation2)
 
     conflicts = []
 
     for item in reservation1_equipment:
-        items_available = item.equipment.quantity - item.quantity
+        if item.equipment in quantities:
+            quantities[item.equipment] -= item.quantity
+        else:
+            quantities[item.equipment] = item.equipment.quantity - item.quantity
         for other_item in reservation2_equipment:
             if other_item.equipment.id == item.equipment.id:
-                items_available -= other_item.quantity
-                if items_available < 0:
+                quantities[item.equipment] -= other_item.quantity
+                if quantities[item.equipment] < 0:
                     if not item.equipment in conflicts:
                         conflicts.append(item.equipment)
 
@@ -41,10 +44,11 @@ def conflicting_equipment(reservation1, reservation2):
 def detect_conflicts(reservation):
     other_reservations = Reservation.objects.exclude(pk=reservation.id)  # TODO: Make this more selective
     conflicts = []
+    quantities = {}
 
     for other_reservation in other_reservations:
         if overlap(reservation, other_reservation):
-            conflicts.extend(conflicting_equipment(other_reservation, reservation))
+            conflicts.extend(conflicting_equipment(other_reservation, reservation, quantities))
 
     return conflicts
 
