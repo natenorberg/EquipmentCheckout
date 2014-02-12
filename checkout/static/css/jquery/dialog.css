@@ -1,0 +1,24 @@
+.ui-dialog-titlebar {
+    border: 1px solid #822212;
+    padding: 7px 15px;
+    border-radius: 2px;
+    background: #cd412a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cd412a 0%, #933233 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd412a), color-stop(100%,#933233)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #cd412a 0%,#933233 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #cd412a 0%,#933233 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #cd412a 0%,#933233 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #cd412a 0%,#933233 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd412a', endColorstr='#933233',GradientType=0 ); /* IE6-9 */
+}
+
+.ui-dialog-title {
+    font-family: helvetica, "Lucida Grande", Arial, sans-serif;
+    font-weight: 600;
+	font-size: 18px;
+    color: #ffffff;
+}
+
+.ui-dialog-titlebar-close {
+  visibility: hidden;
+}

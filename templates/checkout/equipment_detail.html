@@ -4,6 +4,42 @@
 
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/static/css/jquery/dialog.css"/>
+{% endblock %}
+
+{% block scripts %}
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript">
+$(function() {
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        show: {
+            effect: 'fade',
+            duration: 300
+        },
+        hide: {
+            effect: 'hide',
+            duration: 200
+        },
+        buttons: {
+            Cancel: function() {
+                $(this).dialog("close");
+            },
+            "Delete": function() {
+                $("#delete").submit();
+            }
+        }
+    });
+});
+
+$("#delete_button").click(function(event) {
+    event.preventDefault();
+    $("#dialog").dialog('open');
+});
+</script>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +50,7 @@
 
     <h3>Description</h3>
     <p>{{ equipment.description }}</p>
-Ø
+
     <h3>Permissions</h3>
     <p>{% if equipment.music_ed %}Music Education students<br/>{% endif %}
     {% if equipment.pre_gate %}Pre-Music Tech students<br/>{% endif %}
@@ -28,10 +64,14 @@
     {% csrf_token %}
         <input type="submit" class="submit_button" value="Edit">
     </form>
-    <form action="/checkout/equipment/delete/" method="post">
+    <form id="delete" action="/checkout/equipment/delete/" method="post">
     {% csrf_token %}
         <input type="hidden" name="id" value="{{ equipment.id }}">
-        <input type="submit" class="red_button" value="Delete">
+        <button id="delete_button" class="red_button">Delete</button>
     </form>
     {% endif %}
+
+    <div id="dialog" title="Delete Equipment">
+        <p>Are you sure you wish to delete this equipment?</p>
+    </div>
 {% endblock %}
