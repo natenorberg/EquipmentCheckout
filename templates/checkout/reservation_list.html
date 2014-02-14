@@ -41,18 +41,26 @@
                             {% else %}
                             <span class="approved">Approved
                                 {% if user.is_superuser %}
-                                    <button>
-                                        <img src="/static/images/icons/delete.ico">
-                                    </button>
+                                    <form action="/checkout/reservations/reject/" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="id" value="{{ object.id }}">
+                                        <button>
+                                            <img src="/static/images/icons/delete.ico">
+                                        </button>
+                                    </form>
                                 {% endif %}
                             </span>
                             {% endif %}
                         {% else %}
                             <span class="not_approved">Not approved
                                 {% if user.is_superuser %}
-                                    <button>
-                                        <img src="/static/images/icons/check.ico">
-                                    </button>
+                                    <form action="/checkout/reservations/approve/" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="id" value="{{ object.id }}">
+                                        <button>
+                                            <img src="/static/images/icons/check.ico">
+                                        </button>
+                                    </form>
                                 {% endif %}
                             </span>
                         {% endif %}

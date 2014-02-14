@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/mediator.py" afterPath="$PROJECT_DIR$/checkout/mediator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/__init__.py" afterPath="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/reservation_list.html" afterPath="$PROJECT_DIR$/templates/checkout/reservation_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/urls.py" afterPath="$PROJECT_DIR$/checkout/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/views.py" afterPath="$PROJECT_DIR$/checkout/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CheckoutSystem.iws" />
@@ -34,19 +37,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="equipment_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_detail.html">
+      <file leaf-file-name="reservation_edit.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="95" selection-start="283" selection-end="345" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="810">
+            <state line="13" column="55" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete_confirmation_dialog.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkout/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="9" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="129" column="56" selection-start="4579" selection-end="4579" vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2415">
               <folding />
             </state>
           </provider>
@@ -55,7 +58,7 @@
       <file leaf-file-name="user_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="-9.666667" vertical-offset="128" max-vertical-offset="810">
+            <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -64,34 +67,45 @@
       <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="12" selection-start="6246" selection-end="6246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4155">
+            <state line="234" column="12" selection-start="6246" selection-end="6246" vertical-scroll-proportion="0.0" vertical-offset="3510" max-vertical-offset="4155">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mediator.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/checkout/mediator.py">
+      <file leaf-file-name="reservation_list.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="29" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.7223796" vertical-offset="0" max-vertical-offset="1050">
+            <state line="53" column="34" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.5482456" vertical-offset="420" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialog.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/static/css/jquery/dialog.css">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkout/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+            <state line="27" column="73" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/edit.css">
+      <file leaf-file-name="delete_confirmation_dialog.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="142" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
+            <state line="19" column="9" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -125,20 +139,21 @@
         <option value="$PROJECT_DIR$/templates/checkout/reservation_detail.html" />
         <option value="$PROJECT_DIR$/checkout/models.py" />
         <option value="$PROJECT_DIR$/checkout/static/js/new_reservation.js" />
-        <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
-        <option value="$PROJECT_DIR$/templates/checkout/reservation_list.html" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_edit.html" />
         <option value="$PROJECT_DIR$/checkout/forms.py" />
-        <option value="$PROJECT_DIR$/checkout/views.py" />
-        <option value="$PROJECT_DIR$/checkout/urls.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css" />
-        <option value="$PROJECT_DIR$/templates/checkout/reservation_conflicts.html" />
         <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
         <option value="$PROJECT_DIR$/checkout/static/css/jquery/dialog.css" />
         <option value="$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js" />
         <option value="$PROJECT_DIR$/templates/checkout/equipment_detail.html" />
         <option value="$PROJECT_DIR$/templates/auth/user_detail.html" />
         <option value="$PROJECT_DIR$/checkout/mediator.py" />
+        <option value="$PROJECT_DIR$/checkout/fixtures/data.yaml" />
+        <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/checkout/reservation_conflicts.html" />
+        <option value="$PROJECT_DIR$/templates/checkout/reservation_list.html" />
+        <option value="$PROJECT_DIR$/checkout/views.py" />
+        <option value="$PROJECT_DIR$/checkout/urls.py" />
       </list>
     </option>
   </component>
@@ -923,7 +938,11 @@
       <created>1392225756453</created>
       <updated>1392225756453</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="36: Fixed scheduling defect">
+      <created>1392227630297</created>
+      <updated>1392227630297</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -950,22 +969,22 @@
     <frame x="0" y="22" width="1440" height="826" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32472825" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6069652" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24034335" sideWeight="0.6062323" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3719346" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1788269" sideWeight="0.6062323" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3709239" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31947485" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2549234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1004,7 +1023,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="13: Created check in view" />
     <MESSAGE value="13: Made monitor status required to view monitor related views" />
     <MESSAGE value="33: Allowed admins to create new equipment" />
     <MESSAGE value="33: Allowed admins to edit equipment" />
@@ -1029,7 +1047,8 @@
     <MESSAGE value="38: Added confirmation dialog for deleting equipment" />
     <MESSAGE value="38: Quick styling tweak to confirmation dialog" />
     <MESSAGE value="38: Dialog for deleting users" />
-    <option name="LAST_COMMIT_MESSAGE" value="38: Dialog for deleting users" />
+    <MESSAGE value="36: Fixed scheduling defect" />
+    <option name="LAST_COMMIT_MESSAGE" value="36: Fixed scheduling defect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1037,11 +1056,65 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.0" vertical-offset="2477" max-vertical-offset="4785">
+        <state line="13" column="55" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="41" selection-start="3276" selection-end="3301" vertical-scroll-proportion="0.0" vertical-offset="1042" max-vertical-offset="2205">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="12" selection-start="6246" selection-end="6246" vertical-scroll-proportion="0.0" vertical-offset="3510" max-vertical-offset="4155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="50" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_conflicts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="14" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="9" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.0" vertical-offset="2477" max-vertical-offset="4785" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_detail.html">
@@ -1053,23 +1126,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/detail_view.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/mediator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="960">
-          <folding />
-        </state>
+        <state line="40" column="0" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="960" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/db/utils.py">
@@ -1089,16 +1156,12 @@
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/forms/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="0" selection-start="12393" selection-end="12393" vertical-scroll-proportion="0.0" vertical-offset="4136" max-vertical-offset="8640">
-          <folding />
-        </state>
+        <state line="299" column="0" selection-start="12393" selection-end="12393" vertical-scroll-proportion="0.0" vertical-offset="4136" max-vertical-offset="8640" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/detail_view.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="0.50359714" vertical-offset="0" max-vertical-offset="417">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="0.50359714" vertical-offset="0" max-vertical-offset="417" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_detail.html">
@@ -1108,124 +1171,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/fixtures/data.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="442" column="24" selection-start="8997" selection-end="8997" vertical-scroll-proportion="0.1160221" vertical-offset="6567" max-vertical-offset="7110">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/db/models/manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="0" selection-start="8990" selection-end="8990" vertical-scroll-proportion="0.0" vertical-offset="3494" max-vertical-offset="4245">
-          <folding />
-        </state>
+        <state line="247" column="0" selection-start="8990" selection-end="8990" vertical-scroll-proportion="0.0" vertical-offset="3494" max-vertical-offset="4245" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/servers/basehttp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="4483" selection-end="4483" vertical-scroll-proportion="0.0" vertical-offset="1552" max-vertical-offset="2415">
-          <folding />
-        </state>
+        <state line="125" column="0" selection-start="4483" selection-end="4483" vertical-scroll-proportion="0.0" vertical-offset="1552" max-vertical-offset="2415" />
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="760" column="0" selection-start="26941" selection-end="26941" vertical-scroll-proportion="0.33333334" vertical-offset="11279" max-vertical-offset="20025">
-          <folding />
-        </state>
+        <state line="760" column="0" selection-start="26941" selection-end="26941" vertical-scroll-proportion="0.33333334" vertical-offset="11279" max-vertical-offset="20025" />
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="592" column="0" selection-start="19152" selection-end="19152" vertical-scroll-proportion="0.31129476" vertical-offset="8707" max-vertical-offset="10995">
-          <folding />
-        </state>
+        <state line="592" column="0" selection-start="19152" selection-end="19152" vertical-scroll-proportion="0.31129476" vertical-offset="8707" max-vertical-offset="10995" />
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/simple_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="0" selection-start="3789" selection-end="3789" vertical-scroll-proportion="0.31129476" vertical-offset="1702" max-vertical-offset="2385">
-          <folding />
-        </state>
+        <state line="123" column="0" selection-start="3789" selection-end="3789" vertical-scroll-proportion="0.31129476" vertical-offset="1702" max-vertical-offset="2385" />
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.31129476" vertical-offset="1087" max-vertical-offset="6780">
-          <folding />
-        </state>
+        <state line="84" column="0" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.31129476" vertical-offset="1087" max-vertical-offset="6780" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/contrib/staticfiles/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2298" selection-end="2298" vertical-scroll-proportion="0.6694215" vertical-offset="642" max-vertical-offset="1005">
-          <folding />
-        </state>
+        <state line="66" column="0" selection-start="2298" selection-end="2298" vertical-scroll-proportion="0.6694215" vertical-offset="642" max-vertical-offset="1005" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="0" selection-start="7209" selection-end="7209" vertical-scroll-proportion="0.338843" vertical-offset="2742" max-vertical-offset="3105">
-          <folding />
-        </state>
+        <state line="205" column="0" selection-start="7209" selection-end="7209" vertical-scroll-proportion="0.338843" vertical-offset="2742" max-vertical-offset="3105" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/contrib/auth/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.31129476" vertical-offset="97" max-vertical-offset="1065">
-          <folding />
-        </state>
+        <state line="21" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.31129476" vertical-offset="97" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="592" selection-end="592" vertical-scroll-proportion="0.29745042" vertical-offset="0" max-vertical-offset="706">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="5248" selection-end="5248" vertical-scroll-proportion="0.33256352" vertical-offset="1521" max-vertical-offset="4215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="666" selection-end="666" vertical-scroll-proportion="-5.6666665" vertical-offset="224" max-vertical-offset="1260">
-          <folding />
-        </state>
+        <state line="126" column="0" selection-start="5248" selection-end="5248" vertical-scroll-proportion="0.33256352" vertical-offset="1521" max-vertical-offset="4215" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="47" selection-start="6151" selection-end="6151" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="5145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="72" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1238,53 +1242,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/monitor_checkout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="1" selection-start="463" selection-end="463" vertical-scroll-proportion="0.38506588" vertical-offset="157" max-vertical-offset="840">
-          <folding />
-        </state>
+        <state line="28" column="1" selection-start="463" selection-end="463" vertical-scroll-proportion="0.38506588" vertical-offset="157" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="8" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_conflicts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="183" selection-end="183" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
+        <state line="41" column="8" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1350" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/jquery/dialog.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/js/new_reservation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1812" selection-end="1812" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <folding />
-        </state>
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/auth/user_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="17" selection-start="4011" selection-end="4011" vertical-scroll-proportion="0.0" vertical-offset="1499" max-vertical-offset="2205">
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
@@ -1294,23 +1267,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
+    <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/edit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="46" selection-start="155" selection-end="323" vertical-scroll-proportion="0.04398827" vertical-offset="0" max-vertical-offset="990">
+        <state line="8" column="24" selection-start="142" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/edit.css">
+    <entry file="file://$PROJECT_DIR$/checkout/mediator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="142" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2265">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="294" column="55" selection-start="11674" selection-end="11674" vertical-scroll-proportion="0.12328767" vertical-offset="4179" max-vertical-offset="4995" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/fixtures/data.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="460" column="15" selection-start="9375" selection-end="9375" vertical-scroll-proportion="0.0" vertical-offset="6457" max-vertical-offset="7110" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/static/js/new_reservation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="7" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="95" selection-start="283" selection-end="345" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="810">
+        <state line="13" column="52" selection-start="567" selection-end="567" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="55" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
@@ -1322,16 +1320,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_conflicts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="-9.666667" vertical-offset="128" max-vertical-offset="810">
+        <state line="24" column="10" selection-start="833" selection-end="833" vertical-scroll-proportion="0.80898875" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/mediator.py">
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="29" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.7223796" vertical-offset="0" max-vertical-offset="1050">
+        <state line="16" column="0" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="56" selection-start="4579" selection-end="4579" vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2415">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="73" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="34" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.5482456" vertical-offset="420" max-vertical-offset="1380">
           <folding />
         </state>
       </provider>

@@ -6,7 +6,8 @@ from checkout.forms import new_reservation, check_out_comments, check_in_comment
     new_user, edit_user, edit_account, edit_reservation
 from checkout.views import equipment_detail, ReservationListView, reservation_detail, \
     FutureReservationListView, monitor_checkout, monitor_reservation_list, delete_equipment, is_admin, user_detail, \
-    user_list, delete_user, EquipmentListView, reservation_conflicts, delete_reservation
+    user_list, delete_user, EquipmentListView, reservation_conflicts, delete_reservation, approve_reservation, \
+    reject_reservation
 
 admin_required = user_passes_test(lambda u: is_admin(u))
 
@@ -23,6 +24,8 @@ urlpatterns = patterns('',
                        url(r'reservations/add/$', new_reservation),
                        url(r'reservations/add/(?P<reservation_id>\d+)/conflicts/$', reservation_conflicts),  # delete?
                        url(r'reservations/edit/(?P<reservation_id>\d+)/$', edit_reservation),
+                       url(r'reservations/approve/$', approve_reservation),
+                       url(r'reservations/reject/$', reject_reservation),
                        url(r'reservations/delete/$', delete_reservation),
                        url(r'monitor/$', monitor_reservation_list),
                        url(r'monitor/checkout/(?P<reservation_id>\d+)/$', monitor_checkout),

@@ -108,6 +108,28 @@ def delete_reservation(request):
     return HttpResponseRedirect("/checkout/reservations")
 
 
+@user_passes_test(is_admin)
+def approve_reservation(request):
+    if not request.POST:
+        raise Http404
+    reservation_id = request.POST['id']
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    reservation.is_approved = True
+    reservation.save()
+    return HttpResponseRedirect("/checkout/reservations/")
+
+
+@user_passes_test(is_admin)
+def reject_reservation(request):
+    if not request.POST:
+        raise Http404
+    reservation_id = request.POST['id']
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    reservation.is_approved = False
+    reservation.save()
+    return HttpResponseRedirect("/checkout/reservations/")
+
+
 @user_passes_test(is_monitor)
 def monitor_checkout(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
