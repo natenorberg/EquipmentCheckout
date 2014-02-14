@@ -41,7 +41,7 @@
                             {% else %}
                             <span class="approved">Approved
                                 {% if user.is_superuser %}
-                                    <form action="/checkout/reservations/reject/" method="post">
+                                    <form class="inline_form" action="/checkout/reservations/reject/" method="post">
                                         {% csrf_token %}
                                         <input type="hidden" name="id" value="{{ object.id }}">
                                         <button>
@@ -54,7 +54,7 @@
                         {% else %}
                             <span class="not_approved">Not approved
                                 {% if user.is_superuser %}
-                                    <form action="/checkout/reservations/approve/" method="post">
+                                    <form class="inline_form" action="/checkout/reservations/approve/" method="post">
                                         {% csrf_token %}
                                         <input type="hidden" name="id" value="{{ object.id }}">
                                         <button>
