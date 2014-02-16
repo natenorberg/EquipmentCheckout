@@ -46,6 +46,9 @@ class ReservationListView(ListView):
     reservation_tab = True
 
     def get_queryset(self):
+        # Admins should be able to see all reservations so that they can approve them
+        if is_admin(self.request.user):
+            return Reservation.objects.all()
         return Reservation.objects.filter(user=self.request.user)
 
     def approve_reservation(self):
@@ -61,6 +64,8 @@ class FutureReservationListView(ListView):
     reservation_tab = True
 
     def get_queryset(self):
+        if is_admin(self.request.user):
+            return Reservation.objects.filter(in_time__gte=datetime.now())
         return Reservation.objects.filter(user=self.request.user, in_time__gte=datetime.now())
 
 
