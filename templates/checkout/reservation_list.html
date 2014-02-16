@@ -10,6 +10,9 @@
 {% block content %}
     <table>
         <tr>
+            {% if user.is_superuser %}
+            <th>Name</th>
+            {% endif %}
             <th>Project</th>
             <th>Out Time</th>
             <th>In Time</th>
@@ -18,6 +21,9 @@
         </tr>
         {% for object in object_list %}
             <tr>
+                {% if user.is_superuser %}
+                <td>{{ object.user.first_name }} {{ object.user.last_name }}</td>
+                {% endif %}
                 <td>{{ object.project }}</td>
                 <td>{{ object.out_time }}</td>
                 <td>{{ object.in_time }}</td>
@@ -70,7 +76,7 @@
             </tr>
         {% endfor %}
         <tr>
-            <td colspan="5" class="footer">
+            <td colspan="6" class="footer">
                 <form action="/checkout/reservations/add">
                     <input class="submit_button" type="submit" value="Add a Reservation">
                     {% if view.shows_all %}
