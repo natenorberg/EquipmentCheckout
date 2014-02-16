@@ -63,6 +63,11 @@ class ReservationForm(forms.ModelForm):
     in_time = forms.DateTimeField(widget=SplitDateTimeWidget())
     error_css_class = 'error'
 
+    def __init__(self, *args, **kwargs):
+        current_user = kwargs.pop('user')
+        super(ReservationForm, self).__init__(*args, **kwargs)
+        self.fields['equipment'].queryset = Equipment.objects.filter(id__in=get_allowed_equipment(current_user))
+
     class Meta:
         model = Reservation
         fields = ['project', 'equipment', 'out_time', 'in_time']
@@ -83,26 +88,25 @@ class ReservationForm(forms.ModelForm):
 
         return cleaned_data
 
-        # TODO: Figure this out
-        # def get_allowed_equipment(self, user):
-        #     allowed_equipment = []
-        #     for equipment in Equipment.objects.all():
-        #         if equipment.post_gate and user.groups.filter(name="Music Tech") or \
-        #                 equipment.pre_gate and user.groups.filter(name="Pre-Music Tech") or \
-        #                 equipment.staff and user.groups.filter(name="Staff") or \
-        #                 equipment.music_ed and user.groups.filter(name="Music Education"):
-        #             allowed_equipment.append(equipment)
 
-        #     return allowed_equipment
+def get_allowed_equipment(user):
+    allowed_equipment = []
+    for equipment in Equipment.objects.all():
+        if equipment.post_gate and user.groups.filter(name="Music Tech") or \
+                equipment.pre_gate and user.groups.filter(name="Pre-Music Tech") or \
+                equipment.staff and user.groups.filter(name="Staff") or \
+                equipment.music_ed and user.groups.filter(name="Music Education"):
+            allowed_equipment.append(equipment.id)
+
+    return allowed_equipment
 
 
 @login_required
 def new_reservation(request):
     page_title = 'New Reservation'
-    queryset = Equipment.objects.all()
+    queryset = Equipment.objects.filter(id__in=get_allowed_equipment(request.user))
     if request.POST:
-        form = ReservationForm(request.POST)
-        queryset = Equipment.objects.all()
+        form = ReservationForm(request.POST, user=request.user)
         if form.is_valid():
             form.instance.user = request.user
             form.instance.is_approved = False
@@ -123,17 +127,18 @@ def new_reservation(request):
                 return HttpResponseRedirect("/checkout/reservations/add/" + str(reservation.id) + "/conflicts/")
             return HttpResponseRedirect('/checkout/reservations')
     else:
-        form = ReservationForm()
+        form = ReservationForm(user=request.user)
     return render_to_response("checkout/reservation_edit.html",
                               {'form': form, 'reservation_tab': True, 'queryset': queryset, 'page_title': page_title},
                               context_instance=RequestContext(request))
+
 
 @login_required
 def edit_reservation(request, reservation_id):
     page_title = 'Edit Reservation'
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    form = ReservationForm(request.POST or None, instance=reservation)
-    queryset = Equipment.objects.all()
+    form = ReservationForm(request.POST or None, instance=reservation, user=request.user)
+    queryset = Equipment.objects.filter(id__in=get_allowed_equipment(request.user))
     if request.POST and form.is_valid():
         form.instance.user = request.user
         form.instance.is_approved = False
