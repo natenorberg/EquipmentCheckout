@@ -4,6 +4,44 @@
 
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/static/css/jquery/dialog.css"/>
+{% endblock %}
+
+{% block scripts %}
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript">
+$(function() {
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        show: {
+            effect: 'fade',
+            duration: 300
+        },
+        hide: {
+            effect: 'hide',
+            duration: 200
+        },
+        buttons: {
+            Cancel: function() {
+                $(this).dialog("close");
+            },
+            "Edit": function() {
+                $("#edit").submit();
+            }
+        }
+    });
+});
+
+$("#edit_button").click(function(event) {
+    {% if reservation.is_approved %}
+    event.preventDefault();
+    $("#dialog").dialog('open');
+    {% endif %}
+})
+</script>
 {% endblock %}
 
 {% block content %}
@@ -44,6 +82,15 @@
         {% endif %}
     </div>
 
+    {% if user == reservation.user %}
+    <form id="edit" action="/checkout/reservations/edit/{{ reservation.id }}/">
+        <button id="edit_button" class="submit_button">Edit</button>
+    </form>
+
+    <div id="dialog" title="Confirm Edit">
+        <p>Are you sure you want to edit this reservation?<br/>The administrator will need to approve your checkout again.</p>
+    </div>
+    {% endif %}
     {% if is_monitor %}
         {% if reservation.is_approved and not reservation.is_checked_out %}
         <form action="/checkout/monitor/checkout/{{ reservation.id }}/">
