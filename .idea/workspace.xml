@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/reservation_detail.html" afterPath="$PROJECT_DIR$/templates/checkout/reservation_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/reset_password.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/reset_placeholder.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" afterPath="$PROJECT_DIR$/.idea/CheckoutSystem.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/settings.py" afterPath="$PROJECT_DIR$/CheckoutSystem/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/urls.py" afterPath="$PROJECT_DIR$/CheckoutSystem/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/auth/user_edit.html" afterPath="$PROJECT_DIR$/templates/auth/user_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/views.py" afterPath="$PROJECT_DIR$/CheckoutSystem/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/welcome.html" afterPath="$PROJECT_DIR$/templates/welcome.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="32941f10-b017-46ec-9d4d-d11a8c013282" name="New changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/__init__.py" afterPath="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
-    </list>
+    <list id="32941f10-b017-46ec-9d4d-d11a8c013282" name="New changelist" comment="" />
     <ignored path="CheckoutSystem.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,6 +26,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CheckoutSystem$Unittest_TestReservationListView_test_get_queryset.coverage" NAME="Unittest TestReservationListView.test_get_queryset Coverage Results" MODIFIED="1389284855138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checkout" />
+    <SUITE FILE_PATH="coverage/CheckoutSystem$Unittests_in__Users_brianmaher_PycharmProjects_monstercheckout.coverage" NAME="Unittests in /Users/brianmaher/PycharmProjects/monstercheckout Coverage Results" MODIFIED="1392955457166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -40,80 +48,66 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="23" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2490">
+            <state line="43" column="23" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.0" vertical-offset="1145" max-vertical-offset="2490">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reservation_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_detail.html">
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="83" selection-start="180" selection-end="180" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1650">
+            <state line="30" column="68" selection-start="912" selection-end="912" vertical-scroll-proportion="-13.125" vertical-offset="135" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="equipment_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_detail.html">
+      <file leaf-file-name="user_info.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheckoutSystem/user_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="83" selection-start="187" selection-end="283" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="810">
+            <state line="7" column="13" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CheckoutSystem/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="19" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.89235127" vertical-offset="0" max-vertical-offset="5070">
+            <state line="97" column="42" selection-start="2546" selection-end="2546" vertical-scroll-proportion="0.81891346" vertical-offset="1048" max-vertical-offset="1650">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
+      <file leaf-file-name="reset_password.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/reset_password.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="810">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="20" selection-start="2987" selection-end="2987" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="4215">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reservation_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="26" selection-start="3657" selection-end="3657" vertical-scroll-proportion="-48.75" vertical-offset="0" max-vertical-offset="1470">
+            <state line="12" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/urls.py">
+        <entry file="file://$PROJECT_DIR$/CheckoutSystem/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="73" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-              <folding />
+            <state line="4" column="32" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete_confirmation_dialog.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CheckoutSystem/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="467" selection-end="576" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <folding />
+            <state line="33" column="9" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,7 +152,6 @@
         <option value="$PROJECT_DIR$/templates/auth/user_detail.html" />
         <option value="$PROJECT_DIR$/checkout/mediator.py" />
         <option value="$PROJECT_DIR$/checkout/fixtures/data.yaml" />
-        <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_conflicts.html" />
         <option value="$PROJECT_DIR$/checkout/urls.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/global.css" />
@@ -166,13 +159,19 @@
         <option value="$PROJECT_DIR$/checkout/views.py" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_list.html" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_detail.html" />
+        <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/welcome.html" />
+        <option value="$PROJECT_DIR$/templates/reset_placeholder.html" />
+        <option value="$PROJECT_DIR$/CheckoutSystem/views.py" />
+        <option value="$PROJECT_DIR$/CheckoutSystem/urls.py" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/CheckoutSystem/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="826" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -188,7 +187,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -199,7 +198,89 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monstercheckout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monstercheckout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monstercheckout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monstercheckout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fixtures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monstercheckout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="138" />
@@ -275,6 +356,31 @@
     <configuration default="false" name="reservation_edit.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in $PROJECT_DIR$" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CheckoutSystem" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -361,27 +467,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CheckoutSystem" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -407,7 +493,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CheckoutSystem" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -478,15 +584,17 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Django server.CheckoutSystem" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestReservationListView.test_get_queryset" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.reservation_edit.html" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in /Users/brianmaher/PycharmProjects/monstercheckout" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.reservation_edit.html" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestReservationListView.test_get_queryset" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in /Users/brianmaher/PycharmProjects/monstercheckout" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.reservation_edit.html" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestReservationListView.test_get_queryset" />
       </list>
     </recent_temporary>
   </component>
@@ -775,25 +883,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="826" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32472825" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6069652" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1788269" sideWeight="0.6062323" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17851374" sideWeight="0.6062323" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3709239" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2549234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24931507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -815,9 +923,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6069652" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2482066" sideWeight="0.6770538" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32152975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32152975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -865,58 +973,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkout/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="41" selection-start="3276" selection-end="3301" vertical-scroll-proportion="0.0" vertical-offset="1042" max-vertical-offset="2205">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/auth/user_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="12" selection-start="6246" selection-end="6246" vertical-scroll-proportion="0.0" vertical-offset="3510" max-vertical-offset="4155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="50" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_conflicts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="9" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.0" vertical-offset="2477" max-vertical-offset="4785" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="46" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="945" />
@@ -1002,11 +1058,6 @@
         <state line="21" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.31129476" vertical-offset="97" max-vertical-offset="1065" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="706" />
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="126" column="0" selection-start="5248" selection-end="5248" vertical-scroll-proportion="0.33256352" vertical-offset="1521" max-vertical-offset="4215" />
@@ -1069,32 +1120,16 @@
         <state line="24" column="10" selection-start="833" selection-end="833" vertical-scroll-proportion="0.80898875" vertical-offset="0" max-vertical-offset="465" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="20" selection-start="2987" selection-end="2987" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="4215">
+        <state line="122" column="20" selection-start="2987" selection-end="2987" vertical-scroll-proportion="0.82840234" vertical-offset="1410" max-vertical-offset="4215">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/list_view.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="26" selection-start="3657" selection-end="3657" vertical-scroll-proportion="-48.75" vertical-offset="0" max-vertical-offset="1470">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
@@ -1104,25 +1139,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="23" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2490">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wsgiref/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.33235726" vertical-offset="988" max-vertical-offset="6780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="73" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <folding />
-        </state>
+        <state line="85" column="0" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.33235726" vertical-offset="988" max-vertical-offset="6780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_edit.html">
@@ -1134,28 +1153,125 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/static/js/delete_confirmation_dialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="467" selection-end="576" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="22" column="0" selection-start="467" selection-end="576" vertical-scroll-proportion="0.63461536" vertical-offset="0" max-vertical-offset="520">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/equipment_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="83" selection-start="187" selection-end="283" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="83" selection-start="180" selection-end="180" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1650">
+        <state line="5" column="83" selection-start="187" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="19" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.89235127" vertical-offset="0" max-vertical-offset="5070">
+        <state line="19" column="47" selection-start="761" selection-end="761" vertical-scroll-proportion="0.2596154" vertical-offset="0" max-vertical-offset="5070">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="83" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="523" selection-end="523" vertical-scroll-proportion="0.57459676" vertical-offset="0" max-vertical-offset="1470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="40" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.875" vertical-offset="285" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="137" selection-start="639" selection-end="639" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="315">
+          <folding>
+            <element signature="e#632#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="73" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/user_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="23" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="9" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="32" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="68" selection-start="912" selection-end="912" vertical-scroll-proportion="-13.125" vertical-offset="135" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reset_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CheckoutSystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="42" selection-start="2546" selection-end="2546" vertical-scroll-proportion="0.81891346" vertical-offset="1048" max-vertical-offset="1650">
           <folding />
         </state>
       </provider>

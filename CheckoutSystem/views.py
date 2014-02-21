@@ -1,7 +1,8 @@
 from django.contrib.auth import logout
+from django.contrib.auth.views import password_reset
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.template import RequestContext
 
 
@@ -30,8 +31,12 @@ def progress(request):
     return render_to_response("progress.html", context_instance=RequestContext(request))
 
 
-def password_reset_placeholder(request):
-    return render_to_response("reset_placeholder.html", context_instance=RequestContext(request))
+def reset_password(request):
+    if request.method == 'POST':
+        return password_reset(request,
+            from_email=request.POST.get('email'))
+    else:
+        return render(request, 'reset_password.html')
 
 
 def logout_view(request):

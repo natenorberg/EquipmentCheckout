@@ -3,16 +3,16 @@
 {% block title %}{{ page_title }}{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" type="text/css" href="/static/css/checkout/edit.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/checkout/edit.css">
 {% endblock %}
 
 {% block content %}
-<h1>{{ page_title }}</h1>
+    <h1>{{ page_title }}</h1>
 
-<form action="." method="post">
-    {% csrf_token %}
-    <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
-    <div id="left">
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="errors">{{ form.non_field_errors.as_text|cut:"* "}}</div>
+        <div id="left">
             <div>
                 <div class="field_wrapper" id="first_name_field">
                     <label for="id_first_name">First Name</label>
@@ -58,7 +58,5 @@
                 <input type="checkbox" name="is_monitor"><label class="checkbox_label" for="id_is_monitor">Lab Monitor Access</label>
             </div>
         </div>
-
-
-</form>
+    </form>
 {% endblock %}
