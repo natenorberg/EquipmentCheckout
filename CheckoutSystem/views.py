@@ -31,14 +31,6 @@ def progress(request):
     return render_to_response("progress.html", context_instance=RequestContext(request))
 
 
-def reset_password(request):
-    if request.method == 'POST':
-        return password_reset(request,
-            from_email=request.POST.get('email'))
-    else:
-        return render(request, 'reset_password.html')
-
-
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect("/welcome/")
