@@ -82,7 +82,7 @@ $("#edit_button").click(function(event) {
         {% endif %}
     </div>
 
-    {% if user == reservation.user %}
+    {% if user == reservation.user and not reservation.checked_out_time %}
     <form id="edit" action="/checkout/reservations/edit/{{ reservation.id }}/">
         <button id="edit_button" class="submit_button">Edit</button>
     </form>
