@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/reset_password.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutSystem/views.py" afterPath="$PROJECT_DIR$/CheckoutSystem/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/base_site.html" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="32941f10-b017-46ec-9d4d-d11a8c013282" name="New changelist" comment="" />
@@ -73,13 +72,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CheckoutSystem/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="78" selection-start="566" selection-end="566" vertical-scroll-proportion="0.5183585" vertical-offset="0" max-vertical-offset="463">
+            <state line="16" column="78" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_site.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin/base_site.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.34168565" vertical-offset="0" max-vertical-offset="439">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,6 +157,7 @@
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/CheckoutSystem/settings.py" />
         <option value="$PROJECT_DIR$/CheckoutSystem/views.py" />
+        <option value="$PROJECT_DIR$/templates/admin/base_site.html" />
       </list>
     </option>
   </component>
@@ -212,6 +221,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheckoutSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monstercheckout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -846,7 +873,11 @@
       <created>1393003017297</created>
       <updated>1393003017297</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="14: Removed password reset views and html, as not needed given the django default password reset feature">
+      <created>1393003136710</created>
+      <updated>1393003136711</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -927,7 +958,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="5: Hard coded groups" />
     <MESSAGE value="12: Added nav tabs at the top" />
     <MESSAGE value="32: Fixed defect where sometime the user didn't appear to be logged in" />
     <MESSAGE value="12: Trying to push" />
@@ -952,7 +982,8 @@
     <MESSAGE value="11: Showed reservations for all users in admin's reservation list" />
     <MESSAGE value="11: Added a name column to admin's reservation list view" />
     <MESSAGE value="14: Added password reset (by email) feature&#10;21: (Incomplete) Added google calendar to front page" />
-    <option name="LAST_COMMIT_MESSAGE" value="14: Added password reset (by email) feature&#10;21: (Incomplete) Added google calendar to front page" />
+    <MESSAGE value="14: Removed password reset views and html, as not needed given the django default password reset feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="14: Removed password reset views and html, as not needed given the django default password reset feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1249,10 +1280,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CheckoutSystem/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="78" selection-start="566" selection-end="566" vertical-scroll-proportion="0.5183585" vertical-offset="0" max-vertical-offset="463">
+        <state line="16" column="78" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/base_site.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.34168565" vertical-offset="0" max-vertical-offset="439">
+          <folding />
         </state>
       </provider>
     </entry>
