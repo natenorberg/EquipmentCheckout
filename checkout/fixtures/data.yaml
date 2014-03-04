@@ -427,6 +427,7 @@
     quantity: 1
     condition: Good
     description: Need to have more code to deal with this
+    isKit: True
     music_ed: True
     pre_gate: True
     post_gate: True
@@ -459,6 +460,97 @@
     pre_gate: False
     post_gate: True
     staff: True
+
+- model: checkout.subItem
+  pk: 1
+  fields:
+    name: R26 Microphone
+    brand: Roland
+    date_added: 2009-07-24 21:45:0
+    description: Good stereo mic
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 2
+  fields:
+    name: Headphones
+    date_added: 2009-07-24 21:45:0
+    description: Headphones for listening back
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 3
+  fields:
+    name: USB Cord
+    date_added: 2009-07-24 21:45:0
+    description: Connects the portable recorder to the computer for file transfer
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 4
+  fields:
+    name: Extra AA Batteries
+    date_added: 2009-07-24 21:45:0
+    description: In case the first set goes dead
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 5
+  fields:
+    name: AC Adapter
+    date_added: 2009-07-24 21:45:0
+    description: For using power from an outlet
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 6
+  fields:
+    name: Mic Clip
+    date_added: 2009-07-24 21:45:0
+    description: Clip for the mic
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 7
+  fields:
+    name: Mic Clip Adapter
+    date_added: 2009-07-24 21:45:0
+    description: Adapter for the mic clip
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 8
+  fields:
+    name: Windscreen
+    date_added: 2009-07-24 21:45:0
+    description: Windscreen for the mic
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 9
+  fields:
+    name: Manual
+    date_added: 2009-07-24 21:45:0
+    description: Lets you know how the thing works
+    optional: False
+    kit: 31
+
+- model: checkout.subItem
+  pk: 10
+  fields:
+    name: Shotgun kit
+    date_added: 2009-07-24 21:45:0
+    description: This should be a separate item but we need to test optional items
+    optional: True
+    kit: 31
 
 - model: auth.user
   pk: 100

@@ -15,11 +15,25 @@ class Equipment(models.Model):
     quantity = models.IntegerField(max_length=200)
     condition = models.CharField(max_length=200)
     description = models.TextField()
+    isKit = models.BooleanField(default=False)
     #Permissions
     music_ed = models.BooleanField('Music Education', default=False)
     pre_gate = models.BooleanField('Pre-Music Tech', default=False)
     post_gate = models.BooleanField('Music Tech', default=True)
     staff = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name
+
+
+# This model is for the different parts of the kits
+class SubItem(models.Model):
+    name = models.CharField(max_length=500)
+    brand = models.CharField(max_length=50, null=True, blank=True)
+    date_added = models.DateTimeField('date published', auto_now_add=True)
+    description = models.TextField()
+    optional = models.BooleanField()
+    kit = models.ForeignKey(Equipment)
 
     def __str__(self):
         return self.name

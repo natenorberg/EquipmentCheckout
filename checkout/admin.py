@@ -1,5 +1,5 @@
 from django.contrib import admin
-from checkout.models import Equipment, Reservation
+from checkout.models import Equipment, Reservation, SubItem
 
 
 class EquipmentAdmin(admin.ModelAdmin):
@@ -19,5 +19,10 @@ class ReservationAdmin(admin.ModelAdmin):
     list_display = ('user', 'out_time', 'in_time')
 
 
+class SubItemAdmin(admin.ModelAdmin):
+    list_display = ('name', 'brand', 'kit')
+
+
 admin.site.register(Equipment, EquipmentAdmin)
 admin.site.register(Reservation, ReservationAdmin)
+admin.site.register(SubItem, SubItemAdmin)
