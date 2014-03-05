@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.views.generic import ListView
 from checkout.mediator import detect_conflicts
-from checkout.models import Equipment, Reservation, EquipmentReservation
+from checkout.models import Equipment, Reservation, EquipmentReservation, SubItem
 
 
 def is_admin(user):
@@ -24,9 +24,11 @@ class EquipmentListView(ListView):
 
 def equipment_detail(request, equipment_id=None):
     equipment = get_object_or_404(Equipment, pk=equipment_id)
+    sub_items = SubItem.objects.filter(kit=equipment_id)
     can_edit = is_admin(request.user)
     return render_to_response("checkout/equipment_detail.html",
-                              {"equipment": equipment, 'can_edit': can_edit, 'equipment_tab': True},
+                              {"equipment": equipment, 'can_edit': can_edit, 'sub_items': sub_items,
+                               'equipment_tab': True},
                               context_instance=RequestContext(request))
 
 

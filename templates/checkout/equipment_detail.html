@@ -17,33 +17,46 @@
 {% block content %}
     <h1>{{ equipment.name }}</h1>
 
-    <h3>Condition</h3>
-    <p>{{ equipment.condition }}</p>
+    <div id="left">
+        <h3>Condition</h3>
+        <p>{{ equipment.condition }}</p>
 
-    <h3>Description</h3>
-    <p>{{ equipment.description }}</p>
+        <h3>Description</h3>
+        <p>{{ equipment.description }}</p>
 
-    <h3>Permissions</h3>
-    <p>{% if equipment.music_ed %}Music Education students<br/>{% endif %}
-    {% if equipment.pre_gate %}Pre-Music Tech students<br/>{% endif %}
-    {% if equipment.post_gate %}Music Tech students<br/>{% endif %}
-    {% if equipment.staff %}Staff<br/>{% endif %}</p>
+        <h3>Permissions</h3>
+        <p>{% if equipment.music_ed %}Music Education students<br/>{% endif %}
+        {% if equipment.pre_gate %}Pre-Music Tech students<br/>{% endif %}
+        {% if equipment.post_gate %}Music Tech students<br/>{% endif %}
+        {% if equipment.staff %}Staff<br/>{% endif %}</p>
 
-    <a class="back" href="/checkout/equipment/">Back to list</a>
+        <a class="back" href="/checkout/equipment/">Back to list</a>
 
-    {% if can_edit %}
-    <form action="/checkout/equipment/edit/{{ equipment.id }}/">
-    {% csrf_token %}
-        <input type="submit" class="submit_button" value="Edit">
-    </form>
-    <form id="delete" action="/checkout/equipment/delete/" method="post">
-    {% csrf_token %}
-        <input type="hidden" name="id" value="{{ equipment.id }}">
-        <button id="delete_button" class="red_button">Delete</button>
-    </form>
+        {% if can_edit %}
+        <form action="/checkout/equipment/edit/{{ equipment.id }}/">
+        {% csrf_token %}
+            <input type="submit" class="submit_button" value="Edit">
+        </form>
+        <form id="delete" action="/checkout/equipment/delete/" method="post">
+        {% csrf_token %}
+            <input type="hidden" name="id" value="{{ equipment.id }}">
+            <button id="delete_button" class="red_button">Delete</button>
+        </form>
+        {% endif %}
+
+        <div id="dialog" title="Delete Equipment">
+            <p>Are you sure you wish to delete this equipment?</p>
+        </div>
+    </div>
+    {% if equipment.isKit %}
+    <div id="right">
+        <h3>Contents</h3>
+        <p>
+            {% for sub_item in sub_items %}
+                {{ sub_item.name }} {% if sub_item.optional %}<i>(Optional)</i>{% endif %}<br/>
+            {% endfor %}
+        </p>
+    </div>
     {% endif %}
 
-    <div id="dialog" title="Delete Equipment">
-        <p>Are you sure you wish to delete this equipment?</p>
-    </div>
 {% endblock %}
