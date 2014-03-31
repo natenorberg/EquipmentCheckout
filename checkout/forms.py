@@ -156,6 +156,7 @@ def new_reservation(request):
 @login_required
 def new_reservation_kit_options(request, reservation_id):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
+    sub_items = SubItem.objects.all()  # TODO: Change this to filter to only items within that kit
     if request.POST:
         form = ReservationOptionForm(request.POST, instance=reservation)
         if form.is_valid():
@@ -170,7 +171,8 @@ def new_reservation_kit_options(request, reservation_id):
     else:
         form = ReservationOptionForm(instance=reservation)
 
-    return render_to_response("checkout/reservation_subitems.html", {'reservation': reservation, "form": form},
+    return render_to_response("checkout/reservation_subitems.html",
+                              {'reservation': reservation, "form": form, 'sub_items': sub_items},
                               context_instance=RequestContext(request))
 
 
@@ -202,6 +204,16 @@ def edit_reservation(request, reservation_id):
             reservation.is_conflicting = True
             reservation.save()
             return HttpResponseRedirect("/checkout/reservations/add/" + str(reservation.id) + "/conflicts/")
+
+        # Check if there are kits and prompt for more options
+        kits = []
+        for equipment in selected_equipment:
+            if equipment.is_kit:
+                kits.append(equipment)
+        if kits.__len__() > 0:
+            reservation.save()
+            return HttpResponseRedirect("/checkout/reservations/add/" + str(reservation.id) + "/options/")
+
         return HttpResponseRedirect('/checkout/reservations')
     return render_to_response("checkout/reservation_edit.html",
                               {'form': form, 'reservation_tab': True, 'queryset': queryset, 'page_title': page_title},

@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="47: Added tooltips in the reservation form">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/fixtures/data.yaml" afterPath="$PROJECT_DIR$/checkout/fixtures/data.yaml" />
+    <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" afterPath="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/equipment_detail.html" afterPath="$PROJECT_DIR$/templates/checkout/equipment_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/forms.py" afterPath="$PROJECT_DIR$/checkout/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/models.py" afterPath="$PROJECT_DIR$/checkout/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/js/new_reservation.js" afterPath="$PROJECT_DIR$/checkout/static/js/new_reservation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/reservation_detail.html" afterPath="$PROJECT_DIR$/templates/checkout/reservation_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/reservation_edit.html" afterPath="$PROJECT_DIR$/templates/checkout/reservation_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/urls.py" afterPath="$PROJECT_DIR$/checkout/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/views.py" afterPath="$PROJECT_DIR$/checkout/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/welcome.html" afterPath="$PROJECT_DIR$/templates/welcome.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" afterPath="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="32941f10-b017-46ec-9d4d-d11a8c013282" name="New changelist" comment="" />
@@ -59,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reservation_edit.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reservation_edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="12" selection-start="1527" selection-end="1597" vertical-scroll-proportion="0.33231708" vertical-offset="337" max-vertical-offset="1140">
+            <state line="42" column="20" selection-start="1808" selection-end="2327" vertical-scroll-proportion="-4.96" vertical-offset="382" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -86,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkout/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="37" selection-start="7138" selection-end="7138" vertical-scroll-proportion="-12.730769" vertical-offset="2069" max-vertical-offset="5685">
+            <state line="200" column="0" selection-start="8669" selection-end="8669" vertical-scroll-proportion="0.42647058" vertical-offset="2560" max-vertical-offset="5865">
               <folding />
             </state>
           </provider>
@@ -98,7 +89,7 @@
       <file leaf-file-name="reservation_subitems.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_subitems.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="77" selection-start="546" selection-end="546" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="21" column="31" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-2.177215" vertical-offset="143" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -107,7 +98,7 @@
       <file leaf-file-name="edit.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/edit.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="19" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="2624">
+            <state line="66" column="28" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="2460">
               <folding />
             </state>
           </provider>
@@ -153,7 +144,6 @@
         <option value="$PROJECT_DIR$/templates/welcome.html" />
         <option value="$PROJECT_DIR$/checkout/urls.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/jquery/tooltip.css" />
-        <option value="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" />
         <option value="$PROJECT_DIR$/checkout/static/js/new_reservation.js" />
         <option value="$PROJECT_DIR$/templates/checkout/equipment_detail.html" />
         <option value="$PROJECT_DIR$/checkout/fixtures/data.yaml" />
@@ -161,9 +151,10 @@
         <option value="$PROJECT_DIR$/CheckoutSystem/__init__.py" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_edit.html" />
         <option value="$PROJECT_DIR$/templates/checkout/reservation_detail.html" />
-        <option value="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" />
         <option value="$PROJECT_DIR$/templates/checkout/monitor_checkout.html" />
         <option value="$PROJECT_DIR$/checkout/views.py" />
+        <option value="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" />
+        <option value="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" />
         <option value="$PROJECT_DIR$/checkout/forms.py" />
       </list>
     </option>
@@ -889,7 +880,11 @@
       <created>1395011296611</created>
       <updated>1395011296611</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="45: Added initial functionality for reserving kits">
+      <created>1396283799335</created>
+      <updated>1396283799336</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -918,20 +913,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32288828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3678474" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880434" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32697546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6069652" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25035766" sideWeight="0.6062323" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3678474" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880434" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31062672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32697546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -970,7 +965,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="12: Trying to push" />
     <MESSAGE value="33: Added CRUD functionality for users" />
     <MESSAGE value="12: Got tab selection logic in place" />
     <MESSAGE value="12: Fixed Log In link that broke during merge" />
@@ -995,11 +989,12 @@
     <MESSAGE value="45:  Added schema information and fixture data for kit sub items" />
     <MESSAGE value="45:  Modified equipment detail view to show subitems for kits" />
     <MESSAGE value="47: Added tooltips in the reservation form" />
-    <option name="LAST_COMMIT_MESSAGE" value="47: Added tooltips in the reservation form" />
+    <MESSAGE value="45: Added initial functionality for reserving kits" />
+    <option name="LAST_COMMIT_MESSAGE" value="45: Added initial functionality for reserving kits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="116" />
+      <option name="time" value="118" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1183,13 +1178,6 @@
         <state line="3" column="13" selection-start="125" selection-end="125" vertical-scroll-proportion="0.07373272" vertical-offset="0" max-vertical-offset="651" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/edit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="19" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="2624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="14" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5208333" vertical-offset="0" max-vertical-offset="432">
@@ -1246,23 +1234,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="28" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkout/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="16" selection-start="3078" selection-end="3138" vertical-scroll-proportion="-13.461538" vertical-offset="865" max-vertical-offset="2550">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_subitems.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="77" selection-start="546" selection-end="546" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
@@ -1274,16 +1248,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+    <entry file="file://$PROJECT_DIR$/checkout/static/css/checkout/edit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="37" selection-start="7138" selection-end="7138" vertical-scroll-proportion="-12.730769" vertical-offset="2069" max-vertical-offset="5685">
+        <state line="66" column="28" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="2460">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="12" selection-start="1527" selection-end="1597" vertical-scroll-proportion="0.33231708" vertical-offset="337" max-vertical-offset="1140">
+        <state line="42" column="20" selection-start="1808" selection-end="2327" vertical-scroll-proportion="-4.96" vertical-offset="382" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="28" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_subitems.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="31" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-2.177215" vertical-offset="143" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="0" selection-start="8669" selection-end="8669" vertical-scroll-proportion="0.42647058" vertical-offset="2560" max-vertical-offset="5865">
           <folding />
         </state>
       </provider>

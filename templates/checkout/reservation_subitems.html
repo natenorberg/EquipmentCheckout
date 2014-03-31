@@ -11,7 +11,30 @@
         <div class="errors">{{ form.sub_items.errors.as_text|cut:"* " }}</div>
         <div class="equipment_choices">
             <label for="id_equipment">Kit Options</label>
-            {{ form.sub_items }}
+            <div class="errors">{{ form.equipment.errors.as_text|cut:"* " }}</div>
+            <ul id="id_sub_items">
+                {% for sub_item in sub_items %}
+                <li>
+                    <label class="equipment_choice" for="id_sub_items_{{ forloop.counter0 }}">
+                        {% if not sub_item.optional %}
+                        <input name="sub_items" type="hidden" value="{{ sub_item.id }}">
+                        <input class="equipment_list" id="id_sub_items{{ forloop.counter0 }}" name="sub_items" type="checkbox" checked="true" disabled="disabled"
+                               value="{{ sub_item.id }}"> {{ sub_item.name }}
+                        {% else %}
+                        <input class="equipment_list" id="id_sub_items{{ forloop.counter0 }}" name="sub_items" type="checkbox" value="{{ sub_item.id }}"> {{ sub_item.name }}
+                        {% endif %}
+                    </label>
+                </li>
+                {% endfor %}
+{#                {% for pk, sub_item, is_optional in form.sub_items.field.widget.choices %}#}
+{#                <li>#}
+{#                    <label class="equipment_choice" for="id_sub_items_{{ forloop.counter0 }}">#}
+{#                        <input class="equipment_list" id="id_sub_items{{ forloop.counter0 }}" name="sub_items" type="checkbox"#}
+{#                               {% if not is_optional %}checked="true"{% endif %} value="{{ pk }}"> {{ sub_item }}#}
+{#                    </label>#}
+{#                </li>#}
+{#                {% endfor %}#}
+            </ul>
         </div>
         </div>
         <input type="hidden" name="equipment" value="{{ reservation.equipment }}">
