@@ -144,3 +144,16 @@ input[type=number] {
     margin-top: 2px;
     margin-bottom: 1px;
 }
+
+.equipment_choice {
+    width: 80%;
+    display: inline-block;
+}
+
+.options_link {
+    float: right;
+    color: #666682;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-right: 2px;
+}

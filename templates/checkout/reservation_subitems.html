@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/checkout/edit.css"/>
+{% endblock %}
+
+{% block content %}
+<form action="." method="post">
+    {% csrf_token %}
+    <div class="field_wrapper">
+        <div class="errors">{{ form.sub_items.errors.as_text|cut:"* " }}</div>
+        <div class="equipment_choices">
+            <label for="id_equipment">Kit Options</label>
+            {{ form.sub_items }}
+        </div>
+        </div>
+        <input type="hidden" name="equipment" value="{{ reservation.equipment }}">
+        <div class="submit_button_wrapper">
+            <input class="submit_button" type="submit" value="Submit"/>
+        </div>
+    </div>
+</form>
+{% endblock %}

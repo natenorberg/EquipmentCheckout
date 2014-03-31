@@ -3,7 +3,7 @@ $(function() {
     $("#id_in_time_0").datepicker();
     $("#id_out_time_1").timepicker({ 'timeFormat': 'H:i'});
     $("#id_in_time_1").timepicker({ 'timeFormat': 'H:i'});
-    $("#dialog").dialog({
+    $(".dialog").dialog({
         autoOpen: false,
         modal: true,
         show: {
@@ -17,9 +17,18 @@ $(function() {
     });
 });
 
-$("#open_dialog").click(function() {
-    selected_equipment = $(".equipment_list");
-    $("#dialog").dialog("open");
+$(function() {
+    $(document).tooltip({
+        track: true,
+        show: {
+            delay: 350
+        }
+    });
+})
+
+$(".options_link").click(function() {
+
+    $(".dialog").dialog("open");
 });
 
 //$("#reservation_form").submit(function(event) {

@@ -15,7 +15,8 @@ class Equipment(models.Model):
     quantity = models.IntegerField(max_length=200)
     condition = models.CharField(max_length=200)
     description = models.TextField()
-    isKit = models.BooleanField(default=False)
+    is_kit = models.BooleanField(default=False)
+    sub_items = models.ManyToManyField('SubItem')
     #Permissions
     music_ed = models.BooleanField('Music Education', default=False)
     pre_gate = models.BooleanField('Pre-Music Tech', default=False)
@@ -43,6 +44,7 @@ class Reservation(models.Model):
     user = models.ForeignKey(User, related_name='reserved_by')
     project = models.CharField(max_length=50)
     equipment = models.ManyToManyField('Equipment', through='EquipmentReservation')
+    sub_items = models.ManyToManyField('SubItem')
     reserved_time = models.DateTimeField(auto_now_add=True)  # Time reservation was placed by the student
     out_time = models.DateTimeField()  # Time reservation officially starts
     in_time = models.DateTimeField()  # Time equipment is due

@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from checkout.mediator import detect_conflicts
-from checkout.models import Reservation, Equipment, EquipmentReservation
+from checkout.models import Reservation, Equipment, EquipmentReservation, SubItem
 from checkout.views import is_monitor, is_admin
 
 
@@ -89,6 +89,15 @@ class ReservationForm(forms.ModelForm):
         return cleaned_data
 
 
+class ReservationOptionForm(forms.ModelForm):
+    sub_items = forms.ModelMultipleChoiceField(widget=forms.CheckboxSelectMultiple(attrs={'class': 'equipment_list'}),
+                                               queryset=SubItem.objects.all())
+
+    class Meta:
+        model = Reservation
+        fields = ('sub_items',)
+
+
 def get_allowed_equipment(user):
     allowed_equipment = []
     for equipment in Equipment.objects.all():
@@ -120,16 +129,48 @@ def new_reservation(request):
                                                              quantity=quantity)
                 equipment_reservation.save()
 
+            # Check for conflicts and redirect to the conflicts page
             conflicts = detect_conflicts(reservation)
             if conflicts.__len__() > 0:
                 reservation.is_conflicting = True
                 reservation.save()
                 return HttpResponseRedirect("/checkout/reservations/add/" + str(reservation.id) + "/conflicts/")
+
+            # Check if there are kits and prompt for more options
+            kits = []
+            for equipment in selected_equipment:
+                if equipment.is_kit:
+                    kits.append(equipment)
+            if kits.__len__() > 0:
+                reservation.save()
+                return HttpResponseRedirect("/checkout/reservations/add/" + str(reservation.id) + "/options/")
+
             return HttpResponseRedirect('/checkout/reservations')
     else:
         form = ReservationForm(user=request.user)
     return render_to_response("checkout/reservation_edit.html",
                               {'form': form, 'reservation_tab': True, 'queryset': queryset, 'page_title': page_title},
+                              context_instance=RequestContext(request))
+
+
+@login_required
+def new_reservation_kit_options(request, reservation_id):
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    if request.POST:
+        form = ReservationOptionForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.instance.user = reservation.user
+            form.instance.project = reservation.project
+            form.instance.out_time = reservation.out_time
+            form.instance.in_time = reservation.in_time
+            form.instance.is_approved = False
+            form.instance.is_conflicting = False
+            form.save()
+            return HttpResponseRedirect("/checkout/reservations/")
+    else:
+        form = ReservationOptionForm(instance=reservation)
+
+    return render_to_response("checkout/reservation_subitems.html", {'reservation': reservation, "form": form},
                               context_instance=RequestContext(request))
 
 

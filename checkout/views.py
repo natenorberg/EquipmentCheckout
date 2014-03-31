@@ -88,6 +88,7 @@ def monitor_reservation_list(request):
 def reservation_detail(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     equipment = EquipmentReservation.objects.filter(reservation=reservation)
+
     return render_to_response("checkout/reservation_detail.html",
                               dict(reservation=reservation, equipment=equipment, is_monitor=is_monitor(request.user),
                                    reservation_tab=True),
@@ -142,7 +143,8 @@ def monitor_checkout(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     equipment = EquipmentReservation.objects.filter(reservation=reservation)
     return render_to_response("checkout/monitor_checkout.html",
-                              {"reservation": reservation, 'equipment': equipment, 'monitor_tab': True},
+                              {"reservation": reservation, 'equipment': equipment,
+                               'monitor_tab': True},
                               context_instance=RequestContext(request))
 
 

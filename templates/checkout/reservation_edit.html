@@ -14,16 +14,6 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="/static/js/jquery.timepicker.js"></script>
 <script src="/static/js/new_reservation.js"></script>
-<script type="text/javascript">
-$(function() {
-    $(document).tooltip({
-        track: true,
-        show: {
-            delay: 350
-        }
-    });
-})
-</script>
 {% endblock %}
 
 {% block content %}
@@ -51,9 +41,12 @@ $(function() {
                 <ul id="id_equipment">
                     {% for item in queryset %}
                     <li>
-                        <label for="id_equipment_{{ forloop.counter0 }}" title="{{ item.description }}">
+                        <label class="equipment_choice" for="id_equipment_{{ forloop.counter0 }}" title="{{ item.description }}">
                             <input class="equipment_list" id="id_equipment_{{ forloop.counter0 }}" name="equipment" type="checkbox" value="{{ item.id }}"> {{ item.name }}
                         </label>
+                        {% if item.isKit %}
+                        <div class="options_link"><a href="" Options</div>
+                        {% endif %}
                     </li>
                     {% endfor %}
                 </ul>
@@ -74,7 +67,5 @@ $(function() {
         </div>
     </form>
 
-    <div id="dialog" title="Basic dialog">
-  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-</div>
+
 {% endblock %}

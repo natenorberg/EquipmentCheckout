@@ -64,6 +64,11 @@ $("#edit_button").click(function(event) {
         <p>{% for item in equipment %}
             {{ item.equipment.name }} {% if item.quantity > 1 %}(x{{ item.quantity }}){% endif %}<br/>
         {% endfor %}</p>
+
+        <h3>Sub-items</h3>
+        <p>{% for item in reservation.sub_items.all %}
+            {{ item.name }}<br/>
+        {% endfor %}</p>
     </div>
 
     <div id="right">
