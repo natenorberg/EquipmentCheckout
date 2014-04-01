@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142932e8-1cb3-49a0-9bda-2034284918a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" afterPath="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout/forms.py" afterPath="$PROJECT_DIR$/checkout/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" afterPath="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="32941f10-b017-46ec-9d4d-d11a8c013282" name="New changelist" comment="" />
@@ -80,7 +78,7 @@
       <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkout/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="0" selection-start="8669" selection-end="8669" vertical-scroll-proportion="0.42647058" vertical-offset="2560" max-vertical-offset="5865">
+            <state line="166" column="0" selection-start="6810" selection-end="6810" vertical-scroll-proportion="0.3325688" vertical-offset="2195" max-vertical-offset="5985">
               <folding />
             </state>
           </provider>
@@ -89,7 +87,7 @@
       <file leaf-file-name="reservation_subitems.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_subitems.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="31" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-2.177215" vertical-offset="143" max-vertical-offset="765">
+            <state line="15" column="44" selection-start="568" selection-end="568" vertical-scroll-proportion="-2.8481014" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -154,8 +152,8 @@
         <option value="$PROJECT_DIR$/templates/checkout/monitor_checkout.html" />
         <option value="$PROJECT_DIR$/checkout/views.py" />
         <option value="$PROJECT_DIR$/checkout/static/css/checkout/edit.css" />
-        <option value="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" />
         <option value="$PROJECT_DIR$/checkout/forms.py" />
+        <option value="$PROJECT_DIR$/templates/checkout/reservation_subitems.html" />
       </list>
     </option>
   </component>
@@ -884,7 +882,11 @@
       <created>1396283799335</created>
       <updated>1396283799336</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="45: Made checkboxes for required sub items disabled and added support for editing reservations">
+      <created>1396295090302</created>
+      <updated>1396295090302</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -915,7 +917,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3678474" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3678474" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880434" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32697546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -965,7 +967,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="33: Added CRUD functionality for users" />
     <MESSAGE value="12: Got tab selection logic in place" />
     <MESSAGE value="12: Fixed Log In link that broke during merge" />
     <MESSAGE value="12:  Nav tab styling tweaks" />
@@ -990,11 +991,12 @@
     <MESSAGE value="45:  Modified equipment detail view to show subitems for kits" />
     <MESSAGE value="47: Added tooltips in the reservation form" />
     <MESSAGE value="45: Added initial functionality for reserving kits" />
-    <option name="LAST_COMMIT_MESSAGE" value="45: Added initial functionality for reserving kits" />
+    <MESSAGE value="45: Made checkboxes for required sub items disabled and added support for editing reservations" />
+    <option name="LAST_COMMIT_MESSAGE" value="45: Made checkboxes for required sub items disabled and added support for editing reservations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="118" />
+      <option name="time" value="119" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1056,11 +1058,6 @@
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="205" column="0" selection-start="7209" selection-end="7209" vertical-scroll-proportion="0.338843" vertical-offset="2742" max-vertical-offset="3105" />
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/django/contrib/auth/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.31129476" vertical-offset="97" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
@@ -1269,16 +1266,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/contrib/auth/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.3325688" vertical-offset="65" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout/reservation_subitems.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="31" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-2.177215" vertical-offset="143" max-vertical-offset="765">
+        <state line="15" column="44" selection-start="568" selection-end="568" vertical-scroll-proportion="-2.8481014" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="0" selection-start="8669" selection-end="8669" vertical-scroll-proportion="0.42647058" vertical-offset="2560" max-vertical-offset="5865">
+        <state line="166" column="0" selection-start="6810" selection-end="6810" vertical-scroll-proportion="0.3325688" vertical-offset="2195" max-vertical-offset="5985">
           <folding />
         </state>
       </provider>

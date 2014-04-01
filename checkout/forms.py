@@ -153,10 +153,18 @@ def new_reservation(request):
                               context_instance=RequestContext(request))
 
 
+def get_selected_kits(reservation):
+    selected_kits = []
+    for item in EquipmentReservation.objects.filter(reservation=reservation):
+        if item.equipment.is_kit:
+            selected_kits.append(item.equipment)
+
+    return selected_kits
+
 @login_required
 def new_reservation_kit_options(request, reservation_id):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    sub_items = SubItem.objects.all()  # TODO: Change this to filter to only items within that kit
+    sub_items = SubItem.objects.filter(kit__in=get_selected_kits(reservation))
     if request.POST:
         form = ReservationOptionForm(request.POST, instance=reservation)
         if form.is_valid():
