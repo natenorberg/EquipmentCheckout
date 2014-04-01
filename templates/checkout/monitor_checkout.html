@@ -33,14 +33,25 @@ $(".check").click(function() {
 {% endif %}
 
 <div id="left">
-    <h3>Equipment</h3>
     <p class="note">Please check that all the equipment is here to continue.</p>
-        <ul id="id_equipment">
+        <ul id="checklist">
             {% for item in equipment %}
-            <li>
+            {% if not item.equipment.is_kit %}<li>
                 <div class="equipment_checkbox">
                     <input type="checkbox" class="check">{{ item.equipment.name }}
                     {% if item.quantity > 1 %} (x{{ item.quantity }}){% endif %}
+                </div>
+            </li>{% endif %}
+            {% endfor %}
+        </ul>
+
+    <h3>Recording Kits</h3>
+    <p class="note">Please check that all parts of the recording kits are here.</p>
+        <ul id="checklist">
+            {% for item in reservation.sub_items.all %}
+            <li>
+                <div class="equipment_checkbox">
+                    <input type="checkbox" class="check">{{ item.name }}
                 </div>
             </li>
             {% endfor %}

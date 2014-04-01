@@ -11,8 +11,9 @@
     width: 30%;
 }
 
-#id_equipment {
+#checklist {
     margin-top: 7px;
+    margin-bottom: 10px;
     width: 415px;
     border: 1px #c5c5c5 solid;
     border-bottom: 0px;
