@@ -97,7 +97,7 @@ $("#edit_button").click(function(event) {
     </div>
     {% endif %}
     {% if is_monitor %}
-        {% if reservation.is_approved and not reservation.is_checked_out %}
+        {% if reservation.is_approved and not reservation.is_checked_out and not reservation.is_returned %}
         <form action="/checkout/monitor/checkout/{{ reservation.id }}/">
             <input class="submit_button" type="submit" value="Check Out">
         </form>
