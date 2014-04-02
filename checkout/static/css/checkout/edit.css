@@ -75,7 +75,7 @@ input[type=text], input[type=password], input[type=email] {
     font-weight: 500;
 }
 
-#id_permissions {
+.list_box {
     margin-top: 3px;
     width: 400px;
     border: 1px #c5c5c5 solid;
@@ -85,12 +85,13 @@ input[type=text], input[type=password], input[type=email] {
     font-weight: 500;
 }
 
-li {
+li, .li_unstyle {
     padding: 3px;
     border-bottom: 1px #c5c5c5 solid;
 
     font-family: helvetica, "Lucida Grande", Arial, sans-serif;
     font-size: 13px;
+    color: #000000;
 }
 
 li:nth-child(odd)		{ background-color:#f1f4f7; }
@@ -156,4 +157,24 @@ input[type=number] {
     cursor: pointer;
     margin-top: 2px;
     margin-right: 2px;
+}
+
+#contents_list {
+    margin-top: 7px;
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px #c5c5c5 solid;
+    border-bottom: 0px;
+    border-radius: 2px;
+    border-collapse: collapse;
+    font-weight: 500;
+
+    font-family: "Open sans", helvetica, "Lucida Grande", Arial, sans-serif;
+    color: #666682;
+    font-weight: 700;
+}
+
+.add_new_link {
+    font-size: 15px;
+    padding-left: 5px;
 }

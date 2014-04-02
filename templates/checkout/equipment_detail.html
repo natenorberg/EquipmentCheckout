@@ -53,7 +53,7 @@
         <h3>Contents</h3>
         <p>
             {% for sub_item in sub_items %}
-                {{ sub_item.name }} {% if sub_item.optional %}<i>(Optional)</i>{% endif %}<br/>
+                <a href="/checkout/equipment/subitem/{{ sub_item.id }}/">{{ sub_item.name }}</a> {% if sub_item.optional %}<i>(Optional)</i>{% endif %}<br/>
             {% endfor %}
         </p>
     </div>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if new %}Add{% else %}Edit{% endif %} Sub Item{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/checkout/edit.css"/>
+{% endblock %}
+
+{% block content %}
+<div id="left">
+    <h2>{% if new %}Add{% else %}Edit{% endif %} Sub Item</h2>
+    <form action="." method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="submit_button_wrapper">
+            <input class="submit_button" type="submit" value="{% if new %}Add{% else %}Save{% endif %}"/>
+        </div>
+        <a class="back" href="/checkout/equipment/edit/{{ kit_id }}/">Back to kit</a>
+    </form>
+</div>
+<div id="right">
+    <h2>Current Kit Contents</h2>
+    <ul id="contents_list">
+        {% for item in sub_items.all %}
+        <li><a href="/checkout/equipment/{{ item.kit.id }}/subitem/edit/{{ item.id }}">{{ item }}{% if item.optional %} (Optional){% endif %}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -42,6 +42,24 @@ def delete_equipment(request):
     return HttpResponseRedirect("/checkout/equipment/")
 
 
+def sub_item_detail(request, sub_item_id=None):
+    sub_item = get_object_or_404(SubItem, pk=sub_item_id)
+    can_edit = is_admin(request.user)
+    return render_to_response("checkout/sub_item_detail.html",
+                              {'item': sub_item, 'can_edit': can_edit, 'equipment_tab': True},
+                              context_instance=RequestContext(request))
+
+
+@user_passes_test(is_admin)
+def delete_sub_item(request, equipment_id):
+    if not request.POST:
+        raise Http404
+    sub_item_id = request.POST['id']
+    sub_item = get_object_or_404(SubItem, pk=sub_item_id)
+    sub_item.delete()
+    return HttpResponseRedirect("/checkout/equipment/" + str(equipment_id))
+
+
 class ReservationListView(ListView):
     model = Reservation
     shows_all = True
@@ -145,6 +163,7 @@ def get_selected_kits(reservation):
             selected_kits.append(item.equipment)
 
     return selected_kits
+
 
 @user_passes_test(is_monitor)
 def monitor_checkout(request, reservation_id=None):

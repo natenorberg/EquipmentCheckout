@@ -36,11 +36,14 @@ def new_equipment(request):
     if request.POST:
         form = EquipmentForm(request.POST)
         if form.is_valid():
-            form.save()
+            equipment = form.save()
+            if equipment.is_kit:
+                return HttpResponseRedirect('checkout/equipment/add/' + str(equipment.id) + '/options/')
             return HttpResponseRedirect('/checkout/equipment/')
     else:
         form = EquipmentForm()
-    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title, 'equipment_tab': True},
+    return render_to_response("checkout/equipment_edit.html",
+                              {'form': form, 'title': title, 'show_sub_items': False, 'equipment_tab': True},
                               context_instance=RequestContext(request))
 
 
@@ -49,10 +52,57 @@ def edit_equipment(request, equipment_id):
     instance = get_object_or_404(Equipment, id=equipment_id)
     title = "Edit Equipment"
     form = EquipmentForm(request.POST or None, instance=instance)
+    show_sub_items = instance.is_kit
+    sub_items = SubItem.objects.filter(kit=instance)
     if request.POST and form.is_valid():
         form.save()
         return HttpResponseRedirect('/checkout/equipment/')
-    return render_to_response("checkout/equipment_edit.html", {'form': form, 'title': title, 'equipment_tab': True},
+    return render_to_response("checkout/equipment_edit.html",
+                              {'form': form, 'title': title, 'show_sub_items': show_sub_items, 'sub_items': sub_items,
+                               'id': instance.id,
+                               'equipment_tab': True},
+                              context_instance=RequestContext(request))
+
+
+class SubItemForm(forms.ModelForm):
+    class Meta:
+        model = SubItem
+        fields = ['name', 'brand', 'description', 'optional']
+
+
+@user_passes_test(is_admin)
+def add_sub_item(request, equipment_id):
+    kit = get_object_or_404(Equipment, id=equipment_id)
+    sub_items = SubItem.objects.filter(kit=equipment_id)
+    if request.POST:
+        form = SubItemForm(request.POST)
+        if form.is_valid():
+            form.instance.kit = kit
+            sub_item = form.save()
+            kit.sub_items.add(sub_item)
+            return HttpResponseRedirect('/checkout/equipment/add/' + str(kit.id) + '/options/')
+    else:
+        form = SubItemForm()
+    return render_to_response("checkout/sub_item_edit.html",
+                              {'form': form, 'new': True, 'sub_items': sub_items, 'kit_id': equipment_id,
+                               'equipment_tab': True},
+                              context_instance=RequestContext(request))
+
+
+@user_passes_test(is_admin)
+def edit_sub_item(request, equipment_id, sub_item_id):
+    instance = get_object_or_404(SubItem, id=sub_item_id)
+    kit = get_object_or_404(Equipment, id=equipment_id)
+    sub_items = SubItem.objects.filter(kit=equipment_id)
+    form = SubItemForm(request.POST or None, instance=instance)
+    if request.POST and form.is_valid():
+        form.instance.kit = kit
+        sub_item = form.save()
+        kit.sub_items.add(sub_item)
+        return HttpResponseRedirect('/checkout/equipment/add/' + str(kit.id) + '/options/')
+    return render_to_response("checkout/sub_item_edit.html",
+                              {'form': form, 'new': False, 'sub_items': sub_items, 'kit_id': equipment_id,
+                               'equipment_tab': True},
                               context_instance=RequestContext(request))
 
 
@@ -102,9 +152,9 @@ def get_allowed_equipment(user):
     allowed_equipment = []
     for equipment in Equipment.objects.all():
         if equipment.post_gate and user.groups.filter(name="Music Tech") or \
-                equipment.pre_gate and user.groups.filter(name="Pre-Music Tech") or \
-                equipment.staff and user.groups.filter(name="Staff") or \
-                equipment.music_ed and user.groups.filter(name="Music Education"):
+                        equipment.pre_gate and user.groups.filter(name="Pre-Music Tech") or \
+                        equipment.staff and user.groups.filter(name="Staff") or \
+                        equipment.music_ed and user.groups.filter(name="Music Education"):
             allowed_equipment.append(equipment.id)
 
     return allowed_equipment
@@ -160,6 +210,7 @@ def get_selected_kits(reservation):
             selected_kits.append(item.equipment)
 
     return selected_kits
+
 
 @login_required
 def new_reservation_kit_options(request, reservation_id):

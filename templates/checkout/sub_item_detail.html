@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/css/checkout/detail_view.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/static/css/jquery/dialog.css"/>
+{% endblock %}
+
+{% block scripts %}
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="/static/js/delete_confirmation_dialog.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<h1>{{ item.name }}</h1>
+
+<h3>Kit</h3>
+<p>{{ item.kit }}</p>
+
+<h3>Brand</h3>
+<p>{{ item.brand }}</p>
+
+<h3>Description</h3>
+<p>{{ item.description }}</p>
+
+<a class="back" href="/checkout/equipment/{{ item.kit.id }}">Back to kit</a>
+
+{% if can_edit %}
+<form action="/checkout/equipment/{{ item.kit.id }}/subitem/edit/{{ item.id }}">
+{% csrf_token %}
+    <input type="submit" class="submit_button" value="Edit">
+</form>
+<form id="delete" action="/checkout/equipment/{{ item.kit.id }}/subitem/delete/" method="post">
+{% csrf_token %}
+    <input type="hidden" name="id" value="{{ item.id }}">
+    <button id="delete_button" class="red_button">Delete</button>
+</form>
+{% endif %}
+
+<div id="dialog" title="Delete Equipment">
+    <p>Are you sure you wish to delete this item?</p>
+</div>
+
+{% endblock %}

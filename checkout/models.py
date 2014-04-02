@@ -16,7 +16,7 @@ class Equipment(models.Model):
     condition = models.CharField(max_length=200)
     description = models.TextField()
     is_kit = models.BooleanField(default=False)
-    sub_items = models.ManyToManyField('SubItem')
+    sub_items = models.ManyToManyField('SubItem', null=True, blank=True)
     #Permissions
     music_ed = models.BooleanField('Music Education', default=False)
     pre_gate = models.BooleanField('Pre-Music Tech', default=False)

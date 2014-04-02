@@ -17,15 +17,6 @@ $(function() {
     });
 });
 
-$(function() {
-    $(document).tooltip({
-        track: true,
-        show: {
-            delay: 350
-        }
-    });
-})
-
 $(".options_link").click(function() {
 
     $(".dialog").dialog("open");

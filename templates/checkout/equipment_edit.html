@@ -4,6 +4,14 @@
 
 {% block styles %}
 <link rel="stylesheet" href="/static/css/checkout/edit.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/static/css/jquery/tooltip.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="/static/js/tooltip.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -42,12 +50,28 @@
         </div>
         <div id="right">
             <h3>Permissions</h3>
-            <ul id="id_permissions">
+            <ul id="id_permissions" class="list_box">
                 <li>{{ form.music_ed }} Music Education</li>
                 <li>{{ form.pre_gate }} Pre-Music Tech</li>
                 <li>{{ form.post_gate }} Music Tech</li>
                 <li>{{ form.staff }} Staff</li>
             </ul>
+
+            <div class="field_wrapper">
+                <label for="id_is_kit">Recording Kit</label>
+                <div class="errors">{{ form.is_kit.errors.as_text|cut:"* " }}</div>
+                <p class="note">{{ form.is_kit }} This item has several items that need to be checked out together.</p>
+            </div>
+
+            {% if show_sub_items %}
+            <h3>Sub Items</h3>
+            <ul class="list_box">
+                {% for sub_item in sub_items.all %}
+                <li><a href="/checkout/equipment/subitem/{{ sub_item.id }}/" class="li_unstyle" title="{{ sub_item.description }}">{{ sub_item.name }}</a> {% if sub_item.optional %}<i>(Optional)</i>{% endif %}</li>
+                {% endfor %}
+            </ul>
+            <a class="add_new_link" href="checkout/equipment/add/{{ id }}/options/">Add new item</a>
+            {% endif %}
         </div>
     </form>
 {% endblock %}
