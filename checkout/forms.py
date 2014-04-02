@@ -443,6 +443,9 @@ def edit_user(request, user_id):
 @login_required
 def edit_account(request, user_id):
     instance = get_object_or_404(User, id=user_id)
+    # Check to make sure that the user is editing their own account
+    if not instance == request.user:
+        raise Http404
     page_title = "Account Settings"
     form = AccountForm(request.POST or None, instance=instance)
     if request.POST and form.is_valid():
