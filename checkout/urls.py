@@ -37,5 +37,5 @@ urlpatterns = patterns('',
                        url(r'users/add/$', new_user),
                        url(r'users/edit/(?P<user_id>\d+)/$', edit_user),
                        url(r'users/delete/$', delete_user),
-                       url(r'settings/account/(?P<user_id>\d+)/$', login_required(edit_account))
+                       url(r'settings/account/$', login_required(edit_account))
 )
