@@ -45,6 +45,7 @@ $(".check").click(function() {
             {% endfor %}
         </ul>
 
+    {% if has_kits%}
     <h3>Recording Kits</h3>
     <p class="note">Please check that all parts of the recording kits are here.</p>
         <ul id="checklist">
@@ -56,6 +57,7 @@ $(".check").click(function() {
             </li>
             {% endfor %}
         </ul>
+    {% endif %}
 
     <div class="submit_button_wrapper">
         {% if not reservation.is_checked_out %}

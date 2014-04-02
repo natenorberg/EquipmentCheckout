@@ -138,12 +138,23 @@ def reject_reservation(request):
     return HttpResponseRedirect("/checkout/reservations/")
 
 
+def get_selected_kits(reservation):
+    selected_kits = []
+    for item in EquipmentReservation.objects.filter(reservation=reservation):
+        if item.equipment.is_kit:
+            selected_kits.append(item.equipment)
+
+    return selected_kits
+
 @user_passes_test(is_monitor)
 def monitor_checkout(request, reservation_id=None):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     equipment = EquipmentReservation.objects.filter(reservation=reservation)
+    has_kits = False
+    if get_selected_kits(reservation).__len__() > 0:
+        has_kits = True
     return render_to_response("checkout/monitor_checkout.html",
-                              {"reservation": reservation, 'equipment': equipment,
+                              {"reservation": reservation, 'equipment': equipment, 'has_kits': has_kits,
                                'monitor_tab': True},
                               context_instance=RequestContext(request))
 
