@@ -5,6 +5,7 @@
 
     <!-- Import Open Sans from Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,700,800,600 ' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
     {% block styles %}{% endblock %}
@@ -15,20 +16,20 @@
         <div id="nav">
             {% if user.is_active %}
             <div id="reservation_tab" class="tab {% if reservation_tab or view.reservation_tab %}active{% endif %}">
-                <a href="/checkout/reservations/"><span class="tab_text">Reservations</span></a>
+                <a href="/checkout/reservations/"><span class="tab_text"><i class="fa fa-calendar icon-space-right"></i>  Reservations</span></a>
             </div>
             {% endif %}
             <div id="equipment_tab" class="tab {% if equipment_tab or view.equipment_tab %}active{% endif %}">
-                <a href="/checkout/equipment/"><span class="tab_text">Equipment</span></a>
+                <a href="/checkout/equipment/"><span class="tab_text"><i class="fa fa-microphone icon-space-right"></i> Equipment</span></a>
             </div>
             {% if is_admin %}
             <div id="users_tab" class="tab {% if users_tab %}active{% endif %}">
-                <a href="/checkout/users/"><span class="tab_text">Users</span></a>
+                <a href="/checkout/users/"><span class="tab_text"><i class="fa fa-users icon-space-right"></i> Users</span></a>
             </div>
             {% endif %}
             {% if is_monitor %}
             <div id="monitor_tab" class="tab {% if monitor_tab %}active{% endif %}">
-                <a href="/checkout/monitor/"><span class="tab_text">Monitor</span></a>
+                <a href="/checkout/monitor/"><span class="tab_text"><i class="fa fa-key icon-space-right"></i> Monitor</span></a>
             </div>
             {% endif %}
         </div>

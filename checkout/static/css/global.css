@@ -274,3 +274,7 @@ select {
     background: #a9372e;
     box-shadow: 0px 0px 2px #222222 inset;
 }
+
+.icon-space-right {
+    margin-right: 3px;
+}
