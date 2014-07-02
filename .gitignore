@@ -1,0 +1,7 @@
+*.pyc
+checkout_dev
+dbindexer/*
+djangoappengine/*
+djangotoolbox/*
+monstercheckout/*
+.gitignore.swp
